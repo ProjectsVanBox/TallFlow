@@ -24,6 +24,7 @@ plot.data <- as.data.frame(sapply(median.data[3:19], function(x) ( (x-min(x))/(m
 plot.data$Celltype <- median.data$Celltype
 plot.data$SampleID <- median.data$SampleID
 
+
 CD4.data <- plot.data[,c("CD4", "SampleID", "Celltype")]
 CD4.data$Celltype <- as.factor(CD4.data$Celltype)
 CD4.data_long <- melt(CD4.data, id="Celltype") 

@@ -56,7 +56,7 @@ all.df <- readRDS("./CombinedPatients.rds")
 ### Loop over samples and perform single sample umaps
 #sampleNames <- unique(all.df$SampleIDshort)
 sampleNames = c("pt540", "pt530", "pt419", "pt2789", "pt258", "ptvu10138", "pt1946", "pt2723", "pt1950", "pt1949", "pt1524", "pt5438")
-#c("pt2229", "pt913", "pt335")
+#sampleNames = c("pt2229", "pt913", "pt335")
 for (s in sampleNames){
   print(s)
   ### Select data 
