@@ -156,7 +156,9 @@ p3 <- ggplot(data = combined_df[combined_df$SOURCE %in% c("vanBoxtel_HSCT", "Cam
 
 
 #
-
+p1
+p2
+p3
 
 
 ### Save figures 
@@ -187,80 +189,73 @@ sd(pt2322_data$nmuts_norm)
 
 
 ### Check the mutational load from our PMC patients
-#pmc_vcf.list <-  list.files(path = "~/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC", pattern = "*.vcf.gz", full.names = TRUE)
-pmc_vcf.list <- c("/Users/ricohagelaar/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC/PMABM000CNK_PMABM000CMG_PMCRZ994FPJ_WGS.vcf.gz",
-                  "/Users/ricohagelaar/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC/PMABM000FJD_PMABM000FMS_PMCRZ621BPT_WGS.vcf.gz",
-                  "/Users/ricohagelaar/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC/PMABM000FZI_PMABM000IDU_PMCRZ947SEG_WGS.vcf.gz",
-                  "/Users/ricohagelaar/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC/PMABM000GCR_PMABM000GEC_PMCRZ577OFS_WGS.vcf.gz",
-                  "/Users/ricohagelaar/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC/PMABM000GJB_PMABM000GKN_PMCRZ409SOF_WGS.vcf.gz",
-                  "/Users/ricohagelaar/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC/PMABM000GZI_PMABM000HBC_PMCRZ292VXS_WGS.vcf.gz",
-                  "/Users/ricohagelaar/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC/PMABM000HLM_PMGBM700AAB_PMCRZ624MNU_WGS.vcf.gz",
-                  "/Users/ricohagelaar/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC/PMGBM032AAC_PMGBM026AAC_PMCRZ155XWV_WGS.vcf.gz",
-                  "/Users/ricohagelaar/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC/PMGBM111AAC_PMGBM515AAC_PMCRZ583DNH_WGS.vcf.gz",
-                  "/Users/ricohagelaar/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC/PMGBM163AAE_PMGBM164AAE_PMCRZ783EVC_WGS.vcf.gz",
-                  "/Users/ricohagelaar/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC/PMGBM236AAC_PMGBM258AAC_PMCRZ201LXD_WGS.vcf.gz",
-                  "/Users/ricohagelaar/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC/PMGBM550AAB_PMGBM547AAB_PMCRZ524LJZ_WGS.vcf.gz",
-                  "/Users/ricohagelaar/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC/PMGBM625AAB_PMGBM623AAB_PMCRZ786NUR_WGS.vcf.gz",
-                  "/Users/ricohagelaar/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC/PMGBM806AAB_PMGBM832AAB_PMCRZ624SXY_WGS.vcf.gz",
-                  "/Users/ricohagelaar/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC/PMGBM864AAB_PMGBM859AAB_PMCRZ483XQW_WGS.vcf.gz",
-                  "/Users/ricohagelaar/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC/PMGBM894AAE_PMGBM918AAE_PMCRZ284SUL_WGS.vcf.gz",
-                  "/Users/ricohagelaar/hpc/pmc_vanboxtel/projects/SexDifferences/1_Input/WGS_PMC/PMGBM937AAF_PMGBM987AAF_PMCRZ409TTQ_WGS.vcf.gz")
-#"PMCID016AAP" %in% pmc_vcf.list
-pmc_sample_names <- c("PMABM000CNK",
-                      "PMABM000FJD",
-                      "PMABM000FZI",
-                      "PMABM000GCR",
-                      "PMABM000GJB",
-                      "PMABM000GZI",
-                      "PMABM000HLM",
-                      "PMGBM032AAC",
-                      "PMGBM111AAC",
-                      "PMGBM163AAE",
-                      "PMGBM236AAC",
-                      "PMGBM550AAB",
-                      "PMGBM625AAB",
-                      "PMGBM806AAB",
-                      "PMGBM864AAB",
-                      "PMGBM894AAE",
-                      "PMGBM937AAF")
+pmc_pts <- read.csv("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/tall_age.csv")
+pmc_pts_2 <- read.csv("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/tall_age_V2.csv")
+colnames(pmc_pts)
 
 
-
-library(MutationalPatterns)
-library(BSgenome)
-ref_genome <- "BSgenome.Hsapiens.UCSC.hg38"
-library(ref_genome, character.only = TRUE)
-
-
-pmc_grl <- read_vcfs_as_granges(pmc_vcf.list, pmc_sample_names, ref_genome)
-pmc_mut_mat <- mut_matrix(vcf_list = pmc_grl, ref_genome = ref_genome)
+pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/AgeLine/Added_PMC_PTS_2.pdf")
+ggplot() +
+  geom_point(campbell_HSC, mapping = aes(Age, Nmut_hsc_as), fill='red', color='red', shape=21, size=1) + 
+  geom_abline(intercept = 105, slope = 16, color='red') + 
+  geom_point(campbell_naive, mapping = aes(Age, Nmut_hsc_as), fill='orange', color='orange', shape=21, size=1) + 
+  geom_abline(intercept = 164, slope = 22, color='orange') + 
+  geom_point(campbell_mem, mapping = aes(Age, Nmut_hsc_as), fill='purple', color='purple', shape=21, size=1) + 
+  geom_abline(intercept = 382, slope = 25, color='purple') + 
+  geom_ribbon(data=ci_interval, aes(x=x, ymin=conf.low, ymax=conf.high), alpha = 0.4, fill = "#CCCCCC") +
+  geom_point(data = input_df, mapping = aes( y = SNV_LOAD_NORM, x = AGE), fill='black', color='black', shape=21, size=1) + 
+  geom_abline(intercept = healthy_intcpt, slope = healthy_slp, color="black") +
+  geom_point(data = pt2322_data, mapping = aes( y = nmuts_norm, x = age), fill='blue', color='blue', shape=21, size=1) + 
+  geom_point(data = pt2229_data, mapping = aes( y = nmuts_norm, x = age), fill='darkgreen', color='darkgreen', shape=21, size=1) + 
+  geom_point(pmc_pts_2, mapping = aes(age_at_diagnosis, mutations_after_filters), fill='darkgrey', color='darkgrey', shape=21, size=1) +
+  #geom_point(pmc_pts, mapping = aes(age_at_diagnosis, mutations_after_filters), fill='darkgrey', color='darkgrey', shape=21, size=1) +
+  theme_bw() + 
+  ylab("Normalised mutations")
+dev.off()
 
 
 
 
 
+### Include Target 
+SuppTable <- read.table("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/TargetStJudeAgeline/SuppTable1.txt", sep = "\t", header = T)
+TargetBurden <- read.table("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/TargetStJudeAgeline/MutBurdens.txt", sep = "\t", header = T, dec = ".", quote = '"')
 
 
 
+SuppTable.sub <- SuppTable[(SuppTable$Lineage == "T") & (SuppTable$WGS == "Yes" ), ]
+TargetBurden.sub <- TargetBurden[TargetBurden$PID %in% SuppTable.sub$PatientID, ]
+TargetBurden.sub2 <- TargetBurden.sub[TargetBurden.sub$CANCER_TYPE == "TALL", ]
+TargetBurden.sub2$AGE <- gsub(pattern = "age=", "", TargetBurden.sub2$AGE)
+#float(TargetBurden.sub2$AGE)
+TargetBurden.sub2$AGE <- as.integer(TargetBurden.sub2$AGE)
+ggplot() +
+  #geom_point(pmc_pts, mapping = aes(age_at_diagnosis, mutations_after_filters), fill='darkgrey', color='darkgrey', shape=21, size=1) +
+  geom_point(TargetBurden.sub2, mapping = aes(AGE, SBS), fill='SALMON', color='SALMON', shape=21, size=1) +
+  theme_bw() + 
+  ylab("Normalised mutations")
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/AgeLine/Added_PMC_PTS_2_withTarget.pdf")
+ggplot() +
+  geom_point(campbell_HSC, mapping = aes(Age, Nmut_hsc_as), fill='red', color='red', shape=21, size=1) + 
+  geom_abline(intercept = 105, slope = 16, color='red') + 
+  geom_point(campbell_naive, mapping = aes(Age, Nmut_hsc_as), fill='orange', color='orange', shape=21, size=1) + 
+  geom_abline(intercept = 164, slope = 22, color='orange') + 
+  geom_point(campbell_mem, mapping = aes(Age, Nmut_hsc_as), fill='purple', color='purple', shape=21, size=1) + 
+  geom_abline(intercept = 382, slope = 25, color='purple') + 
+  geom_ribbon(data=ci_interval, aes(x=x, ymin=conf.low, ymax=conf.high), alpha = 0.4, fill = "#CCCCCC") +
+  geom_point(data = input_df, mapping = aes( y = SNV_LOAD_NORM, x = AGE), fill='black', color='black', shape=21, size=1) + 
+  geom_abline(intercept = healthy_intcpt, slope = healthy_slp, color="black") +
+  geom_point(data = pt2322_data, mapping = aes( y = nmuts_norm, x = age), fill='blue', color='blue', shape=21, size=1) + 
+  geom_point(data = pt2229_data, mapping = aes( y = nmuts_norm, x = age), fill='darkgreen', color='darkgreen', shape=21, size=1) + 
+  geom_point(pmc_pts_2, mapping = aes(age_at_diagnosis, mutations_after_filters), fill='darkgrey', color='darkgrey', shape=21, size=1) +
+  #geom_point(pmc_pts, mapping = aes(age_at_diagnosis, mutations_after_filters), fill='darkgrey', color='darkgrey', shape=21, size=1) +
+  geom_point(TargetBurden.sub2, mapping = aes(AGE, SBS), fill='SALMON', color='SALMON', shape=21, size=1) +
+  theme_bw() + 
+  ylab("Normalised mutations")
+dev.off()
 
 
 
