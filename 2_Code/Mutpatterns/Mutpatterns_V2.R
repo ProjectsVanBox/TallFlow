@@ -204,6 +204,15 @@ plot_contribution(fit_res$contribution,
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 dev.off()
 
+pdf("./3_Output/FullDenovoMutPatterns/Refit/Default_Refit_relative.pdf")
+plot_contribution(fit_res$contribution,
+                  coord_flip = FALSE,
+                  mode = "relative"
+) + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+dev.off()
+
+write.table(fit_res$contribution, file = "./3_Output/FullDenovoMutPatterns/Refit/Refit_Contributions.txt", sep = "\t", col.names = NA)
 
 # Not usefull
 contri_boots <- fit_to_signatures_bootstrapped(mut_mat,
@@ -240,6 +249,16 @@ plot_contribution(fit_res_strict$contribution,
 )+ 
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 dev.off()
+
+pdf("./3_Output/FullDenovoMutPatterns/Refit/Strict_Refit_relative.pdf")
+plot_contribution(fit_res_strict$contribution,
+                  coord_flip = FALSE,
+                  mode = "relative"
+)+ 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+dev.off()
+write.table(fit_res_strict$contribution, file = "./3_Output/FullDenovoMutPatterns/Refit/Strict_Refit_Contributions.txt", sep = "\t", col.names = NA)
+
 
 
 
@@ -352,3 +371,49 @@ pdf("./3_Output/Mutpatterns/RefittingSignatures/pt2229/pt2229_StackedSpectrum.pd
 plot_spectrum_stacked(type_occurrences[c("pt2229_ALLBULK", "pt2229_TALL1", "pt2229_TALL2", "pt2229_TALL3", "pt2229_TALL4", "pt2229_TALL5", "pt2229_TALL6", "pt2229_TALL7", 
                                          "pt2229_TALL8", "pt2229_TALL9", "pt2229_TALL10"),] , max_value_to_show = 10)
 dev.off()
+
+
+
+
+##mut_matrix(signatures[,"PTA"])
+
+#plot_96_profile(as.matrix(signatures[,"PTA"]))
+#plot_spectrum(as.matrix(signatures[,"PTA"]))
+
+pta_vis <- as.matrix(signatures[, "PTA"])
+colnames(pta_vis) <- "PTA"
+rownames(pta_vis) <- rownames(pt2322_branch_mat)
+pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/Mutpatterns/Signatures/PTA_signature.pdf")
+plot_96_profile(pta_vis)
+dev.off()
+
+pta_vis <- as.matrix(signatures[, "HSPC"])
+colnames(pta_vis) <- "HSPC"
+rownames(pta_vis) <- rownames(pt2322_branch_mat)
+pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/Mutpatterns/Signatures/HSPC_signature.pdf")
+plot_96_profile(pta_vis)
+dev.off()
+
+pta_vis <- as.matrix(signatures[, "SBS1"])
+colnames(pta_vis) <- "SBS1"
+rownames(pta_vis) <- rownames(pt2322_branch_mat)
+pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/Mutpatterns/Signatures/SBS1_signature.pdf")
+plot_96_profile(pta_vis)
+dev.off()
+
+pta_vis <- as.matrix(signatures[, "SBS5"])
+colnames(pta_vis) <- "SBS5"
+rownames(pta_vis) <- rownames(pt2322_branch_mat)
+pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/Mutpatterns/Signatures/SBS5_signature.pdf")
+plot_96_profile(pta_vis)
+dev.off()
+
+pta_vis <- as.matrix(signatures[, "SBS18"])
+colnames(pta_vis) <- "SBS18"
+rownames(pta_vis) <- rownames(pt2322_branch_mat)
+pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/Mutpatterns/Signatures/SBS18_signature.pdf")
+plot_96_profile(pta_vis)
+dev.off()
+
+
+
