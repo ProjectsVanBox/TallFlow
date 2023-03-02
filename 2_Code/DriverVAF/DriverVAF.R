@@ -15,7 +15,8 @@ library(stringr)
 
 ### Read in data
 pt2322_vcf <- readVcf("~/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/BulkSeq_SMuRF/pt2322/DriverSelection/pt2322_DriverVafs.vcf")
-pt2229_vcf <- readVcf("~/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/BulkSeq_SMuRF/pt2229/DriverSelection/pt2229_DriverVafs.vcf")
+#pt2229_vcf <- readVcf("~/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/BulkSeq_SMuRF/pt2229/DriverSelection/pt2229_DriverVafs.vcf")
+pt2229_vcf <- readVcf("~/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/BulkSeq_SMuRF/pt2229inclDP_RH/DriverSelection/pt2229_DriverVafs.vcf")
 
 
 ### Parse variables for pt2322
@@ -31,7 +32,7 @@ rownames(pt2322_HmInput) <- pt2322_rownames
 
 ### Parse variables for pt2229
 pt2229_df <- data.frame(geno(pt2229_vcf)$VAF)
-pt2229_df <- pt2229_df[c("pt2229.DX1BM.MSCBULK", "pt2229.DX1BM.ALLBULK", "pt2229.DX1BM.ALLBULK.DNCD1aNeg", "pt2229.DX1BM.ALLBULK.DNCD1aPos", "pt2229.DX1BM.ALLBULK.iSPCD4")]
+pt2229_df <- pt2229_df[c("pt2229.DX1BM.MSCBULK", "pt2229.DX1BM.ALLBULK", "pt2229.DX1BM.ALLBULK.DNCD1aNeg", "pt2229.DX1BM.ALLBULK.DNCD1aPos", "pt2229.DX1BM.ALLBULK.iSPCD4", "pt2229.DX1BM.ALLBULK.DP")]
 pt2229_list <- lapply(info(pt2229_vcf)$ANN,function(x){strsplit(x,"\\|")})
 pt2229_genes <- c(sapply(sapply(pt2229_list, "[", 1),"[",4))
 pt2229_muts <- c(sapply(sapply(pt2229_list, "[", 1),"[",10))
