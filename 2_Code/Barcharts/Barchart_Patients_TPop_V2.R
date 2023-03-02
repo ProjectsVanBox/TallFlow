@@ -40,7 +40,7 @@ combine.file <- combine.file[! combine.file$SampleID %in% c("C2_pt5716","C3_pt57
 
 
 combine.file.sub <- combine.file[! combine.file$Celltype %in% c("cDC-like", "B-cell-like","Monocyte-like", "NK-cell-like", "pDC-like", "Unknown"), ]
-
+combine.file.sub$MergedSampleName <-  gsub(".*_", "", combine.file.sub$SampleID)
 
 ### Count the occurence of all labels per file
 LabelCounts <- aggregate(groupcount ~ Celltype + SampleID, transform(combine.file.sub, groupcount = 1), length)
@@ -69,8 +69,43 @@ PercentagesLabel[is.na(PercentagesLabel)] <- 0
 ### Create dendrograms
 dend <- as.dendrogram(hclust(as.dist(1-cor(PercentagesLabel))))
 dend <- set(dend, "labels_cex", 0.7) # gives error 
-PercentagesPerLabel$SampleID <- factor(PercentagesPerLabel$SampleID, levels = labels(dend))
+#PercentagesPerLabel$SampleID <- factor(PercentagesPerLabel$SampleID, levels = labels(dend))
+PercentagesPerLabel$MergedSampleName <-  gsub(".*_", "", PercentagesPerLabel$SampleID)
 
+
+#ordered by EGIL subtype
+PercentagesPerLabel$MergedSampleName <- factor(PercentagesPerLabel$MergedSampleName, 
+                                               levels = c("pt8173", "pt540", "pt2322", "pt913", "pt335", "pt419", "pt2229", "pt1946", 
+                                                          "pt633", "pt1179", "pt5676", "pt7675", "pt8711", "pt3976", "pt1524", "pt2789", 
+                                                          "pt2723", "pt5438", "pt14643","pt7267","pt1949","pt1950","pt258","pt530",
+                                                          "pt9175","ptvu10138","pt4564", "pt8148"))
+
+df2 <- PercentagesPerLabel[order(PercentagesPerLabel$MergedSampleName),]
+tail(df2)
+df2$SampleID <- factor(df2$SampleID, levels = rev(unique(df2$SampleID)))
+p.bar <- ggplot(df2, aes(x = SampleID, y = Value, fill=Celltype)) +
+  geom_bar(stat='identity')+ coord_flip() + theme_classic() + scale_fill_manual(values =pal)
+p.bar
+ggsave(filename = "./3_Output/Barcharts/PatientStrict/OnlyT_Populations/EgilOrderBargraph_Patients_TPop.pdf", p.bar, width = 7, height = 9)
+
+#ordered by oncogene
+PercentagesPerLabel$MergedSampleName <- factor(PercentagesPerLabel$MergedSampleName, 
+                                               levels = c("pt8173","pt540","pt913","pt1524","pt8639","pt1946","pt633","pt1179","pt5676",
+                                                          "pt3976","pt2723","pt419","pt2229","ptvu10138","pt2322","pt335","pt2789","pt1949",
+                                                          "pt1950","pt258","pt530","pt9175","pt7267","pt7675","pt8711","pt5438","pt14643",
+                                                          "pt4564","pt8148"))
+PercentagesPerLabel$MergedSampleName
+df2 <- PercentagesPerLabel[order(PercentagesPerLabel$MergedSampleName),]
+tail(df2)
+df2$SampleID <- factor(df2$SampleID, levels = rev(unique(df2$SampleID)))
+p.bar <- ggplot(df2, aes(x = SampleID, y = Value, fill=Celltype)) +
+  geom_bar(stat='identity')+ coord_flip() + theme_classic() + scale_fill_manual(values =pal)
+p.bar
+ggsave(filename = "./3_Output/Barcharts/PatientStrict/OnlyT_Populations/OncogeneOrderBargraph_Patients_TPop.pdf", p.bar, width = 7, height = 9)
+
+
+
+### Older code: 
 
 ### Create plots 
 p.den <- ggplot(as.ggdend(dend), horiz = TRUE, theme = theme_classic()) 
