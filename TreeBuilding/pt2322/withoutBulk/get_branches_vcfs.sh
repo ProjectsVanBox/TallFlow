@@ -27,7 +27,7 @@ grep -P "CLONAL_SAMPLE_NAMES=[\w,-]+TALL[456][\w,-]+TALL[456]" | \
 grep -vP "CLONAL_SAMPLE_NAMES=[\w,-]+TALL[12379]" \
 >> TALL6_TALL4_TALL5_TALL8_branch.vcf
 
-cat ../header.vcf > TALL10_TALL9_TALL12_branch.vcf
+cat ../header.vcf > TALL10_TALL9_TALL11_branch.vcf
 cat ${VCF} | \
 grep -P "CLONAL_SAMPLE_NAMES=[\w,-]+TALL10" | \
 grep -P "CLONAL_SAMPLE_NAMES=[\w,-]+TALL(9|11)" | \

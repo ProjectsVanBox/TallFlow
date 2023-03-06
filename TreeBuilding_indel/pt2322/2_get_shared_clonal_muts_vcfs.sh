@@ -12,5 +12,5 @@ while read line; do
   mysamples=$(echo ${line} | cut -f 2 -d'=' | tr ',' '_' | sed 's/pt2322-DX1BM-//g')
   mysharedmutsvcf=${mytreedir}/muts_vcfs/${nmuts}_${mysamples}.vcf
   cat ${mytreedir}/header.vcf > ${mysharedmutsvcf}
-  grep ${line_grep} ${mysmurfvcf} | awk '{ if (length($4) == 1 && length($5) == 1) { print $0} }'>> ${mysharedmutsvcf}
+  grep ${line_grep} ${mysmurfvcf} | awk '{ if (length($4) != 1 || length($5) != 1) { print $0} }'>> ${mysharedmutsvcf}
 done < ${myinfofile}

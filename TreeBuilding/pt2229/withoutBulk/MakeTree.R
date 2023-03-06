@@ -5,6 +5,7 @@ library(ape)
 setwd("~/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/TreeBuilding/pt2229_new/withoutBulk/")
 
 vcf_files <- list.files("branches_vcfs/",".vcf",full.names = T)
+indel_vcf_files <- list.files("~/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/TreeBuilding_indel/pt2229/branches_vcfs/","branch.vcf",full.names = T)
 
 create_tree_table <- function( vcf_fname ) {
   myvcf <- readVcf(vcf_fname, "hg38")
@@ -24,6 +25,11 @@ create_tree_table <- function( vcf_fname ) {
 
 mytree_table_l <- lapply(vcf_files, create_tree_table)
 mytree_table <- do.call(rbind, mytree_table_l)
+
+indel_mytree_table_l <- lapply(indel_vcf_files, create_tree_table)
+indel_mytree_table <- do.call(rbind, indel_mytree_table_l)
+
+mytree_table <- rbind(mytree_table, indel_mytree_table)
 
 co_occur_m = cbind(mytree_table, "root" = c(rep(0, nrow(mytree_table))))
 #co_occur_m[rowSums(mytree_table) == ncol(mytree_table),"root"] <- 1
@@ -46,7 +52,7 @@ tip.color[grep(rooted_tree$tip.label, pattern = "TALL8$")] <- "#B17BA6"
 tip.color[grep(rooted_tree$tip.label, pattern = "TALL9$")] <- "#B17BA6"
 tip.color[grep(rooted_tree$tip.label, pattern = "TALL10$")] <- "#B17BA6"
 
-pdf("pt2229_tree.pdf")
+pdf("pt2229_tree_incl_INDEL.pdf")
 plot(rooted_tree, use.edge.length = T, label.offset = 1, edge.color = "black", edge.width = 1, cex=1, show.tip.label = TRUE, 
      tip.color = tip.color, root.edge = T)
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-myptatodir="/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/PTATO/pt2229/snvs/pt2229"
-mytreedir="/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/TreeBuilding/pt2229/"
+myptatodir="/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/PTATO/pt2322/indels/pt2322"
+mytreedir="/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/TreeBuilding_indel/pt2322/"
 
 if [ ! -d ${mytreedir} ]; then
   mkdir -p ${mytreedir}

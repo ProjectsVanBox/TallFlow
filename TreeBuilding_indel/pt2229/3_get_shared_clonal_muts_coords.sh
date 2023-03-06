@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mytreedir="/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/TreeBuilding/pt2229/"
+mytreedir="/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/TreeBuilding_indel/pt2322/"
 
 cat ${mytreedir}/muts_vcfs/*.vcf | \
 grep -v "^#" | \
