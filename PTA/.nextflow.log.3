@@ -1,0 +1,56 @@
+Sep-27 13:12:15.857 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /hpc/pmc_vanboxtel/tools/ToolsVanBox_DEV/PTATO_SMuRF3/ptato.nf -c run-template_pt2322.config --out_dir /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/PTATO/pt2322 -profile slurm -resume
+Sep-27 13:12:16.683 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.6
+Sep-27 13:12:16.747 [main] INFO  nextflow.cli.CmdRun - Launching `/hpc/pmc_vanboxtel/tools/ToolsVanBox_DEV/PTATO_SMuRF3/ptato.nf` [wise_bhabha] - revision: 37d9e6fa93
+Sep-27 13:12:16.889 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA/nextflow.config
+Sep-27 13:12:16.962 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA/run-template_pt2322.config
+Sep-27 13:12:16.963 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA/nextflow.config
+Sep-27 13:12:16.964 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA/run-template_pt2322.config
+Sep-27 13:12:17.022 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+Sep-27 13:12:22.601 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+Sep-27 13:12:26.118 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [sge, slurm]
+Sep-27 13:12:26.809 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/pmc_research/rhagelaar/.nextflow/plugins
+Sep-27 13:12:26.812 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Sep-27 13:12:27.133 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Sep-27 13:12:27.161 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Sep-27 13:12:27.169 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Sep-27 13:12:27.263 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Sep-27 13:12:27.458 [main] DEBUG nextflow.Session - Session uuid: 090b3095-1eba-4302-8deb-472ac5d25ac6
+Sep-27 13:12:27.459 [main] DEBUG nextflow.Session - Run name: wise_bhabha
+Sep-27 13:12:27.460 [main] DEBUG nextflow.Session - Executor pool size: 72
+Sep-27 13:12:27.482 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.6 build 5661
+  Created: 21-12-2021 17:01 UTC (18:01 CEST)
+  System: Linux 3.10.0-1160.59.1.el7.x86_64
+  Runtime: Groovy 3.0.9 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27
+  Encoding: UTF-8 (UTF-8)
+  Process: 25348@n0079.compute.hpc [10.100.6.79]
+  CPUs: 72 - Mem: 377.6 GB (24.3 GB) - Swap: 8 GB (4.1 GB)
+Sep-27 13:12:28.065 [main] DEBUG nextflow.Session - Work-dir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA/work [nfs]
+Sep-27 13:12:28.100 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /hpc/pmc_vanboxtel/tools/ToolsVanBox_DEV/PTATO_SMuRF3/bin
+Sep-27 13:12:28.345 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[GoogleLifeSciencesExecutor, AwsBatchExecutor, IgExecutor]
+Sep-27 13:12:28.383 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Sep-27 13:12:28.454 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Sep-27 13:12:28.965 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 73; maxThreads: 1000
+Sep-27 13:12:29.224 [main] ERROR nextflow.cli.Launcher - Unable to acquire lock on session with ID 090b3095-1eba-4302-8deb-472ac5d25ac6
+
+Common reasons of this error are:
+ - You are trying to resume the execution of an already running pipeline
+ - A previous execution was abruptly interrupted leaving the session open
+
+You can check what process is holding the lock file by using the following command:
+ - lsof /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA/.nextflow/cache/090b3095-1eba-4302-8deb-472ac5d25ac6/db/LOCK
+java.io.IOException: Unable to acquire lock on session with ID 090b3095-1eba-4302-8deb-472ac5d25ac6
+
+Common reasons of this error are:
+ - You are trying to resume the execution of an already running pipeline
+ - A previous execution was abruptly interrupted leaving the session open
+
+You can check what process is holding the lock file by using the following command:
+ - lsof /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA/.nextflow/cache/090b3095-1eba-4302-8deb-472ac5d25ac6/db/LOCK
+	at nextflow.CacheDB.openDb(CacheDB.groovy:110)
+	at nextflow.CacheDB.open(CacheDB.groovy:129)
+	at nextflow.Session.init(Session.groovy:378)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:112)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:308)
+	at nextflow.cli.Launcher.run(Launcher.groovy:480)
+	at nextflow.cli.Launcher.main(Launcher.groovy:639)
