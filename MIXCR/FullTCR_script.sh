@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#SBATCH -t 10:0:0
+#SBATCH -t 2:0:0
 #SBATCH --mem=25G
 #SBATCH -c 8
 #SBATCH --mail-type=FAIL,END
-#SBATCH --mail-user=m.j.vanroosmalen-3@prinsesmaximacentrum.nl
+#SBATCH --mail-user=r.hagelaar@prinsesmaximacentrum.nl
 
 
 ### Load modules 
