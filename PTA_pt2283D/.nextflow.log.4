@@ -1,0 +1,646 @@
+Mar-15 11:19:09.517 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /hpc/pmc_vanboxtel/tools/ToolsVanBox/PTATO-1.0.0/ptato.nf -c ./run_config.config --out_dir /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/PTATO_Dev/pt2283D -profile slurm -resume
+Mar-15 11:19:09.889 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.6
+Mar-15 11:19:09.954 [main] INFO  nextflow.cli.CmdRun - Launching `/hpc/pmc_vanboxtel/tools/ToolsVanBox/PTATO-1.0.0/ptato.nf` [shrivelled_carlsson] - revision: b65a034f65
+Mar-15 11:19:09.998 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt2283D/./run_config.config
+Mar-15 11:19:09.999 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt2283D/run_config.config
+Mar-15 11:19:10.046 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+Mar-15 11:19:17.253 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [sge, slurm]
+Mar-15 11:19:17.718 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/pmc_research/rhagelaar/.nextflow/plugins
+Mar-15 11:19:17.742 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Mar-15 11:19:17.811 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Mar-15 11:19:17.818 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Mar-15 11:19:17.826 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Mar-15 11:19:17.905 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Mar-15 11:19:18.294 [main] DEBUG nextflow.Session - Session uuid: 4ae2a271-d94b-4c61-8ed7-9532c8f97ede
+Mar-15 11:19:18.294 [main] DEBUG nextflow.Session - Run name: shrivelled_carlsson
+Mar-15 11:19:18.314 [main] DEBUG nextflow.Session - Executor pool size: 24
+Mar-15 11:19:18.401 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.6 build 5661
+  Created: 21-12-2021 17:01 UTC (18:01 CEST)
+  System: Linux 3.10.0-1160.59.1.el7.x86_64
+  Runtime: Groovy 3.0.9 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27
+  Encoding: UTF-8 (UTF-8)
+  Process: 43345@n0051.compute.hpc [10.100.6.51]
+  CPUs: 24 - Mem: 125.7 GB (7.2 GB) - Swap: 8 GB (4.2 GB)
+Mar-15 11:19:18.619 [main] DEBUG nextflow.Session - Work-dir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt2283D/work [nfs]
+Mar-15 11:19:18.620 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /hpc/pmc_vanboxtel/tools/ToolsVanBox/PTATO-1.0.0/bin
+Mar-15 11:19:19.312 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[GoogleLifeSciencesExecutor, AwsBatchExecutor, IgExecutor]
+Mar-15 11:19:19.446 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Mar-15 11:19:19.647 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Mar-15 11:19:20.485 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 25; maxThreads: 1000
+Mar-15 11:19:21.180 [main] DEBUG nextflow.Session - Session start invoked
+Mar-15 11:19:21.186 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/PTATO_Dev/pt2283D/log/nextflow_trace.txt
+Mar-15 11:19:23.927 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-15 11:19:49.277 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 25; maxThreads: 1000
+Mar-15 11:19:49.662 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name get_gzipped_vcfs:bgzip
+Mar-15 11:19:49.680 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:49.680 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:49.690 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+Mar-15 11:19:49.695 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 1000; pollInterval: 2m; dumpInterval: 5m 
+Mar-15 11:19:49.702 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 5m
+Mar-15 11:19:49.955 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name get_gzipped_vcfs:tabix
+Mar-15 11:19:49.957 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:49.958 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:50.104 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:Sambamba_0_8_2_Index` matches labels `Sambamba_0_8_2,Sambamba_0_8_2_Index` for process with name get_indexed_bams:Index
+Mar-15 11:19:50.116 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:50.117 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:50.211 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:GATK_4_2_6_1_GetSampleName` matches labels `GATK_4_2_6_1,GATK_4_2_6_1_GetSampleName` for process with name get_indexed_bams:GetSampleName
+Mar-15 11:19:50.221 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:50.221 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:50.400 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:SnpSift_4_3_1t__1` matches labels `SnpSift,SnpSift_4_3_1t__1` for process with name get_germline_vcfs:SnpSift
+Mar-15 11:19:50.402 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:50.402 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:50.419 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name get_germline_vcfs:bgzip
+Mar-15 11:19:50.462 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:50.462 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:50.477 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name get_germline_vcfs:tabix
+Mar-15 11:19:50.487 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:50.488 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:50.553 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:SMuRF_3_0_1` matches labels `SMuRF,SMuRF_3_0_1` for process with name short_variants:get_somatic_vcfs:smurf
+Mar-15 11:19:50.588 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:50.596 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:50.672 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name short_variants:get_somatic_vcfs:bgzip
+Mar-15 11:19:50.683 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:50.683 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:50.713 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:get_somatic_vcfs:tabix
+Mar-15 11:19:50.755 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:50.755 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:51.097 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:shapeit_4_2_2` matches labels `shapeit,shapeit_4_2_2` for process with name short_variants:get_ab_tables:shapeit
+Mar-15 11:19:51.099 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:51.099 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:51.145 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:get_ab_tables:tabix
+Mar-15 11:19:51.147 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:51.147 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:51.209 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:createABtable` matches labels `createABtable` for process with name short_variants:get_ab_tables:createABtable
+Mar-15 11:19:51.210 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:51.210 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:51.272 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:51.298 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:51.398 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:walker_2_2_0` matches labels `walker,walker_2_2_0` for process with name short_variants:get_walker_vcfs:walker
+Mar-15 11:19:51.416 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:51.416 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:51.481 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name short_variants:get_walker_vcfs:bgzip
+Mar-15 11:19:51.499 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:51.499 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:51.566 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:get_walker_vcfs:tabix
+Mar-15 11:19:51.580 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:51.585 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:51.638 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:getContext` matches labels `getContext` for process with name short_variants:get_context_beds:getContext
+Mar-15 11:19:51.646 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:51.646 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:51.676 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bedtools_2_30_0_sort` matches labels `bedtoolsSort,bedtools_2_30_0_sort` for process with name short_variants:get_context_beds:sort
+Mar-15 11:19:51.677 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:51.677 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:51.759 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bedtools_2_30_0_closest` matches labels `bedtoolsClosest,bedtools_2_30_0_closest` for process with name short_variants:closest_feature:closest
+Mar-15 11:19:51.765 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:51.765 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:51.795 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bedtools_2_30_0_merge` matches labels `bedtoolsMerge,bedtools_2_30_0_merge` for process with name short_variants:closest_feature:merge
+Mar-15 11:19:51.796 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:51.796 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:51.841 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bedtools_2_30_0_intersect` matches labels `bedtoolsIntersect,bedtools_2_30_0_intersect` for process with name short_variants:intersect_feature:intersect
+Mar-15 11:19:51.864 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:51.864 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:51.891 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bedtools_2_30_0_merge` matches labels `bedtoolsMerge,bedtools_2_30_0_merge` for process with name short_variants:intersect_feature:merge
+Mar-15 11:19:51.894 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:51.894 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:51.929 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bedtools_2_30_0_intersectAll` matches labels `bedtoolsIntersectAll,bedtools_2_30_0_intersectAll` for process with name short_variants:merge_features:intersectAll
+Mar-15 11:19:51.938 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:51.938 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:51.957 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bedtools_2_30_0_mergeAll` matches labels `bedtoolsMergeAll,bedtools_2_30_0_mergeAll` for process with name short_variants:merge_features:mergeAll
+Mar-15 11:19:51.959 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:51.960 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.025 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:GATK_4_2_6_1_SplitVcfs` matches labels `GATK_4_2_6_1,GATK_4_2_6_1_SplitVcfs` for process with name short_variants:SplitVcfs
+Mar-15 11:19:52.056 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.056 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.126 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.126 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.198 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.198 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.219 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name short_variants:snvs:get_ptato_vcfs:bgzip
+Mar-15 11:19:52.220 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.220 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.267 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:snvs:get_ptato_vcfs:tabix
+Mar-15 11:19:52.268 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.269 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.313 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:ptatoCutoff` matches labels `ptatoCutoff` for process with name short_variants:snvs:filter_ptato_vcfs:ptatoCutoff
+Mar-15 11:19:52.331 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.331 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.367 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:ptatoFilter` matches labels `ptatoFilter` for process with name short_variants:snvs:filter_ptato_vcfs:ptatoFilter
+Mar-15 11:19:52.368 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.368 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.401 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name short_variants:snvs:filter_ptato_vcfs:bgzip
+Mar-15 11:19:52.402 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.403 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.422 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:snvs:filter_ptato_vcfs:tabix
+Mar-15 11:19:52.423 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.423 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.499 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.499 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.525 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name short_variants:indels:get_ptato_vcfs:bgzip
+Mar-15 11:19:52.537 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.537 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.558 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:indels:get_ptato_vcfs:tabix
+Mar-15 11:19:52.560 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.561 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.605 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:ptatoIndelFilter` matches labels `ptatoIndelFilter` for process with name short_variants:indels:filter_ptato_vcfs:ptatoIndelFilter
+Mar-15 11:19:52.607 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.607 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.611 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name short_variants:indels:filter_ptato_vcfs:bgzip
+Mar-15 11:19:52.612 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.612 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.635 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:indels:filter_ptato_vcfs:tabix
+Mar-15 11:19:52.636 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.636 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.678 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bedtools_2_30_0_intersectPTATO` matches labels `bedtoolsIntersectPTATO,bedtools_2_30_0_intersectPTATO` for process with name short_variants:intersect_ptato_vcfs:intersectPTATO
+Mar-15 11:19:52.698 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.699 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.703 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name short_variants:intersect_ptato_vcfs:bgzip
+Mar-15 11:19:52.704 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.705 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.716 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:intersect_ptato_vcfs:tabix
+Mar-15 11:19:52.718 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.718 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.766 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:mergePtatoVcfs` matches labels `mergePtatoVcfs` for process with name short_variants:merge_ptato_vcfs:mergePtatoVcfs
+Mar-15 11:19:52.767 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.767 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.771 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name short_variants:merge_ptato_vcfs:bgzip
+Mar-15 11:19:52.771 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.772 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.774 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:merge_ptato_vcfs:tabix
+Mar-15 11:19:52.775 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.775 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.880 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:gripss_purple_linx_1_3_2_CountBamLinesApplication` matches labels `CountBamLinesApplication,gripss_purple_linx_1_3_2_CountBamLinesApplication` for process with name cnvs:get_cobalt_files:CountBamLinesApplication
+Mar-15 11:19:52.891 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.891 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.952 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:FilterCobalt` matches labels `FilterCobalt` for process with name cnvs:filter_cnv_files:FilterCobalt
+Mar-15 11:19:52.953 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.953 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:52.980 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:FilterBAF` matches labels `FilterBAF` for process with name cnvs:filter_cnv_files:FilterBAF
+Mar-15 11:19:52.981 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:52.981 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:53.066 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:gridss_2_13_2` matches labels `gridss,gridss_2_13_2` for process with name svs:get_gridss_vcfs:gridss
+Mar-15 11:19:53.068 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:53.068 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:53.080 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:gridss_2_13_2_AnnotateInsertedSequence` matches labels `gridss,gridss_2_13_2_AnnotateInsertedSequence` for process with name svs:get_gridss_vcfs:AnnotateInsertedSequence
+Mar-15 11:19:53.107 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:53.107 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:53.142 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:gripss_purple_linx_1_3_2_GripssApplicationKt` matches labels `GripssApplicationKt,gripss_purple_linx_1_3_2_GripssApplicationKt` for process with name svs:get_gripss_vcfs:GripssApplicationKt
+Mar-15 11:19:53.152 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:53.153 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:53.190 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:gripss_purple_linx_1_3_2_GripssHardFilterApplicationKt` matches labels `GripssHardFilterApplicationKt,gripss_purple_linx_1_3_2_GripssHardFilterApplicationKt` for process with name svs:get_gripss_vcfs:GripssHardFilterApplicationKt
+Mar-15 11:19:53.191 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:53.192 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:53.344 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:FilterGripss` matches labels `FilterGripss` for process with name svs:combine_cnvs_svs:FilterGripss
+Mar-15 11:19:53.346 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:53.346 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:53.402 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:IntegrateSvFiles` matches labels `IntegrateSvFiles` for process with name svs:combine_cnvs_svs:IntegrateSvFiles
+Mar-15 11:19:53.403 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:53.403 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:53.477 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:CreateSvPlots` matches labels `CreateSvPlots` for process with name svs:combine_cnvs_svs:CreateSvPlots
+Mar-15 11:19:53.485 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:53.485 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:53.561 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:CreateCircosConfig` matches labels `CreateCircosConfig` for process with name svs:combine_cnvs_svs:CreateCircosConfig
+Mar-15 11:19:53.562 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:53.562 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:53.618 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:Circos` matches labels `Circos,circos` for process with name svs:combine_cnvs_svs:Circos
+Mar-15 11:19:53.633 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:53.633 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:53.647 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:GATK_3_8_1_CallableLoci` matches labels `GATK_3_8_1,GATK_3_8_1_CallableLoci` for process with name qc:CallableLoci
+Mar-15 11:19:53.648 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:53.648 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:53.688 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:GATK_4_2_6_1_CollectAlignmentSummaryMetrics` matches labels `GATK_4_2_6_1,GATK_4_2_6_1_CollectAlignmentSummaryMetrics` for process with name qc:CollectAlignmentSummaryMetrics
+Mar-15 11:19:53.689 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:53.689 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:53.732 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:GATK_4_2_6_1_CollectWGSMetrics` matches labels `GATK_4_2_6_1,GATK_4_2_6_1_CollectWGSMetrics` for process with name qc:CollectWGSMetrics
+Mar-15 11:19:53.734 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:53.734 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:53.760 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Mar-15 11:19:53.760 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Mar-15 11:19:53.776 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: mergePtatoVcfs, short_variants:indels:filter_ptato_vcfs:bgzip, Circos, QCreport, short_variants:get_context_beds:sort, short_variants:merge_ptato_vcfs:bgzip, short_variants:intersect_ptato_vcfs:bgzip, tabix, merge, gridss, intersectAll, get_gzipped_vcfs:bgzip, short_variants:get_ab_tables:tabix, short_variants:indels:filter_ptato_vcfs:ptatoIndelFilter, short_variants:get_somatic_vcfs:bgzip, bgzip, svs:combine_cnvs_svs:Circos, short_variants:indels:filter_ptato_vcfs:tabix, SnpSift, ptatoIndelFilter, get_germline_vcfs:bgzip, train_indel_rf, ptatoFilter, get_indexed_bams:Index, ptatoCutoff, short_variants:merge_ptato_vcfs:tabix, short_variants:intersect_ptato_vcfs:tabix, CreateCircosConfig, smurf, qc:CallableLoci, GetSampleName, mergeAll, svs:combine_cnvs_svs:CreateCircosConfig, get_germline_vcfs:SnpSift, CountBamLinesApplication, short_variants:snvs:filter_ptato_vcfs:ptatoCutoff, CallableLoci, createIndelRfTable, short_variants:indels:get_ptato_vcfs:excludeIndels, short_variants:indels:get_ptato_vcfs:tabix, createIndelExcludeIndelList, cnvs:get_cobalt_files:CountBamLinesApplication, train_snv_rf, GripssHardFilterApplicationKt, short_variants:merge_features:mergeAll, FilterCobalt, svs:combine_cnvs_svs:IntegrateSvFiles, intersectExcludeIndelList, short_variants:get_somatic_vcfs:tabix, short_variants:snvs:filter_ptato_vcfs:tabix, short_variants:closest_feature:merge, short_variants:get_walker_vcfs:tabix, createSnvRfTable, createABtable, mergeABtable, qc:QCreport, Index, svs:combine_cnvs_svs:CreateSvPlots, short_variants:intersect_ptato_vcfs:intersectPTATO, cnvs:filter_cnv_files:FilterCobalt, cnvs:filter_cnv_files:FilterBAF, short_variants:snvs:get_ptato_vcfs:bgzip, test_snv_rf, short_variants:indels:get_ptato_vcfs:bgzip, IntegrateSvFiles, GripssApplicationKt, short_variants:snvs:filter_ptato_vcfs:ptatoFilter, short_variants:closest_feature:closest, short_variants:snvs:get_ptato_vcfs:test_snv_rf, short_variants:snvs:get_snvs_rf_tables:createSnvRfTable, excludeIndels, short_variants:snvs:filter_ptato_vcfs:bgzip, FilterBAF, short_variants:get_walker_vcfs:walker, short_variants:intersect_feature:merge, sort, short_variants:get_ab_tables:shapeit, walker, FilterGripss, svs:get_gridss_vcfs:AnnotateInsertedSequence, CollectWGSMetrics, short_variants:merge_features:intersectAll, short_variants:get_context_beds:getContext, short_variants:get_somatic_vcfs:smurf, short_variants:get_walker_vcfs:bgzip, CreateSvPlots, qc:CollectWGSMetrics, svs:combine_cnvs_svs:FilterGripss, short_variants:snvs:get_ptato_vcfs:tabix, svs:get_gripss_vcfs:GripssApplicationKt, short_variants:merge_ptato_vcfs:mergePtatoVcfs, svs:get_gridss_vcfs:gridss, test_indel_rf, SplitVcfs, short_variants:SplitVcfs, shapeit, intersect, intersectPTATO, short_variants:get_ab_tables:createABtable, short_variants:intersect_feature:intersect, get_indexed_bams:GetSampleName, get_germline_vcfs:tabix, AnnotateInsertedSequence, CollectAlignmentSummaryMetrics, short_variants:get_ab_tables:mergeABtable, getContext, get_gzipped_vcfs:tabix, qc:CollectAlignmentSummaryMetrics, closest, svs:get_gripss_vcfs:GripssHardFilterApplicationKt
+Mar-15 11:19:53.777 [main] DEBUG nextflow.Session - Ignite dataflow network (75)
+Mar-15 11:19:53.838 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > get_gzipped_vcfs:bgzip
+Mar-15 11:19:53.823 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/VCF/; pattern: */*.{vcf,vcf.gz}; options: [type:file]
+Mar-15 11:19:53.852 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > get_gzipped_vcfs:tabix
+Mar-15 11:19:53.853 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > get_indexed_bams:Index
+Mar-15 11:19:53.853 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > get_indexed_bams:GetSampleName
+Mar-15 11:19:53.854 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > get_germline_vcfs:SnpSift
+Mar-15 11:19:53.854 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > get_germline_vcfs:bgzip
+Mar-15 11:19:53.854 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > get_germline_vcfs:tabix
+Mar-15 11:19:53.854 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_somatic_vcfs:smurf
+Mar-15 11:19:53.854 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_somatic_vcfs:bgzip
+Mar-15 11:19:53.854 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_somatic_vcfs:tabix
+Mar-15 11:19:53.854 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_ab_tables:shapeit
+Mar-15 11:19:53.855 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_ab_tables:tabix
+Mar-15 11:19:53.855 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_ab_tables:createABtable
+Mar-15 11:19:53.855 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_ab_tables:mergeABtable
+Mar-15 11:19:53.855 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_walker_vcfs:walker
+Mar-15 11:19:53.870 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_walker_vcfs:bgzip
+Mar-15 11:19:53.871 [PathVisitor-2] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/BAMS/; pattern: */*.bam; options: [type:file]
+Mar-15 11:19:53.875 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_walker_vcfs:tabix
+Mar-15 11:19:53.875 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_context_beds:getContext
+Mar-15 11:19:53.890 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_context_beds:sort
+Mar-15 11:19:53.890 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:closest_feature:closest
+Mar-15 11:19:53.890 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:closest_feature:merge
+Mar-15 11:19:53.890 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:intersect_feature:intersect
+Mar-15 11:19:53.890 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:intersect_feature:merge
+Mar-15 11:19:53.891 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:merge_features:intersectAll
+Mar-15 11:19:53.891 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:merge_features:mergeAll
+Mar-15 11:19:53.891 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:SplitVcfs
+Mar-15 11:19:53.891 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:snvs:get_snvs_rf_tables:createSnvRfTable
+Mar-15 11:19:53.891 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:snvs:get_ptato_vcfs:test_snv_rf
+Mar-15 11:19:53.891 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:snvs:get_ptato_vcfs:bgzip
+Mar-15 11:19:53.891 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:snvs:get_ptato_vcfs:tabix
+Mar-15 11:19:53.891 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:snvs:filter_ptato_vcfs:ptatoCutoff
+Mar-15 11:19:53.891 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:snvs:filter_ptato_vcfs:ptatoFilter
+Mar-15 11:19:53.891 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:snvs:filter_ptato_vcfs:bgzip
+Mar-15 11:19:53.891 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:snvs:filter_ptato_vcfs:tabix
+Mar-15 11:19:53.891 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:indels:get_ptato_vcfs:excludeIndels
+Mar-15 11:19:53.892 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:indels:get_ptato_vcfs:bgzip
+Mar-15 11:19:53.892 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:indels:get_ptato_vcfs:tabix
+Mar-15 11:19:53.892 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:indels:filter_ptato_vcfs:ptatoIndelFilter
+Mar-15 11:19:53.892 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:indels:filter_ptato_vcfs:bgzip
+Mar-15 11:19:53.892 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:indels:filter_ptato_vcfs:tabix
+Mar-15 11:19:53.892 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:intersect_ptato_vcfs:intersectPTATO
+Mar-15 11:19:53.892 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:intersect_ptato_vcfs:bgzip
+Mar-15 11:19:53.892 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:intersect_ptato_vcfs:tabix
+Mar-15 11:19:53.892 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:merge_ptato_vcfs:mergePtatoVcfs
+Mar-15 11:19:53.892 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:merge_ptato_vcfs:bgzip
+Mar-15 11:19:53.892 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:merge_ptato_vcfs:tabix
+Mar-15 11:19:53.893 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > cnvs:get_cobalt_files:CountBamLinesApplication
+Mar-15 11:19:53.893 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > cnvs:filter_cnv_files:FilterCobalt
+Mar-15 11:19:53.893 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > cnvs:filter_cnv_files:FilterBAF
+Mar-15 11:19:53.900 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:get_gridss_vcfs:gridss
+Mar-15 11:19:53.904 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:get_gridss_vcfs:AnnotateInsertedSequence
+Mar-15 11:19:53.904 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:get_gripss_vcfs:GripssApplicationKt
+Mar-15 11:19:53.905 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:get_gripss_vcfs:GripssHardFilterApplicationKt
+Mar-15 11:19:53.905 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:combine_cnvs_svs:FilterGripss
+Mar-15 11:19:53.905 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:combine_cnvs_svs:IntegrateSvFiles
+Mar-15 11:19:53.905 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:combine_cnvs_svs:CreateSvPlots
+Mar-15 11:19:53.910 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:combine_cnvs_svs:CreateCircosConfig
+Mar-15 11:19:53.912 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:combine_cnvs_svs:Circos
+Mar-15 11:19:53.912 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:CallableLoci
+Mar-15 11:19:53.912 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:CollectAlignmentSummaryMetrics
+Mar-15 11:19:53.912 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:CollectWGSMetrics
+Mar-15 11:19:53.913 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:QCreport
+Mar-15 11:19:53.913 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Mar-15 11:19:53.913 [main] DEBUG nextflow.Session - Session await
+Mar-15 11:19:54.567 [Actor Thread 6] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://quay.io/biocontainers/htslib:1.15--h9753748_0; path=/hpc/local/CentOS7/pmc_vanboxtel/singularity_cache/quay.io-biocontainers-htslib-1.15--h9753748_0.img
+Mar-15 11:19:54.571 [Actor Thread 8] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://broadinstitute/gatk:4.2.6.1; path=/hpc/local/CentOS7/pmc_vanboxtel/singularity_cache/broadinstitute-gatk-4.2.6.1.img
+Mar-15 11:19:55.345 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [83/97451f] Cached process > get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL12)
+Mar-15 11:19:55.347 [Actor Thread 22] INFO  nextflow.processor.TaskProcessor - [14/d3b660] Cached process > get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL11)
+Mar-15 11:19:55.348 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [d9/cbe2bf] Cached process > get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL1)
+Mar-15 11:19:55.348 [Actor Thread 19] INFO  nextflow.processor.TaskProcessor - [3d/11ef2e] Cached process > get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL2)
+Mar-15 11:19:55.349 [Actor Thread 23] INFO  nextflow.processor.TaskProcessor - [24/f54526] Cached process > get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-MSCBULK)
+Mar-15 11:19:55.349 [Actor Thread 11] INFO  nextflow.processor.TaskProcessor - [27/e48296] Cached process > get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-ALLBULK)
+Mar-15 11:19:55.350 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [07/093e6d] Cached process > get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL8)
+Mar-15 11:19:55.351 [Actor Thread 16] INFO  nextflow.processor.TaskProcessor - [6f/3948fe] Cached process > get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL6)
+Mar-15 11:19:55.353 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [b1/a20645] Cached process > get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL10)
+Mar-15 11:19:55.360 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [08/651e9e] Cached process > get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)
+Mar-15 11:19:55.360 [Actor Thread 24] INFO  nextflow.processor.TaskProcessor - [fb/e17a41] Cached process > get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL5)
+Mar-15 11:19:55.360 [Actor Thread 20] INFO  nextflow.processor.TaskProcessor - [19/80b13d] Cached process > get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL9)
+Mar-15 11:19:55.361 [Actor Thread 9] INFO  nextflow.processor.TaskProcessor - [8a/545e19] Cached process > get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL7)
+Mar-15 11:19:55.360 [Actor Thread 14] INFO  nextflow.processor.TaskProcessor - [82/6699b6] Cached process > get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL3)
+Mar-15 11:19:55.361 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [2c/579aa1] Cached process > get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL4)
+Mar-15 11:19:56.086 [Actor Thread 8] INFO  nextflow.processor.TaskProcessor - [11/27591c] Cached process > get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)
+Mar-15 11:19:56.530 [Actor Thread 14] INFO  nextflow.processor.TaskProcessor - [f7/0bf2d4] Cached process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL9)
+Mar-15 11:19:56.549 [Actor Thread 24] INFO  nextflow.processor.TaskProcessor - [f7/e59739] Cached process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-MSCBULK)
+Mar-15 11:19:56.551 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [1a/5a3771] Cached process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL6)
+Mar-15 11:19:56.563 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [fa/32819e] Cached process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL12)
+Mar-15 11:19:56.565 [Actor Thread 11] INFO  nextflow.processor.TaskProcessor - [d8/08820e] Cached process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL10)
+Mar-15 11:19:56.568 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [4f/3e0933] Cached process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL3)
+Mar-15 11:19:56.569 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [54/c59bd7] Cached process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL4)
+Mar-15 11:19:56.571 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [63/e00831] Cached process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL7)
+Mar-15 11:19:56.572 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [1f/fddcba] Cached process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-ALLBULK)
+Mar-15 11:19:56.576 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [43/9ed997] Cached process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL11)
+Mar-15 11:19:56.578 [Actor Thread 19] INFO  nextflow.processor.TaskProcessor - [4c/7f8ab2] Cached process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL8)
+Mar-15 11:19:56.615 [Actor Thread 9] INFO  nextflow.processor.TaskProcessor - [f9/d44470] Cached process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL2)
+Mar-15 11:19:56.621 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [55/ee19a3] Cached process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL5)
+Mar-15 11:19:56.659 [Actor Thread 22] INFO  nextflow.processor.TaskProcessor - [d3/e366ee] Cached process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL1)
+Mar-15 11:19:56.675 [Actor Thread 55] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://quay.io/biocontainers/gatk:3.8--hdfd78af_11; path=/hpc/local/CentOS7/pmc_vanboxtel/singularity_cache/quay.io-biocontainers-gatk-3.8--hdfd78af_11.img
+Mar-15 11:19:56.769 [Actor Thread 60] INFO  nextflow.processor.TaskProcessor - [b4/4cb0b4] Cached process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL9)
+Mar-15 11:19:56.887 [Actor Thread 2] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://gridss/gridss:2.13.2; path=/hpc/local/CentOS7/pmc_vanboxtel/singularity_cache/gridss-gridss-2.13.2.img
+Mar-15 11:19:56.888 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [94/f0b022] Cached process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL5)
+Mar-15 11:19:56.895 [Actor Thread 19] INFO  nextflow.processor.TaskProcessor - [b6/155ce4] Cached process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL1)
+Mar-15 11:19:56.921 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [88/3effba] Cached process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL2)
+Mar-15 11:19:56.925 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [44/4c6526] Cached process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL11)
+Mar-15 11:19:56.937 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [1b/c4c54d] Cached process > qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL11)
+Mar-15 11:19:56.971 [Actor Thread 53] INFO  nextflow.processor.TaskProcessor - [db/406d3f] Cached process > qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL10)
+Mar-15 11:19:57.000 [Actor Thread 53] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://davelabhub/snpsift:4.3.1t--1; path=/hpc/local/CentOS7/pmc_vanboxtel/singularity_cache/davelabhub-snpsift-4.3.1t--1.img
+Mar-15 11:19:57.012 [Actor Thread 53] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://vanboxtelbioinformatics/smurf:3.0.1; path=/hpc/local/CentOS7/pmc_vanboxtel/singularity_cache/vanboxtelbioinformatics-smurf-3.0.1.img
+Mar-15 11:19:57.020 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [e8/a2733c] Cached process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL7)
+Mar-15 11:19:57.040 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [0f/bb3e03] Cached process > qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL5)
+Mar-15 11:19:57.048 [Actor Thread 58] INFO  nextflow.processor.TaskProcessor - [b9/e2974f] Cached process > qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL8)
+Mar-15 11:19:57.068 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [8c/e07f41] Cached process > svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL7)
+Mar-15 11:19:57.081 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [7e/53fc0a] Cached process > svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL6)
+Mar-15 11:19:57.094 [Actor Thread 19] INFO  nextflow.processor.TaskProcessor - [9a/93856e] Cached process > svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL5)
+Mar-15 11:19:57.114 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [96/8526b7] Cached process > svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL2)
+Mar-15 11:19:57.216 [Actor Thread 63] INFO  nextflow.processor.TaskProcessor - [03/be509c] Cached process > get_germline_vcfs:SnpSift (SnpSift pt2283D)
+Mar-15 11:19:57.226 [Actor Thread 73] INFO  nextflow.processor.TaskProcessor - [51/3b3905] Cached process > svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL3)
+Mar-15 11:19:57.237 [Actor Thread 55] INFO  nextflow.processor.TaskProcessor - [7c/8b64a2] Cached process > svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL9)
+Mar-15 11:19:57.240 [Actor Thread 69] INFO  nextflow.processor.TaskProcessor - [d1/a4428b] Cached process > svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL8)
+Mar-15 11:19:57.270 [Actor Thread 62] INFO  nextflow.processor.TaskProcessor - [51/b637a0] Cached process > svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL12)
+Mar-15 11:19:57.270 [Actor Thread 71] INFO  nextflow.processor.TaskProcessor - [01/ae1299] Cached process > svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL1)
+Mar-15 11:19:57.326 [Actor Thread 76] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://gridss/gridss-purple-linx:1.3.2; path=/hpc/local/CentOS7/pmc_vanboxtel/singularity_cache/gridss-gridss-purple-linx-1.3.2.img
+Mar-15 11:19:57.408 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [48/a137fc] Cached process > qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL6)
+Mar-15 11:19:57.538 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [48/62892e] Cached process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL3)
+Mar-15 11:19:57.542 [Actor Thread 24] INFO  nextflow.processor.TaskProcessor - [6f/af2593] Cached process > qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL1)
+Mar-15 11:19:57.553 [Actor Thread 64] INFO  nextflow.processor.TaskProcessor - [11/56bd5b] Cached process > qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL7)
+Mar-15 11:19:57.574 [Actor Thread 22] INFO  nextflow.processor.TaskProcessor - [bd/85f178] Cached process > svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-ALLBULK)
+Mar-15 11:19:57.598 [Actor Thread 11] INFO  nextflow.processor.TaskProcessor - [4d/398819] Cached process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL4)
+Mar-15 11:19:57.599 [Actor Thread 65] INFO  nextflow.processor.TaskProcessor - [d1/77638c] Cached process > qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL4)
+Mar-15 11:19:57.600 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [e5/03e7b8] Cached process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-ALLBULK)
+Mar-15 11:19:57.601 [Actor Thread 51] INFO  nextflow.processor.TaskProcessor - [8e/2fbe01] Cached process > qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-ALLBULK)
+Mar-15 11:19:57.601 [Actor Thread 9] INFO  nextflow.processor.TaskProcessor - [7f/cb3cd4] Cached process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-MSCBULK)
+Mar-15 11:19:57.602 [Actor Thread 57] INFO  nextflow.processor.TaskProcessor - [b6/c3236b] Cached process > qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL12)
+Mar-15 11:19:57.609 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [77/063d7c] Cached process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL6)
+Mar-15 11:19:57.616 [Actor Thread 56] INFO  nextflow.processor.TaskProcessor - [64/c883cc] Cached process > qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL9)
+Mar-15 11:19:57.617 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [6f/52f92b] Cached process > qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-MSCBULK)
+Mar-15 11:19:57.622 [Actor Thread 61] INFO  nextflow.processor.TaskProcessor - [dd/4141ee] Cached process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL12)
+Mar-15 11:19:57.630 [Actor Thread 59] INFO  nextflow.processor.TaskProcessor - [17/50248c] Cached process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL10)
+Mar-15 11:19:57.653 [Actor Thread 66] INFO  nextflow.processor.TaskProcessor - [ef/014f9d] Cached process > qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL3)
+Mar-15 11:19:57.653 [Actor Thread 2] INFO  nextflow.processor.TaskProcessor - [31/7de63c] Cached process > svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL4)
+Mar-15 11:19:57.676 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [5b/b7bba7] Cached process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL8)
+Mar-15 11:19:57.682 [Actor Thread 25] INFO  nextflow.processor.TaskProcessor - [03/ed41f0] Cached process > qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL2)
+Mar-15 11:19:57.739 [Actor Thread 24] INFO  nextflow.processor.TaskProcessor - [0b/050abf] Cached process > get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)
+Mar-15 11:19:57.779 [Actor Thread 75] INFO  nextflow.processor.TaskProcessor - [e9/f172db] Cached process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL6)
+Mar-15 11:19:57.784 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [20/6b279c] Cached process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL8)
+Mar-15 11:19:57.786 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [e7/649c47] Cached process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL9)
+Mar-15 11:19:57.788 [Actor Thread 82] INFO  nextflow.processor.TaskProcessor - [be/e6f31b] Cached process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL4)
+Mar-15 11:19:57.790 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [f3/3617d0] Cached process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-ALLBULK)
+Mar-15 11:19:57.791 [Actor Thread 68] INFO  nextflow.processor.TaskProcessor - [b5/bd5809] Cached process > short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)
+Mar-15 11:19:57.792 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [a9/e62fd0] Cached process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL1)
+Mar-15 11:19:57.793 [Actor Thread 78] INFO  nextflow.processor.TaskProcessor - [24/54b3d9] Cached process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL5)
+Mar-15 11:19:57.794 [Actor Thread 19] INFO  nextflow.processor.TaskProcessor - [9f/5608ae] Cached process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL12)
+Mar-15 11:19:57.795 [Actor Thread 77] INFO  nextflow.processor.TaskProcessor - [ea/96ab28] Cached process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL11)
+Mar-15 11:19:57.796 [Actor Thread 70] INFO  nextflow.processor.TaskProcessor - [0d/7fe042] Cached process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL10)
+Mar-15 11:19:57.820 [Actor Thread 55] INFO  nextflow.processor.TaskProcessor - [2d/5e024b] Cached process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL3)
+Mar-15 11:19:57.820 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [7d/6830a5] Cached process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL2)
+Mar-15 11:19:57.826 [Actor Thread 80] INFO  nextflow.processor.TaskProcessor - [88/22deeb] Cached process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL7)
+Mar-15 11:19:58.282 [Actor Thread 25] INFO  nextflow.processor.TaskProcessor - [3f/f61069] Cached process > get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)
+Mar-15 11:19:58.426 [Actor Thread 52] DEBUG nextflow.processor.TaskProcessor - Process qc:QCreport > collision check staging file names: [pt2283D-DX1BM-TALL8.wgs_metrics.txt:1, pt2283D-DX1BM-TALL9.alignment_summary_metrics.txt:1, pt2283D-DX1BM-TALL4.alignment_summary_metrics.txt:1, pt2283D-DX1BM-TALL1.alignment_summary_metrics.txt:1, pt2283D-DX1BM-TALL11.alignment_summary_metrics.txt:1, pt2283D-DX1BM-MSCBULK.wgs_metrics.txt:1, pt2283D-DX1BM-TALL7.alignment_summary_metrics.txt:1, pt2283D-DX1BM-TALL5.wgs_metrics.txt:1, pt2283D-DX1BM-TALL2.wgs_metrics.txt:1, pt2283D-DX1BM-TALL6.wgs_metrics.txt:1, pt2283D-DX1BM-TALL3.wgs_metrics.txt:1, pt2283D-DX1BM-TALL9.wgs_metrics.txt:1, pt2283D-DX1BM-TALL8.alignment_summary_metrics.txt:1, pt2283D-DX1BM-TALL10.wgs_metrics.txt:1, pt2283D-DX1BM-TALL2.alignment_summary_metrics.txt:1, pt2283D-DX1BM-TALL5.alignment_summary_metrics.txt:1, pt2283D-DX1BM-TALL12.alignment_summary_metrics.txt:2, pt2283D-DX1BM-ALLBULK.alignment_summary_metrics.txt:1, pt2283D-DX1BM-TALL4.wgs_metrics.txt:1, pt2283D-DX1BM-TALL10.alignment_summary_metrics.txt:1, pt2283D-DX1BM-TALL11.wgs_metrics.txt:1, pt2283D-DX1BM-TALL3.alignment_summary_metrics.txt:1, pt2283D-DX1BM-MSCBULK.alignment_summary_metrics.txt:1, pt2283D-DX1BM-TALL12.wgs_metrics.txt:1, pt2283D-DX1BM-TALL6.alignment_summary_metrics.txt:1, pt2283D-DX1BM-TALL7.wgs_metrics.txt:1, pt2283D-DX1BM-ALLBULK.wgs_metrics.txt:1]
+Mar-15 11:19:58.495 [Actor Thread 52] ERROR nextflow.processor.TaskProcessor - Error executing process > 'qc:QCreport (QCreport)'
+
+Caused by:
+  Process `qc:QCreport` input file name collision -- There are multiple input files for each of the following file names: pt2283D-DX1BM-TALL12.alignment_summary_metrics.txt
+
+
+Tip: when you have fixed the problem you can continue the execution adding the option `-resume` to the run command line
+Mar-15 11:19:58.543 [Actor Thread 52] DEBUG nextflow.Session - Session aborted -- Cause: Process `qc:QCreport` input file name collision -- There are multiple input files for each of the following file names: pt2283D-DX1BM-TALL12.alignment_summary_metrics.txt
+Mar-15 11:19:58.904 [Actor Thread 52] DEBUG nextflow.Session - The following nodes are still active:
+[process] short_variants:get_somatic_vcfs:bgzip
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_somatic_vcfs:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_ab_tables:shapeit
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_ab_tables:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_ab_tables:createABtable
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_ab_tables:mergeABtable
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_walker_vcfs:walker
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_walker_vcfs:bgzip
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_walker_vcfs:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_context_beds:getContext
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_context_beds:sort
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:closest_feature:closest
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:closest_feature:merge
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:intersect_feature:intersect
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:intersect_feature:merge
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:merge_features:intersectAll
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:merge_features:mergeAll
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:SplitVcfs
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:snvs:get_snvs_rf_tables:createSnvRfTable
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:snvs:get_ptato_vcfs:test_snv_rf
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:snvs:get_ptato_vcfs:bgzip
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:snvs:get_ptato_vcfs:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:snvs:filter_ptato_vcfs:ptatoCutoff
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:snvs:filter_ptato_vcfs:ptatoFilter
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:snvs:filter_ptato_vcfs:bgzip
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:snvs:filter_ptato_vcfs:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:indels:get_ptato_vcfs:excludeIndels
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:indels:get_ptato_vcfs:bgzip
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:indels:get_ptato_vcfs:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:indels:filter_ptato_vcfs:ptatoIndelFilter
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:indels:filter_ptato_vcfs:bgzip
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:indels:filter_ptato_vcfs:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:intersect_ptato_vcfs:intersectPTATO
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:intersect_ptato_vcfs:bgzip
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:intersect_ptato_vcfs:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:merge_ptato_vcfs:mergePtatoVcfs
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:merge_ptato_vcfs:bgzip
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:merge_ptato_vcfs:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] cnvs:filter_cnv_files:FilterCobalt
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] cnvs:filter_cnv_files:FilterBAF
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] svs:get_gridss_vcfs:AnnotateInsertedSequence
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] svs:get_gripss_vcfs:GripssApplicationKt
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] svs:get_gripss_vcfs:GripssHardFilterApplicationKt
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] svs:combine_cnvs_svs:FilterGripss
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] svs:combine_cnvs_svs:IntegrateSvFiles
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] svs:combine_cnvs_svs:CreateSvPlots
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] svs:combine_cnvs_svs:CreateCircosConfig
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] svs:combine_cnvs_svs:Circos
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] qc:QCreport
+  status=ACTIVE
+  port 0: (queue) closed; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+Mar-15 11:19:58.960 [main] DEBUG nextflow.Session - Session await > all process finished
+Mar-15 11:19:58.960 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Mar-15 11:19:58.991 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=86; pendingCount=2; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=43d 1h 28m 7s;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Mar-15 11:19:59.016 [main] DEBUG nextflow.trace.TraceFileObserver - Flow completing -- flushing trace file
+Mar-15 11:19:59.071 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+Mar-15 11:20:00.425 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":{"mean":37.94,"min":33.8,"q1":37.45,"q2":38.15,"q3":38.92,"max":41.2,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL6)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL4)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-ALLBULK)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL11)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL2)"},"process":"GetSampleName","mem":{"mean":211542016,"min":207007744,"q1":208700416,"q2":210100224,"q3":211384320,"max":221122560,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL7)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL5)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL2)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL3)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL8)"},"memUsage":{"mean":1.97,"min":1.93,"q1":1.94,"q2":1.96,"q3":1.97,"max":2.06,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL7)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL5)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL2)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL3)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL8)"},"timeUsage":{"mean":3.87,"min":3.85,"q1":3.86,"q2":3.87,"q3":3.88,"max":3.88,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL5)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL3)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL4)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-ALLBULK)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL10)"},"vmem":{"mean":9032763977.14,"min":8992669696,"q1":9017788416,"q2":9047103488,"q3":9047179264,"max":9047207936,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL6)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL8)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-MSCBULK)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL1)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL11)"},"reads":{"mean":21685425.79,"min":21684160,"q1":21684208.25,"q2":21686286.5,"q3":21686287.75,"max":21686462,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL6)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL11)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-MSCBULK)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL8)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL1)"},"cpu":{"mean":37.94,"min":33.8,"q1":37.45,"q2":38.15,"q3":38.92,"max":41.2,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL6)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL4)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-ALLBULK)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL11)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL2)"},"time":{"mean":23211.93,"min":23074,"q1":23167,"q2":23240.5,"q3":23266.25,"max":23296,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL5)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL3)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL4)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-ALLBULK)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL10)"},"writes":{"mean":699272,"min":699270,"q1":699270,"q2":699270,"q3":699274,"max":699278,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL9)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-ALLBULK)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL7)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL2)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt2283D-DX1BM-TALL10)"}},{"cpuUsage":{"mean":88.7,"min":83.9,"q1":86.3,"q2":88.7,"q3":91.1,"max":93.5,"minLabel":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"process":"bgzip","mem":{"mean":3645440,"min":3645440,"q1":3645440,"q2":3645440,"q3":3645440,"max":3645440,"minLabel":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"memUsage":{"mean":0.03,"min":0.03,"q1":0.03,"q2":0.03,"q3":0.03,"max":0.03,"minLabel":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"timeUsage":{"mean":1.9,"min":1.03,"q1":1.47,"q2":1.9,"q3":2.34,"max":2.78,"minLabel":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"vmem":{"mean":12263424,"min":12263424,"q1":12263424,"q2":12263424,"q3":12263424,"max":12263424,"minLabel":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"reads":{"mean":4742784615.5,"min":2973503655,"q1":3858144135.25,"q2":4742784615.5,"q3":5627425095.75,"max":6512065576,"minLabel":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"cpu":{"mean":88.7,"min":83.9,"q1":86.3,"q2":88.7,"q3":91.1,"max":93.5,"minLabel":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"time":{"mean":68500,"min":37000,"q1":52750,"q2":68500,"q3":84250,"max":100000,"minLabel":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"writes":{"mean":998282045.5,"min":650327486,"q1":824304765.75,"q2":998282045.5,"q3":1172259325.25,"max":1346236605,"minLabel":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:bgzip (bgzip 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"}},{"cpuUsage":{"mean":97.7,"min":97.4,"q1":97.55,"q2":97.7,"q3":97.85,"max":98,"minLabel":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"process":"tabix","mem":{"mean":15394816,"min":14835712,"q1":15115264,"q2":15394816,"q3":15674368,"max":15953920,"minLabel":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"memUsage":{"mean":0.14,"min":0.14,"q1":0.14,"q2":0.14,"q3":0.15,"max":0.15,"minLabel":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"timeUsage":{"mean":0.44,"min":0.33,"q1":0.39,"q2":0.44,"q3":0.5,"max":0.56,"minLabel":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"vmem":{"mean":25354240,"min":24743936,"q1":25049088,"q2":25354240,"q3":25659392,"max":25964544,"minLabel":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"reads":{"mean":998358273.5,"min":650403884,"q1":824381078.75,"q2":998358273.5,"q3":1172335468.25,"max":1346312663,"minLabel":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"cpu":{"mean":97.7,"min":97.4,"q1":97.55,"q2":97.7,"q3":97.85,"max":98,"minLabel":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"time":{"mean":16000,"min":12000,"q1":14000,"q2":16000,"q3":18000,"max":20000,"minLabel":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"writes":{"mean":1868304,"min":1685448,"q1":1776876,"q2":1868304,"q3":1959732,"max":2051160,"minLabel":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:tabix (tabix 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"}},{"cpuUsage":{"mean":93.15,"min":89.6,"q1":90.33,"q2":93.05,"q3":94.48,"max":99.8,"minLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL4)","maxLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL1)","q1Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL2)","q2Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL11)","q3Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL12)"},"process":"CollectWGSMetrics","mem":{"mean":7982060397.71,"min":7729500160,"q1":7848346624,"q2":7923544064,"q3":8055256064,"max":8422256640,"minLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL1)","maxLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-MSCBULK)","q1Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL6)","q2Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL4)","q3Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL2)"},"memUsage":{"mean":37.17,"min":35.99,"q1":36.55,"q2":36.9,"q3":37.51,"max":39.22,"minLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL1)","maxLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-MSCBULK)","q1Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL6)","q2Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL4)","q3Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL2)"},"timeUsage":{"mean":17.2,"min":12.48,"q1":13.02,"q2":14.65,"q3":21.33,"max":29.94,"minLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL7)","maxLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-ALLBULK)","q1Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL5)","q2Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL4)","q3Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL11)"},"vmem":{"mean":20176871716.57,"min":20176814080,"q1":20176818176,"q2":20176898048,"q3":20176908288,"max":20176920576,"minLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL3)","maxLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL5)","q1Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL8)","q2Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL11)","q3Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL6)"},"reads":{"mean":34379491215.14,"min":25227390157,"q1":27153450017.75,"q2":28818872826.5,"q3":43304135883,"max":51599449997,"minLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL8)","maxLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL10)","q1Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL2)","q2Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL3)","q3Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-MSCBULK)"},"cpu":{"mean":93.15,"min":89.6,"q1":90.33,"q2":93.05,"q3":94.48,"max":99.8,"minLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL4)","maxLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL1)","q1Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL2)","q2Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL11)","q3Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL12)"},"time":{"mean":4953252.64,"min":3592917,"q1":3750979.25,"q2":4217915,"q3":6142958.25,"max":8622732,"minLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL7)","maxLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-ALLBULK)","q1Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL5)","q2Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL4)","q3Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL11)"},"writes":{"mean":757401.57,"min":757160,"q1":757298.5,"q2":757331.5,"q3":757533.25,"max":757679,"minLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL7)","maxLabel":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-ALLBULK)","q1Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL5)","q2Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL9)","q3Label":"qc:CollectWGSMetrics (GATK CollectWGSMetrics pt2283D-DX1BM-TALL12)"}},{"cpuUsage":{"mean":91.63,"min":75.2,"q1":85.95,"q2":94.35,"q3":98.7,"max":100.6,"minLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL4)","maxLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL1)","q1Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL10)","q2Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-ALLBULK)","q3Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL7)"},"process":"CollectAlignmentSummaryMetrics","mem":{"mean":9218111488,"min":9105829888,"q1":9212179456,"q2":9225355264,"q3":9253186560,"max":9269645312,"minLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL1)","maxLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL8)","q1Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-MSCBULK)","q2Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL6)","q3Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL5)"},"memUsage":{"mean":35.77,"min":35.34,"q1":35.75,"q2":35.8,"q3":35.91,"max":35.97,"minLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL1)","maxLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL8)","q1Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-MSCBULK)","q2Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL6)","q3Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL5)"},"timeUsage":{"mean":10.68,"min":6.9,"q1":7.94,"q2":9.23,"q3":14.15,"max":17.53,"minLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL5)","maxLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL10)","q1Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL7)","q2Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL3)","q3Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL11)"},"vmem":{"mean":24624313197.71,"min":24597704704,"q1":24628699136,"q2":24628711424,"q3":24628776960,"max":24628817920,"minLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL11)","maxLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL3)","q1Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL7)","q2Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL4)","q3Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL2)"},"reads":{"mean":34379368844.14,"min":25227214040,"q1":27153383647.5,"q2":28818771345.5,"q3":43303962351,"max":51599276398,"minLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL8)","maxLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL10)","q1Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL2)","q2Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL3)","q3Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-MSCBULK)"},"cpu":{"mean":91.63,"min":75.2,"q1":85.95,"q2":94.35,"q3":98.7,"max":100.6,"minLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL4)","maxLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL1)","q1Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL10)","q2Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-ALLBULK)","q3Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL7)"},"time":{"mean":3075454.64,"min":1986472,"q1":2285965.75,"q2":2659026.5,"q3":4076241.25,"max":5049419,"minLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL5)","maxLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL10)","q1Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL7)","q2Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL3)","q3Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL11)"},"writes":{"mean":795674.43,"min":767779,"q1":772471.25,"q2":776997.5,"q3":824869.5,"max":847051,"minLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL8)","maxLabel":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL10)","q1Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL9)","q2Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL3)","q3Label":"qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt2283D-DX1BM-TALL11)"}},{"cpuUsage":{"mean":95.36,"min":71.8,"q1":95.65,"q2":98.85,"q3":99.38,"max":100.4,"minLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-ALLBULK)","maxLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL8)","q1Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL10)","q2Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL3)","q3Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL7)"},"process":"CallableLoci","mem":{"mean":5885764169.14,"min":5716955136,"q1":5720245248,"q2":5721890816,"q3":5801085952,"max":6586413056,"minLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-ALLBULK)","maxLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL7)","q1Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL3)","q2Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL8)","q3Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL11)"},"memUsage":{"mean":27.41,"min":26.62,"q1":26.64,"q2":26.64,"q3":27.01,"max":30.67,"minLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-ALLBULK)","maxLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL7)","q1Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL3)","q2Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL8)","q3Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL11)"},"timeUsage":{"mean":21.03,"min":14.08,"q1":14.55,"q2":17.26,"q3":22.36,"max":45.16,"minLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL5)","maxLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-ALLBULK)","q1Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL4)","q2Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL6)","q3Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-MSCBULK)"},"vmem":{"mean":20096393216,"min":20096393216,"q1":20096393216,"q2":20096393216,"q3":20096393216,"max":20096393216,"minLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL11)","maxLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL2)","q1Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL8)","q2Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL7)","q3Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL12)"},"reads":{"mean":40769950762.36,"min":31696363711,"q1":33635226163.75,"q2":35287679748,"q3":49606213261.25,"max":57987191030,"minLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL8)","maxLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL10)","q1Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL2)","q2Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL3)","q3Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-MSCBULK)"},"cpu":{"mean":95.36,"min":71.8,"q1":95.65,"q2":98.85,"q3":99.38,"max":100.4,"minLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-ALLBULK)","maxLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL8)","q1Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL10)","q2Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL3)","q3Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL7)"},"time":{"mean":6056857.14,"min":4055000,"q1":4190250,"q2":4970500,"q3":6440000,"max":13007000,"minLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL5)","maxLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-ALLBULK)","q1Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL4)","q2Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL6)","q3Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-MSCBULK)"},"writes":{"mean":401210383.79,"min":94085593,"q1":297351127.25,"q2":478866467.5,"q3":526488371.25,"max":541274380,"minLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-ALLBULK)","maxLabel":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL4)","q1Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL12)","q2Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL1)","q3Label":"qc:CallableLoci (GATK CallableLoci pt2283D-DX1BM-TALL7)"}},{"cpuUsage":{"mean":75.81,"min":69.54,"q1":71.51,"q2":76.34,"q3":79.72,"max":81.7,"minLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-ALLBULK)","maxLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL8)","q1Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL4)","q2Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL12)","q3Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL1)"},"process":"gridss","mem":{"mean":18680438784,"min":18558771200,"q1":18644781056,"q2":18663563264,"q3":18728257536,"max":18814939136,"minLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-ALLBULK)","maxLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL1)","q1Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL6)","q2Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL12)","q3Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL7)"},"memUsage":{"mean":86.99,"min":86.42,"q1":86.82,"q2":86.91,"q3":87.21,"max":87.61,"minLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-ALLBULK)","maxLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL1)","q1Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL6)","q2Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL12)","q3Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL7)"},"timeUsage":{"mean":20.05,"min":10.15,"q1":15.18,"q2":19.82,"q3":23.51,"max":36,"minLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-ALLBULK)","maxLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL12)","q1Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL1)","q2Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL9)","q3Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL5)"},"vmem":{"mean":31431258484.36,"min":29466611712,"q1":29466611712,"q2":29466611712,"q3":30061885440,"max":45020778496,"minLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL7)","maxLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL1)","q1Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL5)","q2Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL12)","q3Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL4)"},"reads":{"mean":730716897407.27,"min":627343061151,"q1":671469420026,"q2":708326117328,"q3":728085473228,"max":1068949497122,"minLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-ALLBULK)","maxLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL12)","q1Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL8)","q2Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL5)","q3Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL4)"},"cpu":{"mean":606.49,"min":556.3,"q1":572.05,"q2":610.7,"q3":637.8,"max":653.6,"minLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-ALLBULK)","maxLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL8)","q1Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL4)","q2Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL12)","q3Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL1)"},"time":{"mean":34644580.55,"min":17542307,"q1":26228632.5,"q2":34255870,"q3":40617801.5,"max":62204059,"minLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-ALLBULK)","maxLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL12)","q1Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL1)","q2Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL9)","q3Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL5)"},"writes":{"mean":322256164169.91,"min":239418831671,"q1":287436595717,"q2":310372961782,"q3":326088950943,"max":530829680646,"minLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-ALLBULK)","maxLabel":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL12)","q1Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL8)","q2Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL5)","q3Label":"svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL4)"}},{"cpuUsage":{"mean":30.14,"min":30.14,"q1":30.14,"q2":30.14,"q3":30.14,"max":30.14,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)"},"process":"SnpSift","mem":{"mean":468811776,"min":468811776,"q1":468811776,"q2":468811776,"q3":468811776,"max":468811776,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)"},"memUsage":{"mean":2.18,"min":2.18,"q1":2.18,"q2":2.18,"q3":2.18,"max":2.18,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)"},"timeUsage":{"mean":0.6,"min":0.6,"q1":0.6,"q2":0.6,"q3":0.6,"max":0.6,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)"},"vmem":{"mean":7743528960,"min":7743528960,"q1":7743528960,"q2":7743528960,"q3":7743528960,"max":7743528960,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)"},"reads":{"mean":15733012588,"min":15733012588,"q1":15733012588,"q2":15733012588,"q3":15733012588,"max":15733012588,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)"},"cpu":{"mean":241.1,"min":241.1,"q1":241.1,"q2":241.1,"q3":241.1,"max":241.1,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)"},"time":{"mean":174000,"min":174000,"q1":174000,"q2":174000,"q3":174000,"max":174000,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)"},"writes":{"mean":15997403133,"min":15997403133,"q1":15997403133,"q2":15997403133,"q3":15997403133,"max":15997403133,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt2283D)"}},{"cpuUsage":{"mean":55.53,"min":12.83,"q1":57.24,"q2":65.03,"q3":69.05,"max":78.76,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL2)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL1)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL7)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL3)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL4)"},"process":"CountBamLinesApplication","mem":{"mean":16019260652.31,"min":14712811520,"q1":15770877952,"q2":16155025408,"q3":16240971776,"max":16743747584,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL12)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL1)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-ALLBULK)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL3)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL8)"},"memUsage":{"mean":37.3,"min":34.26,"q1":36.72,"q2":37.61,"q3":37.81,"max":38.98,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL12)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL1)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-ALLBULK)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL3)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL8)"},"timeUsage":{"mean":1.9,"min":0.73,"q1":0.83,"q2":1.01,"q3":1.27,"max":5.34,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL7)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL12)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL1)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL4)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-ALLBULK)"},"vmem":{"mean":44934880019.69,"min":44439162880,"q1":44935532544,"q2":45006503936,"q3":45059985408,"max":45186469888,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL3)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL8)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-ALLBULK)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL9)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL4)"},"reads":{"mean":69082821621.69,"min":60671668615,"q1":62515389510,"q2":63295776359,"q3":78955303540,"max":86807564037,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL8)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL10)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL2)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL3)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL11)"},"cpu":{"mean":444.26,"min":102.6,"q1":457.9,"q2":520.2,"q3":552.4,"max":630.1,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL2)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL1)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL7)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL3)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL4)"},"time":{"mean":1637471.46,"min":627895,"q1":718072,"q2":876441,"q3":1093109,"max":4614387,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL7)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL12)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL1)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL4)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-ALLBULK)"},"writes":{"mean":111203418.77,"min":110773370,"q1":110877090,"q2":110931819,"q3":111577043,"max":111963121,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL8)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL10)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL2)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL9)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL11)"}},{"cpuUsage":{"mean":71.46,"min":71.46,"q1":71.46,"q2":71.46,"q3":71.46,"max":71.46,"minLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"process":"smurf","mem":{"mean":14178897920,"min":14178897920,"q1":14178897920,"q2":14178897920,"q3":14178897920,"max":14178897920,"minLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"memUsage":{"mean":66.03,"min":66.03,"q1":66.03,"q2":66.03,"q3":66.03,"max":66.03,"minLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"timeUsage":{"mean":87.49,"min":87.49,"q1":87.49,"q2":87.49,"q3":87.49,"max":87.49,"minLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"vmem":{"mean":31455862784,"min":31455862784,"q1":31455862784,"q2":31455862784,"q3":31455862784,"max":31455862784,"minLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"reads":{"mean":19531306979260,"min":19531306979260,"q1":19531306979260,"q2":19531306979260,"q3":19531306979260,"max":19531306979260,"minLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"cpu":{"mean":571.7,"min":571.7,"q1":571.7,"q2":571.7,"q3":571.7,"max":571.7,"minLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"time":{"mean":37797831,"min":37797831,"q1":37797831,"q2":37797831,"q3":37797831,"max":37797831,"minLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"writes":{"mean":14998351684,"min":14998351684,"q1":14998351684,"q2":14998351684,"q3":14998351684,"max":14998351684,"minLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"short_variants:get_somatic_vcfs:smurf (SMuRF 230307_HMF1931_pt2283D.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"}}]
+Mar-15 11:20:00.465 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL11) > jobId: 22873522; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt2283D/work/16/014570ebc8b2825f82957d7ada1572
+Mar-15 11:20:00.473 [Task submitter] INFO  nextflow.Session - [16/014570] Submitted process > svs:get_gridss_vcfs:gridss (gridss pt2283D-DX1BM-MSCBULK pt2283D-DX1BM-TALL11)
+Mar-15 11:20:04.854 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+Mar-15 11:20:08.096 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Mar-15 11:20:09.093 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
