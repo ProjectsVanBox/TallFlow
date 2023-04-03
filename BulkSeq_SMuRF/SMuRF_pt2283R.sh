@@ -6,7 +6,7 @@
 #SBATCH -e SMuRF.err
 #SBATCH -o SMuRF.log
 
-cd /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/BulkSeq_SMuRF/pt2283D
+cd /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/BulkSeq_SMuRF/pt2283R
 
 . /hpc/pmc_vanboxtel/tools/ToolsVanBox/SMuRF-3.0.0/venv_3.6/bin/activate
 /hpc/local/CentOS7/pmc_vanboxtel/bin/samtools-bcftools-htslib-1.0_x64-linux/bin/bgzip -c /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/BULK_SEQ/VCFS/pt2283R/230307_HMF1931_pt2283R.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted.vcf > /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/BULK_SEQ/VCFS/pt2283R/230307_HMF1931_pt2283R.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted.vcf.gz
@@ -14,13 +14,11 @@ cd /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/BulkSeq_SMuRF/pt2283D
 
 python /hpc/pmc_vanboxtel/tools/ToolsVanBox/SMuRF-3.0.0/SMuRF.py \
   -i /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/BULK_SEQ/VCFS/pt2283R/230307_HMF1931_pt2283R.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted.vcf.gz \
-  -b /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/BULK_SEQ/BAMS/pt2283D/pt2283D-DX1BM-ALLBULK_dedup.bam \
-  -b /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/BULK_SEQ/BAMS/pt2283D/pt2283D-DX1BM-ALLBULK-DN_dedup.bam \
-  -b /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/BULK_SEQ/BAMS/pt2283D/pt2283D-DX1BM-ALLBULK-DP_dedup.bam \
-  -b /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/BULK_SEQ/BAMS/pt2283D/pt2283D-DX1BM-ALLBULK-iSPCD4_dedup.bam \
-  -b /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/BULK_SEQ/BAMS/pt2283D/pt2283D-DX1BM-ALLBULK-SPCD4_dedup.bam \
-  -b /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/BULK_SEQ/BAMS/pt2283D/pt2283D-DX1BM-MSCBULK_dedup.bam \
-  -n pt2283D-DX1BM-MSCBULK \
+  -b /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/BULK_SEQ/BAMS/pt2283R/pt2283R-DX1BM-ALLBULK_dedup.bam \
+  -b /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/BULK_SEQ/BAMS/pt2283R/pt2283R-DX1BM-ALLBULK-DN_dedup.bam \
+  -b /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/BULK_SEQ/BAMS/pt2283R/pt2283R-DX1BM-ALLBULK-DP_dedup.bam \
+  -b /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/BULK_SEQ/BAMS/pt2283R/pt2283R-DX1BM-ALLBULK-iSPCD4_dedup.bam \
+  -b /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/BULK_SEQ/BAMS/pt2283R/pt2283R-DX1BM-ALLBULK-SPCD4_dedup.bam \
   -c /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/BulkSeq_SMuRF/SMuRF_config15x.ini
 
 #bash /hpc/pmc_vanboxtel/tools/ToolsVanBox/SMuRF-3.0.0/scripts/split_mutation_type.sh /hpc/pmc_vanboxtel/projects/Ageline/2_Code/2_scripts/10817/10817.filtered_variants_snpEff_snpSift_Cosmicv89_SMuRF_filtered.vcf
