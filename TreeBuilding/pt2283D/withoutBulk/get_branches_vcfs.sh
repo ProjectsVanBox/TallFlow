@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/TreeBuilding/pt2322/withoutBulk/branches_vcfs
+cd /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/TreeBuilding/pt2283D/branches_vcfs/withoutBulk
 
 VCF=/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/TreeBuilding/pt2322/SMuRF.filtered.coords.vcf
 
