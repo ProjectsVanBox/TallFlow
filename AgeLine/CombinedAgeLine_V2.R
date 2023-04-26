@@ -199,12 +199,13 @@ sd(pt2283D_data$nmuts_norm)
 
 
 ### Check the mutational load from our PMC patients
-pmc_pts <- read.csv("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/tall_age.csv")
-pmc_pts_2 <- read.csv("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/tall_age_V2.csv")
+pmc_pts <- read.csv("/Users/verapoort/hpc/projects/TallFlow/1_Input/CampbellAgeline/tall_age.csv")
+pmc_pts_2 <- read.csv("/Users/verapoort/hpc/projects/TallFlow/1_Input/CampbellAgeline/tall_age_V2.csv")
 colnames(pmc_pts)
 
 
-pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/AgeLine/Added_PMC_PTS_2.pdf")
+
+pdf("Added_PMC_PTS_2.pdf")
 ggplot() +
   geom_point(campbell_HSC, mapping = aes(Age, Nmut_hsc_as), fill='grey', color='grey', shape=21, size=1) + 
   geom_abline(intercept = 105, slope = 16, color='grey') + 
@@ -229,8 +230,8 @@ dev.off()
 
 
 ### Include Target 
-SuppTable <- read.table("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/TargetStJudeAgeline/SuppTable1.txt", sep = "\t", header = T)
-TargetBurden <- read.table("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/TargetStJudeAgeline/MutBurdens.txt", sep = "\t", header = T, dec = ".", quote = '"')
+SuppTable <- read.table("/Users/verapoort/hpc/projects/TallFlow/1_Input/CampbellAgeline/SuppTable1.txt", sep = "\t", header = T)
+TargetBurden <- read.table("/Users/verapoort/hpc/projects/TallFlow/1_Input/CampbellAgeline/MutBurdens.txt", sep = "\t", header = T, dec = ".", quote = '"')
 
 
 
@@ -246,29 +247,35 @@ ggplot() +
   theme_bw() + 
   ylab("Normalised mutations")
 
+getwd()
 
-
-pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/AgeLine/Added_PMC_PTS_2_withTarget.pdf")
+pdf("Added_PMC_PTS_2_withTarget.pdf")
 ggplot() +
-  geom_point(campbell_HSC, mapping = aes(Age, Nmut_hsc_as), fill='red', color='red', shape=21, size=1) + 
-  geom_abline(intercept = 105, slope = 16, color='red') + 
-  geom_point(campbell_naive, mapping = aes(Age, Nmut_hsc_as), fill='orange', color='orange', shape=21, size=1) + 
-  geom_abline(intercept = 164, slope = 22, color='orange') + 
-  geom_point(campbell_mem, mapping = aes(Age, Nmut_hsc_as), fill='purple', color='purple', shape=21, size=1) + 
-  geom_abline(intercept = 382, slope = 25, color='purple') + 
+  geom_point(campbell_HSC, mapping = aes(Age, Nmut_hsc_as), fill='grey', color='grey', shape=21, size=3) + 
+  geom_abline(intercept = 105, slope = 16, color='grey') + 
+  geom_point(campbell_naive, mapping = aes(Age, Nmut_hsc_as), fill='grey45', color='grey45', shape=17, size=3) + 
+  geom_abline(intercept = 164, slope = 22, color='grey45') + 
+  geom_point(campbell_mem, mapping = aes(Age, Nmut_hsc_as), fill='grey32', color='grey32', shape=23, size=3) + 
+  geom_abline(intercept = 382, slope = 25, color='grey32') + 
   geom_ribbon(data=ci_interval, aes(x=x, ymin=conf.low, ymax=conf.high), alpha = 0.4, fill = "#CCCCCC") +
-  geom_point(data = input_df, mapping = aes( y = SNV_LOAD_NORM, x = AGE), fill='black', color='black', shape=21, size=1) + 
+  geom_point(data = input_df, mapping = aes( y = SNV_LOAD_NORM, x = AGE), fill='black', color='black', shape=21, size=3) + 
   geom_abline(intercept = healthy_intcpt, slope = healthy_slp, color="black") +
-  geom_point(data = pt2322_data, mapping = aes( y = nmuts_norm, x = age), fill='blue', color='blue', shape=21, size=1) + 
-  geom_point(data = pt2229_data, mapping = aes( y = nmuts_norm, x = age), fill='darkgreen', color='darkgreen', shape=21, size=1) + 
-  geom_point(pmc_pts_2, mapping = aes(age_at_diagnosis, mutations_after_filters), fill='darkgrey', color='darkgrey', shape=21, size=1) +
+  geom_point(data = pt2322_data, mapping = aes( y = nmuts_norm, x = age), fill='orange', color='orange', shape=21, size=3) + 
+  geom_point(data = pt2229_data, mapping = aes( y = nmuts_norm, x = age), fill='red', color='red', shape=21, size=3) +
+  geom_point(data = pt2283D_data, mapping = aes( y = nmuts_norm, x = age), fill='darkgreen', color='darkgreen', shape=21, size=3) + 
+  geom_point(pmc_pts_2, mapping = aes(age_at_diagnosis, mutations_after_filters), fill='purple', color='purple', shape=22, size=3) +
   #geom_point(pmc_pts, mapping = aes(age_at_diagnosis, mutations_after_filters), fill='darkgrey', color='darkgrey', shape=21, size=1) +
-  geom_point(TargetBurden.sub2, mapping = aes(AGE, SBS), fill='SALMON', color='SALMON', shape=21, size=1) +
-  theme_bw() + 
-  ylab("Normalised mutations")
+  geom_point(TargetBurden.sub2, mapping = aes(AGE, SBS), fill='cornflowerblue', color='cornflowerblue', shape=22, size=3) +
+  ylab("Normalised mutations") +
+  theme_classic() +
+  ylim(0, 4000)+ 
+  theme(axis.title.x = element_text(size=30),
+        axis.title.y = element_text(size=30),
+        axis.text = element_text(size=30),
+        legend.text = element_text(size=30))
 dev.off()
 
-
+getwd()
 # add the bulk sample to the Agelines, mutations are also normalized to callable loci in script for mutational pattern analysis
 # see supplement figure 3C
 Nmut_bulk <- c(667,317,97)
