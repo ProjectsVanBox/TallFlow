@@ -1,0 +1,217 @@
+INFO	2023-05-03 17:10:30	SamToFastq	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    SamToFastq -INPUT /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/input/bam/pt2322-DX1BM-ALLBULK-iSPCD4_dedup.bam -OUTPUT_DIR /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/input/fastq -RG_TAG ID -OUTPUT_PER_RG true
+**********
+
+
+17:10:31.282 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/picard-2.24.1/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Wed May 03 17:10:31 CEST 2023] SamToFastq INPUT=/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/input/bam/pt2322-DX1BM-ALLBULK-iSPCD4_dedup.bam OUTPUT_PER_RG=true RG_TAG=ID OUTPUT_DIR=/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/input/fastq    COMPRESS_OUTPUTS_PER_RG=false RE_REVERSE=true INTERLEAVE=false INCLUDE_NON_PF_READS=false CLIPPING_MIN_LENGTH=0 READ1_TRIM=0 READ2_TRIM=0 INCLUDE_NON_PRIMARY_ALIGNMENTS=false VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Wed May 03 17:10:31 CEST 2023] Executing as rhagelaar@n0095.compute.hpc on Linux 3.10.0-1160.83.1.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27; Deflater: Intel; Inflater: Intel; Provider GCS is not available; Picard version: 2.24.1
+INFO	2023-05-03 17:10:39	SamToFastq	Processed     1,000,000 records.  Elapsed time: 00:00:08s.  Time for last 1,000,000:    8s.  Last read position: 7:142,021,819
+INFO	2023-05-03 17:10:47	SamToFastq	Processed     2,000,000 records.  Elapsed time: 00:00:16s.  Time for last 1,000,000:    7s.  Last read position: 14:106,051,949
+[Wed May 03 17:10:52 CEST 2023] picard.sam.SamToFastq done. Elapsed time: 0.35 minutes.
+Runtime.totalMemory()=5855772672
+To get help, see http://broadinstitute.github.io/picard/index.html#GettingHelp
+Exception in thread "main" htsjdk.samtools.SAMFormatException: SAM validation error: ERROR::MATE_NOT_FOUND:Found 61163 unpaired mates
+	at htsjdk.samtools.SAMUtils.processValidationError(SAMUtils.java:469)
+	at picard.sam.SamToFastq.doWork(SamToFastq.java:225)
+	at picard.cmdline.CommandLineProgram.instanceMain(CommandLineProgram.java:304)
+	at picard.cmdline.PicardCommandLine.instanceMain(PicardCommandLine.java:103)
+	at picard.cmdline.PicardCommandLine.main(PicardCommandLine.java:113)
+/hpc/pmc_vanboxtel/projects/TallFlow/2_Code/MIXCR/
+IMPORTANT: MiXCR will use at most 12000MB of RAM,
+           use -Xmx to change automatically set heap size (i.e. -Xmx50g to set heap size to 50 Gb)
+====================
+Running:
+mixcr align --report /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.align.report.txt --json-report /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.align.report.json --preset rnaseq-full-length --dna --species hsa /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/input/fastq/Merged/pt2322-DX1BM-ALLBULK-iSPCD4_R1.fastq /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/input/fastq/Merged/pt2322-DX1BM-ALLBULK-iSPCD4_R2.fastq /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.vdjca
+Alignment: 0%
+Alignment: 10.6%  ETA: 00:05:48
+Alignment: 21.2%  ETA: 00:05:34
+Alignment: 31.8%  ETA: 00:04:43
+Alignment: 42.4%  ETA: 00:03:42
+Alignment: 53%  ETA: 00:03:23
+Alignment: 63.6%  ETA: 00:02:17
+Alignment: 74.2%  ETA: 00:01:49
+Alignment: 84.8%  ETA: 00:01:03
+Alignment: 95.4%  ETA: 00:00:19
+============== Align Report ==============
+Analysis time: 6.98m
+Total sequencing reads: 1248685
+Successfully aligned reads: 14091 (1.13%)
+Alignment failed: no hits (not TCR/IG?): 1010409 (80.92%)
+Alignment failed: no CDR3 parts: 126123 (10.1%)
+Alignment failed: low total score: 98062 (7.85%)
+Overlapped: 128965 (10.33%)
+Overlapped and aligned: 341 (0.03%)
+Overlapped and not aligned: 128624 (10.3%)
+Alignment-aided overlaps, percent of overlapped and aligned: 6 (1.76%)
+No CDR3 parts alignments, percent of successfully aligned: 1711 (12.14%)
+Partial aligned reads, percent of successfully aligned: 12317 (87.41%)
+V gene chimeras: 231 (0.02%)
+J gene chimeras: 208 (0.02%)
+Paired-end alignment conflicts eliminated: 18 (0%)
+Realigned with forced non-floating bound: 2239452 (179.34%)
+Realigned with forced non-floating right bound in left read: 5289 (0.42%)
+Realigned with forced non-floating left bound in right read: 5289 (0.42%)
+TRA chains: 1769 (12.55%)
+TRA non-functional: 9 (0.51%)
+TRB chains: 1603 (11.38%)
+TRB non-functional: 0 (0%)
+TRD chains: 110 (0.78%)
+TRD non-functional: 11 (10%)
+TRG chains: 219 (1.55%)
+TRG non-functional: 0 (0%)
+TRAD chains: 960 (6.81%)
+TRAD non-functional: 0 (0%)
+IGH chains: 3743 (26.56%)
+IGH non-functional: 0 (0%)
+IGK chains: 2831 (20.09%)
+IGK non-functional: 0 (0%)
+IGL chains: 2856 (20.27%)
+IGL non-functional: 0 (0%)
+Trimming report:
+  R1 reads trimmed left: 1332 (0.11%)
+  R1 reads trimmed right: 0 (0%)
+  Average R1 nucleotides trimmed left: 0.0030784385173202207
+  Average R1 nucleotides trimmed right: 0.0
+  R2 reads trimmed left: 60 (0%)
+  R2 reads trimmed right: 1 (0%)
+  Average R2 nucleotides trimmed left: 1.5216007239616077E-4
+  Average R2 nucleotides trimmed right: 8.008424862955829E-7
+====================
+Running:
+mixcr assemblePartial --report /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.assemblePartial.report.txt --json-report /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.assemblePartial.report.json /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.vdjca /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.passembled.1.vdjca
+Building index: 0%
+Searching for overlaps: 0%
+Searching for overlaps: 83.5%  ETA: 00:00:00
+============== AssemblePartial Report ==============
+Analysis time: 1.67s
+Total alignments analysed: 14091
+Number of output alignments: 14088 (99.98%)
+Alignments already with CDR3 (no overlapping is performed): 67 (0.48%)
+Successfully overlapped alignments: 3 (0.02%)
+Left parts with too small N-region (failed to extract k-mer): 1753 (12.44%)
+Extracted k-mer diversity: 39935
+Dropped due to wildcard in k-mer: 0 (0%)
+Dropped due to too short NRegion parts in overlap: 19 (0.13%)
+Dropped overlaps with empty N region due to no complete NDN coverage: 0 (0%)
+Number of left-side alignments: 8489 (60.24%)
+Number of right-side alignments: 3359 (23.84%)
+Complex overlaps: 0 (0%)
+Over-overlaps: 20 (0.14%)
+Partial alignments written to output: 14018 (99.48%)
+====================
+Running:
+mixcr assemblePartial --report /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.assemblePartial.report.txt --json-report /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.assemblePartial.report.json /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.passembled.1.vdjca /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.passembled.2.vdjca
+Building index: 0%
+Searching for overlaps: 0%
+============== AssemblePartial Report ==============
+Analysis time: 1.07s
+Total alignments analysed: 14088
+Number of output alignments: 14088 (100%)
+Alignments already with CDR3 (no overlapping is performed): 70 (0.5%)
+Successfully overlapped alignments: 0 (0%)
+Left parts with too small N-region (failed to extract k-mer): 1753 (12.44%)
+Extracted k-mer diversity: 39912
+Dropped due to wildcard in k-mer: 0 (0%)
+Dropped due to too short NRegion parts in overlap: 15 (0.11%)
+Dropped overlaps with empty N region due to no complete NDN coverage: 0 (0%)
+Number of left-side alignments: 8486 (60.24%)
+Number of right-side alignments: 3356 (23.82%)
+Complex overlaps: 0 (0%)
+Over-overlaps: 20 (0.14%)
+Partial alignments written to output: 14018 (99.5%)
+====================
+Running:
+mixcr extend --report /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.extend.report.txt --json-report /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.extend.report.json /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.passembled.2.vdjca /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.extended.vdjca
+Extending alignments: 0%
+============== Extend Report ==============
+Analysis time: 299ms
+Extended alignments count: 7 (0.05%)
+V extensions total: 1 (0.01%)
+V extensions with merged targets: 0 (0%)
+J extensions total: 6 (0.04%)
+J extensions with merged targets: 0 (0%)
+V+J extensions: 0 (0%)
+Mean V extension length: 2.0
+Mean J extension length: 7.666666666666667
+====================
+Running:
+mixcr assemble --report /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.assemble.report.txt --json-report /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.assemble.report.json /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.extended.vdjca /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.clna
+Initialization: progress unknown
+Initialization: progress unknown
+============== Assemble Report ==============
+Analysis time: 385ms
+Final clonotype count: 13
+Reads used in clonotypes, percent of total: 67 (0.01%)
+Average number of reads per clonotype: 5.15
+Reads dropped due to the lack of a clone sequence, percent of total: 14018 (1.12%)
+Reads dropped due to a too short clonal sequence, percent of total: 0 (0%)
+Reads dropped due to low quality, percent of total: 0 (0%)
+Reads dropped due to failed mapping, percent of total: 6 (0%)
+Reads dropped with low quality clones, percent of total: 0 (0%)
+Reads used in clonotypes before clustering, percent of total: 67 (0.01%)
+Number of reads used as a core, percent of used: 67 (100%)
+Mapped low quality reads, percent of used: 0 (0%)
+Reads clustered in PCR error correction, percent of used: 0 (0%)
+Reads pre-clustered due to the similar VJC-lists, percent of used: 0 (0%)
+Clonotypes dropped as low quality: 0
+Clonotypes eliminated by PCR error correction: 0
+Clonotypes pre-clustered due to the similar VJC-lists: 0
+Clones dropped in post filtering: 0 (0%)
+Reads dropped in post filtering: 0.0 (0%)
+Alignments filtered by tag prefix: 0 (0%)
+TRA chains: 7 (53.85%)
+TRA non-functional: 5 (71.43%)
+TRB chains: 3 (23.08%)
+TRB non-functional: 1 (33.33%)
+TRD chains: 1 (7.69%)
+TRD non-functional: 1 (100%)
+TRG chains: 2 (15.38%)
+TRG non-functional: 0 (0%)
+====================
+Running:
+mixcr assembleContigs --report /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.assembleContigs.report.txt --json-report /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.assembleContigs.report.json /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.clna /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.contigs.clns
+Assembling contigs: 0%
+============== AssembleContigs Report ==============
+Analysis time: 239ms
+Initial clonotype count: 13
+Final clonotype count: 13 (100%)
+Canceled assemblies: 0 (0%)
+Number of premature termination assembly events, percent of number of initial clonotypes: 0.0 (0%)
+Longest contig length: 711
+Clustered variants: 0 (0%)
+Reads in clustered variants: 0.0 (0%)
+Reads in divided (newly created) clones: 0.0 (0%)
+Clones with ambiguous letters in splitting region: 0 (0%)
+Reads in clones with ambiguous letters in splitting region: 0.0 (0%)
+Average number of ambiguous letters per clone with ambiguous letters in splitting region: NaN
+====================
+Running:
+mixcr exportClones /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.contigs.clns /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/MIXCR4.3.2/Output/pt2322-DX1BM-ALLBULK-iSPCD4/pt2322-DX1BM-ALLBULK-iSPCD4_Receptor.clones.tsv
+Exporting TRB
+Exporting clones: 0%
+WARNING: Filtered 3 of 13 clones (76.92%).
+WARNING: Filtered 24.0 of 67.0 reads (64.18%).
+Exporting TRAD
+Exporting clones: 0%
+WARNING: Filtered 8 of 13 clones (38.46%).
+WARNING: Filtered 23.0 of 67.0 reads (65.67%).
+Exporting TRG
+Exporting clones: 0%
+WARNING: Filtered 2 of 13 clones (84.62%).
+WARNING: Filtered 20.0 of 67.0 reads (70.15%).
+Analysis finished successfully.
+IMPORTANT: MiXCR will use at most 12000MB of RAM,
+           use -Xmx to change automatically set heap size (i.e. -Xmx50g to set heap size to 50 Gb)
+IMPORTANT: MiXCR will use at most 12000MB of RAM,
+           use -Xmx to change automatically set heap size (i.e. -Xmx50g to set heap size to 50 Gb)
+IMPORTANT: MiXCR will use at most 12000MB of RAM,
+           use -Xmx to change automatically set heap size (i.e. -Xmx50g to set heap size to 50 Gb)
