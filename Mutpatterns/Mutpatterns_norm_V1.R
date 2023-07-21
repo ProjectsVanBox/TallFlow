@@ -107,6 +107,10 @@ pt2322_data$nmuts_norm3 <- pt2322_data$SNV_LOAD*(1/(pt2322_data$CALLABLE/hg38_au
 pt2229_data <- read.table("~/hpc/pmc_vanboxtel/projects/TallFlow/2_Code/AgeLine/pt2229_ageline_table.txt", sep = " ", header = T)
 pt2229_data$age <- rep.int(x = 5.5, times = length(rownames(pt2229_data)))
 pt2229_data$nmuts_norm <- (pt2229_data$SNV_LOAD/pt2229_data$CALLABLE)*hg38_autosomal_nonN_genome_size
+# pt2283D
+pt2283D_data <- read.table("~/hpc/pmc_vanboxtel/projects/TallFlow/2_Code/AgeLine/pt2283D_ageline_table.txt", sep = " ", header = T)
+pt2283D_data$age <- rep.int(x = 10, times = length(rownames(pt2283D_data)))
+pt2283D_data$nmuts_norm <- (pt2283D_data$SNV_LOAD/pt2283D_data$CALLABLE)*hg38_autosomal_nonN_genome_size
 
 
 ### Read in vcf files 
@@ -115,17 +119,22 @@ pt2322_vcf_files <- list.files(path = "/Users/ricohagelaar/Documents/Thymus_Proj
                                pattern = "*filtered.vcf.gz$", full.names = TRUE, recursive = TRUE )
 pt2229_vcf_files <- list.files(path = "/Users/ricohagelaar/Documents/Thymus_Project/PTATO/POTATO_Dev/snvs/pt2229/",
                                pattern = "*filtered.vcf.gz$", full.names = TRUE, recursive = TRUE )
+pt2283D_vcf_files <- list.files(path = "~/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/PTATO_Dev/pt2283D/snvs/pt2283D/",
+                               pattern = "*filtered.vcf.gz$", full.names = TRUE, recursive = TRUE )
 # Sample names 
 pt2322_sample_names <- c("pt2322_ALLBULK", "pt2322_TALL1", "pt2322_TALL10", "pt2322_TALL11", "pt2322_TALL12", "pt2322_TALL2", "pt2322_TALL3", "pt2322_TALL4",
                          "pt2322_TALL5", "pt2322_TALL6", "pt2322_TALL7", "pt2322_TALL8", "pt2322_TALL9") 
 pt2229_sample_names <- c("pt2229_ALLBULK", "pt2229_TALL1", "pt2229_TALL10", "pt2229_TALL2", "pt2229_TALL3", "pt2229_TALL4", "pt2229_TALL5", "pt2229_TALL6", 
                          "pt2229_TALL7", "pt2229_TALL8", "pt2229_TALL9")
+pt2283D_sample_names <- c("pt2283D_ALLBULK", "pt2283D_TALL1", "pt2283D_TALL10", "pt2283D_TALL11", "pt2283D_TALL12", "pt2283D_TALL2", "pt2283D_TALL3", "pt2283D_TALL4", "pt2283D_TALL5", "pt2283D_TALL6", 
+                          "pt2283D_TALL7", "pt2283D_TALL8", "pt2283D_TALL9")
 # Create matrices 
 pt2322_grl <- read_vcfs_as_granges(pt2322_vcf_files, pt2322_sample_names, ref_genome)
 pt2322_mut_mat <- mut_matrix(vcf_list = pt2322_grl, ref_genome = ref_genome)
 pt2229_grl <- read_vcfs_as_granges(pt2229_vcf_files, pt2229_sample_names, ref_genome)
 pt2229_mut_mat <- mut_matrix(vcf_list = pt2229_grl, ref_genome = ref_genome)
-
+pt2283D_grl <- read_vcfs_as_granges(pt2283D_vcf_files, pt2283D_sample_names, ref_genome)
+pt2283D_mut_mat <- mut_matrix(vcf_list = pt2283D_grl, ref_genome = ref_genome)
 
 
 #grl_list <- c(pt2322_grl, pt2322_branch_grl)#, pt2229_mut_mat, pooled_pt2229_branch_mat)
@@ -133,6 +142,8 @@ pt2322_type_occurrences <- mut_type_occurrences(pt2322_grl, ref_genome)
 pt2322_type_occurrences
 pt2229_type_occurrences <- mut_type_occurrences(pt2229_grl, ref_genome)
 pt2229_type_occurrences
+pt2283D_type_occurrences <- mut_type_occurrences(pt2283D_grl, ref_genome)
+pt2283D_type_occurrences
 COLORS6 <- c(
   "#2EBAED", "#000000", "#DE1C14",
   "#D4D2D2", "#ADCC54", "#F0D0CE"
@@ -180,6 +191,21 @@ plot_spectrum_stacked(pt2229_type_occurrences2, max_value_to_show = 10)
 dev.off()
 
 
+pt2283D_data$mut_rate <- pt2283D_data$CALLABLE / hg38_autosomal_nonN_genome_size
+rownames(pt2283D_data) <- gsub(x = pt2283D_data$SAMPLE, pattern = "-DX1BM-", replacement = "_")
+pt2283D_data <- pt2283D_data[rownames(pt2283D_type_occurrences),]
+pt2283D_type_occurrences * pt2283D_data$mut_rate
+pt2283D_type_occurrences2 <- pt2283D_type_occurrences * (1 / pt2283D_data$mut_rate)
+pt2283D_type_occurrences2[1,] <- pt2283D_type_occurrences[1,]
+
+pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/Mutpatterns/NormNumbers/Original_pt2283D.pdf")
+plot_spectrum_stacked(pt2283D_type_occurrences, max_value_to_show = 10)
+dev.off()
+pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/Mutpatterns/NormNumbers/Norm_pt2283D.pdf")
+plot_spectrum_stacked(pt2283D_type_occurrences2, max_value_to_show = 10)
+dev.off()
+
+
 pt2322_data[is.na(pt2322_data)] <- 1
 pt2322_data[1,] <- c(1, 1, 1, 1, 1, 1, 1, 1, 1)
 rownames(pt2322_data[1,]) <- c("pt2322_ALLBULK")
@@ -187,3 +213,103 @@ rownames(pt2322_data[1,]) <- c("pt2322_ALLBULK")
 
 input_df$INDEL_LOAD_NORM <- input_df$INDEL_LOAD/input_df$CALLABLE*hg38_autosomal_nonN_genome_size
 
+
+
+
+
+
+# pt2322
+pt2322_data <- read.table("~/hpc/pmc_vanboxtel/projects/TallFlow/2_Code/AgeLine/Bulk_pt2322_ageline_table.txt", sep = " ", header = T)
+pt2322_data$age <- rep.int(x = 9.4, times = length(rownames(pt2322_data)))
+pt2322_data$mut_rate <- pt2322_data$CALLABLE / hg38_autosomal_nonN_genome_size
+rownames(pt2322_data) <- gsub(x = pt2322_data$SAMPLE, pattern = "-DX1BM-", replacement = "-")
+rownames(pt2322_data) <- gsub(x = rownames(pt2322_data), pattern = "-ALLBULK-", replacement = "-")
+# pt2229
+pt2229_data <- read.table("~/hpc/pmc_vanboxtel/projects/TallFlow/2_Code/AgeLine/Bulk_pt2229_ageline_table.txt", sep = " ", header = T)
+pt2229_data$age <- rep.int(x = 5.5, times = length(rownames(pt2229_data)))
+pt2229_data$mut_rate <- pt2229_data$CALLABLE / hg38_autosomal_nonN_genome_size
+rownames(pt2229_data) <- gsub(x = pt2229_data$SAMPLE, pattern = "-DX1BM-", replacement = "-")
+rownames(pt2229_data) <- gsub(x = rownames(pt2229_data), pattern = "-ALLBULK-", replacement = "-")
+pt2229_data
+# pt2283D
+pt2283D_data <- read.table("~/hpc/pmc_vanboxtel/projects/TallFlow/2_Code/AgeLine/Bulk_pt2283D_ageline_table.txt", sep = " ", header = T)
+pt2283D_data$age <- rep.int(x = 10, times = length(rownames(pt2283D_data)))
+pt2283D_data$mut_rate <- pt2283D_data$CALLABLE / hg38_autosomal_nonN_genome_size
+rownames(pt2283D_data) <- gsub(x = pt2283D_data$SAMPLE, pattern = "-DX1BM-", replacement = "-")
+rownames(pt2283D_data) <- gsub(x = rownames(pt2283D_data), pattern = "-ALLBULK-", replacement = "-")
+
+
+
+
+
+
+### check Bulk sample 
+# pt2322
+pt2322_vcf_files <- list.files(path = "~/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/BulkSeq_SMuRF/pt2322/",
+                               pattern = "*SMuRF.filtered.vcf$", full.names = TRUE, recursive = FALSE )
+pt2322_sample_names <- c("pt2322_DN", "pt2322_DP", "pt2322_iSPCD4", "pt2322_SPCD4", "pt2322_ALLBulk", "pt2322_MONO", "pt2322_Combined")
+pt2322_grl <- read_vcfs_as_granges(pt2322_vcf_files, pt2322_sample_names, ref_genome)
+pt2322_type_occurrences <- mut_type_occurrences(pt2322_grl, ref_genome)
+pt2322_type_occurrences <-pt2322_type_occurrences[rownames(pt2322_type_occurrences) %in% c("pt2322_DN", "pt2322_DP", "pt2322_iSPCD4", "pt2322_SPCD4", "pt2322_ALLBulk"),]
+pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/Mutpatterns/Bulk_StackedBarCharts/WithoutCallable/pt2322.pdf")
+plot_spectrum_stacked(pt2322_type_occurrences
+                      , max_value_to_show = 10)
+dev.off()
+pt2322_type_occurrences2 <- pt2322_type_occurrences * (1 / pt2322_data$mut_rate)
+pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/Mutpatterns/Bulk_StackedBarCharts/WithCallable/pt2322.pdf")
+plot_spectrum_stacked(pt2322_type_occurrences2
+                      , max_value_to_show = 10)
+dev.off()
+# pt2229
+pt2229_vcf_files <- list.files(path = "~/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/BulkSeq_SMuRF/pt2229inclDP/",
+                               pattern = "*SMuRF.filtered.vcf$", full.names = TRUE, recursive = FALSE )
+pt2229_sample_names <- c("pt2229-DNCD1aNeg", "pt2229-DNCD1aPos", "pt2229-DP", "pt2229-iSPCD4", "pt2229-ALLBULK", "pt2229-MSCBULK", "pt2229_Combined")
+pt2229_grl <- read_vcfs_as_granges(pt2229_vcf_files, pt2229_sample_names, ref_genome)
+pt2229_type_occurrences <- mut_type_occurrences(pt2229_grl, ref_genome)
+pt2229_type_occurrences <- pt2229_type_occurrences[rownames(pt2229_type_occurrences) %in% c("pt2229-DNCD1aNeg", "pt2229-DNCD1aPos", "pt2229-DP", "pt2229-iSPCD4", "pt2229-ALLBULK"),]
+pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/Mutpatterns/Bulk_StackedBarCharts/WithoutCallable/pt2229.pdf")
+plot_spectrum_stacked(pt2229_type_occurrences
+                      , max_value_to_show = 10)
+dev.off()
+pt2229_type_occurrences2 <- pt2229_type_occurrences * (1 / pt2229_data$mut_rate)
+pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/Mutpatterns/Bulk_StackedBarCharts/WithCallable/pt2229.pdf")
+plot_spectrum_stacked(pt2229_type_occurrences2
+                      , max_value_to_show = 10)
+dev.off()
+# pt2283D
+pt2283D_vcf_files <- list.files(path = "~/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/BulkSeq_SMuRF/pt2283D/",
+                               pattern = "*SMuRF.filtered.vcf$", full.names = TRUE, recursive = FALSE )
+pt2283D_sample_names <- c("pt2283D-DN", "pt2283D-DP", "pt2283D-iSPCD4", "pt2283D-SPCD4", "pt2283D-ALLBULK", "pt2283D-MSCBULK", "pt2283D-Combined")
+pt2283D_grl <- read_vcfs_as_granges(pt2283D_vcf_files, pt2283D_sample_names, ref_genome)
+pt2283D_type_occurrences <- mut_type_occurrences(pt2283D_grl, ref_genome)
+pt2283D_type_occurrences <- pt2283D_type_occurrences[rownames(pt2283D_type_occurrences) %in% c("pt2283D-DN", "pt2283D-DP", "pt2283D-iSPCD4", "pt2283D-SPCD4", "pt2283D-ALLBULK"),]
+pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/Mutpatterns/Bulk_StackedBarCharts/WithoutCallable/pt2283D.pdf")
+plot_spectrum_stacked(pt2283D_type_occurrences
+                      , max_value_to_show = 10)
+dev.off()
+pt2283D_type_occurrences2 <- pt2283D_type_occurrences * (1 / pt2283D_data$mut_rate)
+pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/Mutpatterns/Bulk_StackedBarCharts/WithCallable/pt2283D.pdf")
+plot_spectrum_stacked(pt2283D_type_occurrences2
+                      , max_value_to_show = 10)
+dev.off()
+# pt344
+pt344_vcf_files <- list.files(path = "~/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/BulkSeq_SMuRF/pt344/",
+                                pattern = "*SMuRF.filtered.vcf$", full.names = TRUE, recursive = FALSE )
+pt344_sample_names <- c("pt344-ALLBULK", "pt344-DNCD1aPos", "pt344-DP", "pt344-SPCD8", "pt344-MONOBULK", "pt344-Combined")
+pt344_grl <- read_vcfs_as_granges(pt344_vcf_files, pt344_sample_names, ref_genome)
+pt344_type_occurrences <- mut_type_occurrences(pt344_grl, ref_genome)
+pt344_type_occurrences <- pt344_type_occurrences[rownames(pt344_type_occurrences) %in% c("pt344-ALLBULK", "pt344-DNCD1aPos", "pt344-DP", "pt344-SPCD8"),]
+pdf("/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/Mutpatterns/Bulk_StackedBarCharts/WithoutCallable/pt344.pdf")
+plot_spectrum_stacked(pt344_type_occurrences,
+                      max_value_to_show = 10)
+dev.off()
+
+# Does this one have way too many muts? 
+# pt2283R
+#pt2283R_vcf_files <- list.files(path = "~/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/BulkSeq_SMuRF/pt2283R/SingleVCFs/",
+#                                pattern = "*SMuRF.filtered.vcf$", full.names = TRUE, recursive = FALSE )
+#pt2283R_sample_names <- c("pt2283R-DN", "pt2283R-DP", "pt2283R-iSPCD4", "pt2283R-SPCD4", "pt2283R-ALLBULK")
+#pt2283R_grl <- read_vcfs_as_granges(pt2283R_vcf_files, pt2283R_sample_names, ref_genome)
+#pt2283R_type_occurrences <- mut_type_occurrences(pt2283R_grl, ref_genome)
+#plot_spectrum_stacked(pt2283R_type_occurrences, 
+#                      max_value_to_show = 10)
