@@ -1,0 +1,955 @@
+Oct-31 14:55:51.454 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /hpc/pmc_vanboxtel/tools/ToolsVanBox/PTATO-1.2.0/ptato.nf -c ./run_config.config --out_dir /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/PTATO_Dev/pt3291 -profile slurm -resume
+Oct-31 14:55:51.610 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.6
+Oct-31 14:55:51.935 [main] INFO  nextflow.cli.CmdRun - Launching `/hpc/pmc_vanboxtel/tools/ToolsVanBox/PTATO-1.2.0/ptato.nf` [scruffy_varahamihira] - revision: b65a034f65
+Oct-31 14:55:51.969 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/./run_config.config
+Oct-31 14:55:51.969 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/run_config.config
+Oct-31 14:55:52.023 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `slurm`
+Oct-31 14:56:00.490 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [sge, slurm]
+Oct-31 14:56:00.534 [main] WARN  nextflow.config.ConfigBuilder - It appears you have never run this project before -- Option `-resume` is ignored
+Oct-31 14:56:00.988 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/pmc_research/rhagelaar/.nextflow/plugins
+Oct-31 14:56:01.050 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Oct-31 14:56:01.147 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Oct-31 14:56:01.171 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Oct-31 14:56:01.178 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Oct-31 14:56:01.269 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Oct-31 14:56:02.003 [main] DEBUG nextflow.Session - Session uuid: 22ee607c-e6df-4aaf-9be3-0f635a1d180d
+Oct-31 14:56:02.003 [main] DEBUG nextflow.Session - Run name: scruffy_varahamihira
+Oct-31 14:56:02.004 [main] DEBUG nextflow.Session - Executor pool size: 72
+Oct-31 14:56:02.179 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.6 build 5661
+  Created: 21-12-2021 17:01 UTC (18:01 CEST)
+  System: Linux 4.18.0-477.15.1.el8_8.x86_64
+  Runtime: Groovy 3.0.9 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27
+  Encoding: UTF-8 (UTF-8)
+  Process: 2701969@n0079.manage.hpc [10.100.2.79]
+  CPUs: 72 - Mem: 377.3 GB (88 GB) - Swap: 8 GB (7.5 GB)
+Oct-31 14:56:02.542 [main] DEBUG nextflow.Session - Work-dir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work [nfs]
+Oct-31 14:56:02.553 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /hpc/pmc_vanboxtel/tools/ToolsVanBox/PTATO-1.2.0/bin
+Oct-31 14:56:03.294 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[GoogleLifeSciencesExecutor, AwsBatchExecutor, IgExecutor]
+Oct-31 14:56:03.421 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Oct-31 14:56:03.505 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Oct-31 14:56:04.406 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 73; maxThreads: 1000
+Oct-31 14:56:05.103 [main] DEBUG nextflow.Session - Session start invoked
+Oct-31 14:56:05.109 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/PTATO_Dev/pt3291/log/nextflow_trace.txt
+Oct-31 14:56:08.131 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Oct-31 14:56:33.773 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 73; maxThreads: 1000
+Oct-31 14:56:34.015 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name get_gzipped_vcfs:bgzip
+Oct-31 14:56:34.031 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:34.031 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:34.042 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+Oct-31 14:56:34.051 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 1000; pollInterval: 30s; dumpInterval: 5m 
+Oct-31 14:56:34.072 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 5m
+Oct-31 14:56:34.275 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name get_gzipped_vcfs:tabix
+Oct-31 14:56:34.299 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:34.300 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:34.480 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:Sambamba_0_8_2_Index` matches labels `Sambamba_0_8_2,Sambamba_0_8_2_Index` for process with name get_indexed_bams:Index
+Oct-31 14:56:34.481 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:34.482 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:34.525 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:GATK_4_2_6_1_GetSampleName` matches labels `GATK_4_2_6_1,GATK_4_2_6_1_GetSampleName` for process with name get_indexed_bams:GetSampleName
+Oct-31 14:56:34.528 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:34.528 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:34.644 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:SnpSift_4_3_1t__1` matches labels `SnpSift,SnpSift_4_3_1t__1` for process with name get_germline_vcfs:SnpSift
+Oct-31 14:56:34.656 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:34.700 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:34.708 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name get_germline_vcfs:bgzip
+Oct-31 14:56:34.710 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:34.731 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:34.737 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name get_germline_vcfs:tabix
+Oct-31 14:56:34.739 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:34.739 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:34.865 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:SMuRF_3_0_1` matches labels `SMuRF,SMuRF_3_0_1` for process with name short_variants:get_somatic_vcfs:smurf
+Oct-31 14:56:34.867 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:34.867 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:35.047 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name short_variants:get_somatic_vcfs:bgzip
+Oct-31 14:56:35.049 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:35.049 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:35.103 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:get_somatic_vcfs:tabix
+Oct-31 14:56:35.104 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:35.104 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:35.671 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:shapeit_4_2_2` matches labels `shapeit,shapeit_4_2_2` for process with name short_variants:get_ab_tables:shapeit
+Oct-31 14:56:35.673 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:35.673 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:35.802 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:get_ab_tables:tabix
+Oct-31 14:56:35.803 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:35.803 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:36.069 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:createABtable` matches labels `createABtable` for process with name short_variants:get_ab_tables:createABtable
+Oct-31 14:56:36.071 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:36.071 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:36.139 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:36.140 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:36.308 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:walker_2_2_0` matches labels `walker,walker_2_2_0` for process with name short_variants:get_walker_vcfs:walker
+Oct-31 14:56:36.309 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:36.309 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:36.414 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name short_variants:get_walker_vcfs:bgzip
+Oct-31 14:56:36.416 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:36.423 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:36.457 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:get_walker_vcfs:tabix
+Oct-31 14:56:36.458 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:36.459 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:36.524 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:getContext` matches labels `getContext` for process with name short_variants:get_context_beds:getContext
+Oct-31 14:56:36.538 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:36.538 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:36.544 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bedtools_2_30_0_sort` matches labels `bedtoolsSort,bedtools_2_30_0_sort` for process with name short_variants:get_context_beds:sort
+Oct-31 14:56:36.546 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:36.546 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:36.764 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bedtools_2_30_0_closest` matches labels `bedtoolsClosest,bedtools_2_30_0_closest` for process with name short_variants:closest_feature:closest
+Oct-31 14:56:36.765 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:36.765 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:36.772 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bedtools_2_30_0_groupby` matches labels `bedtoolsGroupby,bedtools_2_30_0_groupby` for process with name short_variants:closest_feature:groupby
+Oct-31 14:56:36.773 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:36.773 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:37.066 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bedtools_2_30_0_intersect` matches labels `bedtoolsIntersect,bedtools_2_30_0_intersect` for process with name short_variants:intersect_feature:intersect
+Oct-31 14:56:37.067 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:37.067 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:37.071 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bedtools_2_30_0_groupby` matches labels `bedtoolsGroupby,bedtools_2_30_0_groupby` for process with name short_variants:intersect_feature:groupby
+Oct-31 14:56:37.914 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:37.914 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.194 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bedtools_2_30_0_intersectAll` matches labels `bedtoolsIntersectAll,bedtools_2_30_0_intersectAll` for process with name short_variants:groupby_features:intersectAll
+Oct-31 14:56:38.195 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.195 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.215 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bedtools_2_30_0_groupbyAll` matches labels `bedtoolsGroupbyAll,bedtools_2_30_0_groupbyAll` for process with name short_variants:groupby_features:groupbyAll
+Oct-31 14:56:38.216 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.216 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.349 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:GATK_4_2_6_1_SplitVcfs` matches labels `GATK_4_2_6_1,GATK_4_2_6_1_SplitVcfs` for process with name short_variants:SplitVcfs
+Oct-31 14:56:38.350 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.350 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.379 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.379 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.389 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.389 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.403 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name short_variants:snvs:get_ptato_vcfs:bgzip
+Oct-31 14:56:38.404 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.404 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.421 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:snvs:get_ptato_vcfs:tabix
+Oct-31 14:56:38.446 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.446 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.471 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:ptatoCutoff` matches labels `ptatoCutoff` for process with name short_variants:snvs:filter_ptato_vcfs:ptatoCutoff
+Oct-31 14:56:38.483 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.483 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.526 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:ptatoFilter` matches labels `ptatoFilter` for process with name short_variants:snvs:filter_ptato_vcfs:ptatoFilter
+Oct-31 14:56:38.530 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.530 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.553 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name short_variants:snvs:filter_ptato_vcfs:bgzip
+Oct-31 14:56:38.554 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.554 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.571 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:snvs:filter_ptato_vcfs:tabix
+Oct-31 14:56:38.584 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.584 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.608 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.609 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.639 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name short_variants:indels:get_ptato_vcfs:bgzip
+Oct-31 14:56:38.640 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.640 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.660 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:indels:get_ptato_vcfs:tabix
+Oct-31 14:56:38.661 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.661 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.684 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:ptatoIndelFilter` matches labels `ptatoIndelFilter` for process with name short_variants:indels:filter_ptato_vcfs:ptatoIndelFilter
+Oct-31 14:56:38.697 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.697 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.700 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name short_variants:indels:filter_ptato_vcfs:bgzip
+Oct-31 14:56:38.700 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.700 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.719 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:indels:filter_ptato_vcfs:tabix
+Oct-31 14:56:38.720 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.720 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.759 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bedtools_2_30_0_intersectPTATO` matches labels `bedtoolsIntersectPTATO,bedtools_2_30_0_intersectPTATO` for process with name short_variants:intersect_ptato_vcfs:intersectPTATO
+Oct-31 14:56:38.760 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.760 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.767 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name short_variants:intersect_ptato_vcfs:bgzip
+Oct-31 14:56:38.768 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.768 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.783 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:intersect_ptato_vcfs:tabix
+Oct-31 14:56:38.785 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.786 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.810 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:mergePtatoVcfs` matches labels `mergePtatoVcfs` for process with name short_variants:merge_ptato_vcfs:mergePtatoVcfs
+Oct-31 14:56:38.810 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.810 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.836 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:bgzip_1_15` matches labels `bgzip,bgzip_1_15` for process with name short_variants:merge_ptato_vcfs:bgzip
+Oct-31 14:56:38.848 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.848 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.895 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:tabix_1_15` matches labels `tabix,tabix_1_15` for process with name short_variants:merge_ptato_vcfs:tabix
+Oct-31 14:56:38.895 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.895 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:38.968 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:gripss_purple_linx_1_3_2_CountBamLinesApplication` matches labels `CountBamLinesApplication,gripss_purple_linx_1_3_2_CountBamLinesApplication` for process with name cnvs:get_cobalt_files:CountBamLinesApplication
+Oct-31 14:56:38.982 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:38.983 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:39.020 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:FilterCobalt` matches labels `FilterCobalt` for process with name cnvs:filter_cnv_files:FilterCobalt
+Oct-31 14:56:39.021 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:39.021 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:39.080 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:FilterBAF` matches labels `FilterBAF` for process with name cnvs:filter_cnv_files:FilterBAF
+Oct-31 14:56:39.081 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:39.081 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:39.178 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:gridss_2_13_2` matches labels `gridss,gridss_2_13_2` for process with name svs:get_gridss_vcfs:gridss
+Oct-31 14:56:39.200 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:39.200 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:39.233 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:gridss_2_13_2_AnnotateInsertedSequence` matches labels `gridss,gridss_2_13_2_AnnotateInsertedSequence` for process with name svs:get_gridss_vcfs:AnnotateInsertedSequence
+Oct-31 14:56:39.234 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:39.234 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:39.289 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:gripss_purple_linx_1_3_2_GripssApplicationKt` matches labels `GripssApplicationKt,gripss_purple_linx_1_3_2_GripssApplicationKt` for process with name svs:get_gripss_vcfs:GripssApplicationKt
+Oct-31 14:56:39.290 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:39.290 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:39.298 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:gripss_purple_linx_1_3_2_GripssHardFilterApplicationKt` matches labels `GripssHardFilterApplicationKt,gripss_purple_linx_1_3_2_GripssHardFilterApplicationKt` for process with name svs:get_gripss_vcfs:GripssHardFilterApplicationKt
+Oct-31 14:56:39.298 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:39.299 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:39.399 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:FilterGripss` matches labels `FilterGripss` for process with name svs:combine_cnvs_svs:FilterGripss
+Oct-31 14:56:39.399 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:39.400 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:39.509 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:IntegrateSvFiles` matches labels `IntegrateSvFiles` for process with name svs:combine_cnvs_svs:IntegrateSvFiles
+Oct-31 14:56:39.510 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:39.510 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:39.547 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:CreateSvPlots` matches labels `CreateSvPlots` for process with name svs:combine_cnvs_svs:CreateSvPlots
+Oct-31 14:56:39.548 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:39.548 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:39.583 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:CreateCircosConfig` matches labels `CreateCircosConfig` for process with name svs:combine_cnvs_svs:CreateCircosConfig
+Oct-31 14:56:39.583 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:39.583 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:39.620 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:Circos` matches labels `Circos,circos` for process with name svs:combine_cnvs_svs:Circos
+Oct-31 14:56:39.620 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:39.621 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:39.630 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:GATK_3_8_1_CallableLoci` matches labels `GATK_3_8_1,GATK_3_8_1_CallableLoci` for process with name qc:CallableLoci
+Oct-31 14:56:39.631 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:39.631 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:39.661 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:GATK_4_2_6_1_CollectAlignmentSummaryMetrics` matches labels `GATK_4_2_6_1,GATK_4_2_6_1_CollectAlignmentSummaryMetrics` for process with name qc:CollectAlignmentSummaryMetrics
+Oct-31 14:56:39.662 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:39.662 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:39.732 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:GATK_4_2_6_1_CollectWGSMetrics` matches labels `GATK_4_2_6_1,GATK_4_2_6_1_CollectWGSMetrics` for process with name qc:CollectWGSMetrics
+Oct-31 14:56:39.733 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:39.733 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:39.753 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Oct-31 14:56:39.753 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Oct-31 14:56:39.823 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: mergePtatoVcfs, short_variants:indels:filter_ptato_vcfs:bgzip, Circos, QCreport, short_variants:get_context_beds:sort, short_variants:merge_ptato_vcfs:bgzip, short_variants:intersect_ptato_vcfs:bgzip, tabix, gridss, intersectAll, get_gzipped_vcfs:bgzip, short_variants:get_ab_tables:tabix, short_variants:indels:filter_ptato_vcfs:ptatoIndelFilter, short_variants:get_somatic_vcfs:bgzip, bgzip, short_variants:intersect_feature:groupby, svs:combine_cnvs_svs:Circos, short_variants:indels:filter_ptato_vcfs:tabix, SnpSift, ptatoIndelFilter, groupbyAll, get_germline_vcfs:bgzip, train_indel_rf, ptatoFilter, get_indexed_bams:Index, ptatoCutoff, short_variants:merge_ptato_vcfs:tabix, short_variants:intersect_ptato_vcfs:tabix, CreateCircosConfig, smurf, qc:CallableLoci, GetSampleName, svs:combine_cnvs_svs:CreateCircosConfig, get_germline_vcfs:SnpSift, CountBamLinesApplication, short_variants:snvs:filter_ptato_vcfs:ptatoCutoff, CallableLoci, createIndelRfTable, short_variants:indels:get_ptato_vcfs:excludeIndels, short_variants:indels:get_ptato_vcfs:tabix, createIndelExcludeIndelList, cnvs:get_cobalt_files:CountBamLinesApplication, train_snv_rf, GripssHardFilterApplicationKt, groupby, FilterCobalt, svs:combine_cnvs_svs:IntegrateSvFiles, intersectExcludeIndelList, short_variants:get_somatic_vcfs:tabix, short_variants:snvs:filter_ptato_vcfs:tabix, short_variants:get_walker_vcfs:tabix, createSnvRfTable, createABtable, mergeABtable, qc:QCreport, Index, svs:combine_cnvs_svs:CreateSvPlots, short_variants:intersect_ptato_vcfs:intersectPTATO, cnvs:filter_cnv_files:FilterCobalt, cnvs:filter_cnv_files:FilterBAF, short_variants:snvs:get_ptato_vcfs:bgzip, short_variants:groupby_features:intersectAll, test_snv_rf, short_variants:indels:get_ptato_vcfs:bgzip, IntegrateSvFiles, GripssApplicationKt, short_variants:snvs:filter_ptato_vcfs:ptatoFilter, short_variants:closest_feature:closest, short_variants:snvs:get_ptato_vcfs:test_snv_rf, short_variants:snvs:get_snvs_rf_tables:createSnvRfTable, excludeIndels, short_variants:snvs:filter_ptato_vcfs:bgzip, FilterBAF, short_variants:get_walker_vcfs:walker, sort, short_variants:get_ab_tables:shapeit, walker, FilterGripss, svs:get_gridss_vcfs:AnnotateInsertedSequence, CollectWGSMetrics, short_variants:get_context_beds:getContext, short_variants:get_somatic_vcfs:smurf, short_variants:get_walker_vcfs:bgzip, CreateSvPlots, qc:CollectWGSMetrics, short_variants:closest_feature:groupby, svs:combine_cnvs_svs:FilterGripss, short_variants:snvs:get_ptato_vcfs:tabix, svs:get_gripss_vcfs:GripssApplicationKt, short_variants:groupby_features:groupbyAll, short_variants:merge_ptato_vcfs:mergePtatoVcfs, svs:get_gridss_vcfs:gridss, test_indel_rf, SplitVcfs, short_variants:SplitVcfs, shapeit, intersect, intersectPTATO, short_variants:get_ab_tables:createABtable, short_variants:intersect_feature:intersect, get_indexed_bams:GetSampleName, get_germline_vcfs:tabix, AnnotateInsertedSequence, CollectAlignmentSummaryMetrics, short_variants:get_ab_tables:mergeABtable, getContext, get_gzipped_vcfs:tabix, qc:CollectAlignmentSummaryMetrics, closest, svs:get_gripss_vcfs:GripssHardFilterApplicationKt
+Oct-31 14:56:39.824 [main] DEBUG nextflow.Session - Ignite dataflow network (75)
+Oct-31 14:56:39.928 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > get_gzipped_vcfs:bgzip
+Oct-31 14:56:39.915 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/VCF/; pattern: */*.{vcf,vcf.gz}; options: [type:file]
+Oct-31 14:56:39.935 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > get_gzipped_vcfs:tabix
+Oct-31 14:56:39.937 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > get_indexed_bams:Index
+Oct-31 14:56:39.937 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > get_indexed_bams:GetSampleName
+Oct-31 14:56:39.938 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > get_germline_vcfs:SnpSift
+Oct-31 14:56:39.938 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > get_germline_vcfs:bgzip
+Oct-31 14:56:39.938 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > get_germline_vcfs:tabix
+Oct-31 14:56:39.938 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_somatic_vcfs:smurf
+Oct-31 14:56:39.938 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_somatic_vcfs:bgzip
+Oct-31 14:56:39.938 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_somatic_vcfs:tabix
+Oct-31 14:56:39.938 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_ab_tables:shapeit
+Oct-31 14:56:39.938 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_ab_tables:tabix
+Oct-31 14:56:39.938 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_ab_tables:createABtable
+Oct-31 14:56:39.938 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_ab_tables:mergeABtable
+Oct-31 14:56:39.939 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_walker_vcfs:walker
+Oct-31 14:56:39.940 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_walker_vcfs:bgzip
+Oct-31 14:56:39.940 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_walker_vcfs:tabix
+Oct-31 14:56:39.940 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_context_beds:getContext
+Oct-31 14:56:39.940 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:get_context_beds:sort
+Oct-31 14:56:39.940 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:closest_feature:closest
+Oct-31 14:56:39.940 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:closest_feature:groupby
+Oct-31 14:56:39.940 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:intersect_feature:intersect
+Oct-31 14:56:39.940 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:intersect_feature:groupby
+Oct-31 14:56:39.941 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:groupby_features:intersectAll
+Oct-31 14:56:39.941 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:groupby_features:groupbyAll
+Oct-31 14:56:39.941 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:SplitVcfs
+Oct-31 14:56:39.941 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:snvs:get_snvs_rf_tables:createSnvRfTable
+Oct-31 14:56:39.941 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:snvs:get_ptato_vcfs:test_snv_rf
+Oct-31 14:56:39.941 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:snvs:get_ptato_vcfs:bgzip
+Oct-31 14:56:39.941 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:snvs:get_ptato_vcfs:tabix
+Oct-31 14:56:39.941 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:snvs:filter_ptato_vcfs:ptatoCutoff
+Oct-31 14:56:39.941 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:snvs:filter_ptato_vcfs:ptatoFilter
+Oct-31 14:56:39.941 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:snvs:filter_ptato_vcfs:bgzip
+Oct-31 14:56:39.941 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:snvs:filter_ptato_vcfs:tabix
+Oct-31 14:56:39.941 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:indels:get_ptato_vcfs:excludeIndels
+Oct-31 14:56:39.941 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:indels:get_ptato_vcfs:bgzip
+Oct-31 14:56:39.941 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:indels:get_ptato_vcfs:tabix
+Oct-31 14:56:39.942 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:indels:filter_ptato_vcfs:ptatoIndelFilter
+Oct-31 14:56:39.942 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:indels:filter_ptato_vcfs:bgzip
+Oct-31 14:56:39.942 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:indels:filter_ptato_vcfs:tabix
+Oct-31 14:56:39.942 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:intersect_ptato_vcfs:intersectPTATO
+Oct-31 14:56:39.942 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:intersect_ptato_vcfs:bgzip
+Oct-31 14:56:39.942 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:intersect_ptato_vcfs:tabix
+Oct-31 14:56:39.942 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:merge_ptato_vcfs:mergePtatoVcfs
+Oct-31 14:56:39.942 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:merge_ptato_vcfs:bgzip
+Oct-31 14:56:39.942 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > short_variants:merge_ptato_vcfs:tabix
+Oct-31 14:56:39.942 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > cnvs:get_cobalt_files:CountBamLinesApplication
+Oct-31 14:56:39.943 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > cnvs:filter_cnv_files:FilterCobalt
+Oct-31 14:56:39.943 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > cnvs:filter_cnv_files:FilterBAF
+Oct-31 14:56:39.943 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:get_gridss_vcfs:gridss
+Oct-31 14:56:39.943 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:get_gridss_vcfs:AnnotateInsertedSequence
+Oct-31 14:56:39.943 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:get_gripss_vcfs:GripssApplicationKt
+Oct-31 14:56:39.943 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:get_gripss_vcfs:GripssHardFilterApplicationKt
+Oct-31 14:56:39.943 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:combine_cnvs_svs:FilterGripss
+Oct-31 14:56:39.943 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:combine_cnvs_svs:IntegrateSvFiles
+Oct-31 14:56:39.943 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:combine_cnvs_svs:CreateSvPlots
+Oct-31 14:56:39.943 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:combine_cnvs_svs:CreateCircosConfig
+Oct-31 14:56:39.943 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > svs:combine_cnvs_svs:Circos
+Oct-31 14:56:39.943 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:CallableLoci
+Oct-31 14:56:39.944 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:CollectAlignmentSummaryMetrics
+Oct-31 14:56:39.944 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:CollectWGSMetrics
+Oct-31 14:56:39.944 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > qc:QCreport
+Oct-31 14:56:39.944 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Oct-31 14:56:39.944 [main] DEBUG nextflow.Session - Session await
+Oct-31 14:56:40.008 [PathVisitor-2] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/BAMS/; pattern: */*.bam; options: [type:file]
+Oct-31 14:56:40.990 [Actor Thread 13] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://quay.io/biocontainers/htslib:1.15--h9753748_0; path=/hpc/local/CentOS7/pmc_vanboxtel/singularity_cache/quay.io-biocontainers-htslib-1.15--h9753748_0.img
+Oct-31 14:56:41.367 [Actor Thread 22] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://broadinstitute/gatk:4.2.6.1; path=/hpc/local/CentOS7/pmc_vanboxtel/singularity_cache/broadinstitute-gatk-4.2.6.1.img
+Oct-31 14:56:42.779 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL8) > jobId: 7163610; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/19/7b3cba40023ba973c29d6760751498
+Oct-31 14:56:42.786 [Task submitter] INFO  nextflow.Session - [19/7b3cba] Submitted process > get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL8)
+Oct-31 14:56:43.176 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL10) > jobId: 7163611; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/12/2cbcd5bb7c28dbc7d4e6a697ac0b7f
+Oct-31 14:56:43.177 [Task submitter] INFO  nextflow.Session - [12/2cbcd5] Submitted process > get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL10)
+Oct-31 14:56:43.439 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted) > jobId: 7163612; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/5f/9202446b6c09101f17782abd09109a
+Oct-31 14:56:43.440 [Task submitter] INFO  nextflow.Session - [5f/920244] Submitted process > get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)
+Oct-31 14:56:43.669 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL4) > jobId: 7163613; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/47/bfc50e22e8f40813ec60c7aba62ee0
+Oct-31 14:56:43.669 [Task submitter] INFO  nextflow.Session - [47/bfc50e] Submitted process > get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL4)
+Oct-31 14:56:43.756 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL9) > jobId: 7163614; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/6d/afb1ae9d93e8d73f99f80cc858b10d
+Oct-31 14:56:43.757 [Task submitter] INFO  nextflow.Session - [6d/afb1ae] Submitted process > get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL9)
+Oct-31 14:56:43.806 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL11) > jobId: 7163615; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/db/b3d3ac1c02b8c3c9d6f7b3aca87c7c
+Oct-31 14:56:43.807 [Task submitter] INFO  nextflow.Session - [db/b3d3ac] Submitted process > get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL11)
+Oct-31 14:56:43.876 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL1) > jobId: 7163616; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/d1/1bb1a54bbff907d05f2b6fcde9edbd
+Oct-31 14:56:43.877 [Task submitter] INFO  nextflow.Session - [d1/1bb1a5] Submitted process > get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL1)
+Oct-31 14:56:43.964 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL6) > jobId: 7163617; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/e0/a9634b7996bfdf2665ba456388345e
+Oct-31 14:56:43.965 [Task submitter] INFO  nextflow.Session - [e0/a9634b] Submitted process > get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL6)
+Oct-31 14:56:44.037 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL12) > jobId: 7163618; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/25/938b328527bdc7964c84000c9e3108
+Oct-31 14:56:44.037 [Task submitter] INFO  nextflow.Session - [25/938b32] Submitted process > get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL12)
+Oct-31 14:56:44.081 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL3) > jobId: 7163619; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/fe/3d5a2b48f98ec5ecab72ba09d69821
+Oct-31 14:56:44.081 [Task submitter] INFO  nextflow.Session - [fe/3d5a2b] Submitted process > get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL3)
+Oct-31 14:56:44.113 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL7) > jobId: 7163620; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c8/294e57079c8ee78b0eb5d5b86e8181
+Oct-31 14:56:44.114 [Task submitter] INFO  nextflow.Session - [c8/294e57] Submitted process > get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL7)
+Oct-31 14:56:44.151 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL5) > jobId: 7163621; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c4/d7ab94d22286c0b5b2d2fd01986eb6
+Oct-31 14:56:44.151 [Task submitter] INFO  nextflow.Session - [c4/d7ab94] Submitted process > get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL5)
+Oct-31 14:56:44.198 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_indexed_bams:GetSampleName (GATK GetSampleName pt344-DX1PB-MONOBULK) > jobId: 7163622; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/fd/0a94c8f24f44575b59baa51b78dbd5
+Oct-31 14:56:44.198 [Task submitter] INFO  nextflow.Session - [fd/0a94c8] Submitted process > get_indexed_bams:GetSampleName (GATK GetSampleName pt344-DX1PB-MONOBULK)
+Oct-31 14:56:44.239 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL2) > jobId: 7163623; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/6b/b2a828b5661d4d7cae67e3f188fbc2
+Oct-31 14:56:44.239 [Task submitter] INFO  nextflow.Session - [6b/b2a828] Submitted process > get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL2)
+Oct-31 14:58:04.086 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7163611; id: 3; name: get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL10); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/12/2cbcd5bb7c28dbc7d4e6a697ac0b7f started: 1698760624123; exited: 2023-10-31T13:57:23Z; ]
+Oct-31 14:58:04.234 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7163613; id: 4; name: get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL4); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/47/bfc50e22e8f40813ec60c7aba62ee0 started: 1698760624145; exited: 2023-10-31T13:57:23Z; ]
+Oct-31 14:58:04.355 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7163614; id: 9; name: get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL9); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/6d/afb1ae9d93e8d73f99f80cc858b10d started: 1698760624152; exited: 2023-10-31T13:57:23Z; ]
+Oct-31 14:58:04.429 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7163615; id: 10; name: get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL11); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/db/b3d3ac1c02b8c3c9d6f7b3aca87c7c started: 1698760624170; exited: 2023-10-31T13:57:23Z; ]
+Oct-31 14:58:04.453 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7163616; id: 7; name: get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL1); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/d1/1bb1a54bbff907d05f2b6fcde9edbd started: 1698760624182; exited: 2023-10-31T13:57:23Z; ]
+Oct-31 14:58:04.484 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7163617; id: 13; name: get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL6); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/e0/a9634b7996bfdf2665ba456388345e started: 1698760624189; exited: 2023-10-31T13:57:23Z; ]
+Oct-31 14:58:04.534 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7163618; id: 6; name: get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL12); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/25/938b328527bdc7964c84000c9e3108 started: 1698760684512; exited: 2023-10-31T13:57:39Z; ]
+Oct-31 14:58:04.564 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7163621; id: 5; name: get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL5); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c4/d7ab94d22286c0b5b2d2fd01986eb6 started: 1698760684560; exited: 2023-10-31T13:57:39Z; ]
+Oct-31 14:58:04.619 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7163622; id: 14; name: get_indexed_bams:GetSampleName (GATK GetSampleName pt344-DX1PB-MONOBULK); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/fd/0a94c8f24f44575b59baa51b78dbd5 started: 1698760684615; exited: 2023-10-31T13:57:41Z; ]
+Oct-31 14:58:04.661 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7163623; id: 12; name: get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL2); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/6b/b2a828b5661d4d7cae67e3f188fbc2 started: 1698760684656; exited: 2023-10-31T13:57:41Z; ]
+Oct-31 14:59:04.083 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7163610; id: 2; name: get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL8); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/19/7b3cba40023ba973c29d6760751498 started: 1698760744079; exited: 2023-10-31T13:57:43Z; ]
+Oct-31 14:59:04.096 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7163612; id: 1; name: get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/5f/9202446b6c09101f17782abd09109a started: 1698760624133; exited: 2023-10-31T13:58:44Z; ]
+Oct-31 14:59:04.152 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7163620; id: 8; name: get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL7); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c8/294e57079c8ee78b0eb5d5b86e8181 started: 1698760744139; exited: 2023-10-31T13:58:08Z; ]
+Oct-31 14:59:04.193 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted) > jobId: 7163630; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/f6/7bf4d50e3fa9d2a29265fe02dd6a84
+Oct-31 14:59:04.193 [Task submitter] INFO  nextflow.Session - [f6/7bf4d5] Submitted process > get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)
+Oct-31 14:59:34.083 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7163619; id: 11; name: get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL3); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/fe/3d5a2b48f98ec5ecab72ba09d69821 started: 1698760774079; exited: 2023-10-31T13:58:12Z; ]
+Oct-31 14:59:34.136 [Actor Thread 69] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://quay.io/biocontainers/gatk:3.8--hdfd78af_11; path=/hpc/local/CentOS7/pmc_vanboxtel/singularity_cache/quay.io-biocontainers-gatk-3.8--hdfd78af_11.img
+Oct-31 14:59:34.317 [Actor Thread 66] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://gridss/gridss:2.13.2; path=/hpc/local/CentOS7/pmc_vanboxtel/singularity_cache/gridss-gridss-2.13.2.img
+Oct-31 14:59:34.396 [Actor Thread 6] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://gridss/gridss-purple-linx:1.3.2; path=/hpc/local/CentOS7/pmc_vanboxtel/singularity_cache/gridss-gridss-purple-linx-1.3.2.img
+Oct-31 14:59:34.572 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL11) > jobId: 7163648; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/72/d08bf36c470c9ba363e73fa457c230
+Oct-31 14:59:34.573 [Task submitter] INFO  nextflow.Session - [72/d08bf3] Submitted process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL11)
+Oct-31 14:59:34.925 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL6) > jobId: 7163649; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/fb/d4130f05fff98fe7e3616b418bbe69
+Oct-31 14:59:34.926 [Task submitter] INFO  nextflow.Session - [fb/d4130f] Submitted process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL6)
+Oct-31 14:59:35.113 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL4) > jobId: 7163650; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c0/92c662917f8e91a7b0debcdfc4216d
+Oct-31 14:59:35.113 [Task submitter] INFO  nextflow.Session - [c0/92c662] Submitted process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL4)
+Oct-31 14:59:35.165 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectWGSMetrics (GATK CollectWGSMetrics pt344-DX1PB-MONOBULK) > jobId: 7163651; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/03/8d32dc8f1e831d391641146b384a3e
+Oct-31 14:59:35.165 [Task submitter] INFO  nextflow.Session - [03/8d32dc] Submitted process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt344-DX1PB-MONOBULK)
+Oct-31 14:59:35.308 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL7) > jobId: 7163652; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/28/af235bf94bc8ec6e20eebe9cd569c0
+Oct-31 14:59:35.308 [Task submitter] INFO  nextflow.Session - [28/af235b] Submitted process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL7)
+Oct-31 14:59:35.357 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL3) > jobId: 7163653; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/32/94d44964dade2c44ce38a7e8dac6a2
+Oct-31 14:59:35.357 [Task submitter] INFO  nextflow.Session - [32/94d449] Submitted process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL3)
+Oct-31 14:59:35.399 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL12) > jobId: 7163654; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ed/fda9852220ee9a1b557bfaee9d4741
+Oct-31 14:59:35.399 [Task submitter] INFO  nextflow.Session - [ed/fda985] Submitted process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL12)
+Oct-31 14:59:35.439 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL9) > jobId: 7163655; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c8/580664c7029a2346a29a7fe99e3ea8
+Oct-31 14:59:35.439 [Task submitter] INFO  nextflow.Session - [c8/580664] Submitted process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL9)
+Oct-31 14:59:35.484 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL5) > jobId: 7163656; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/19/330885f0a6ab7cd02a50af4597e97a
+Oct-31 14:59:35.484 [Task submitter] INFO  nextflow.Session - [19/330885] Submitted process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL5)
+Oct-31 14:59:35.521 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL8) > jobId: 7163657; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ee/5d9acf091a8e81c79d47148aa9e45d
+Oct-31 14:59:35.521 [Task submitter] INFO  nextflow.Session - [ee/5d9acf] Submitted process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL8)
+Oct-31 14:59:35.575 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL1) > jobId: 7163658; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/af/309d9ae5ef612bf43970f5d9481d4a
+Oct-31 14:59:35.575 [Task submitter] INFO  nextflow.Session - [af/309d9a] Submitted process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL1)
+Oct-31 14:59:35.603 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL10) > jobId: 7163659; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/b4/573681fb6f33ded60044c861bcc252
+Oct-31 14:59:35.603 [Task submitter] INFO  nextflow.Session - [b4/573681] Submitted process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL10)
+Oct-31 14:59:35.634 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1BM-TALL5) > jobId: 7163660; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/a9/d05ed67d759bd0e8ed45aa9d4dd9fc
+Oct-31 14:59:35.634 [Task submitter] INFO  nextflow.Session - [a9/d05ed6] Submitted process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1BM-TALL5)
+Oct-31 14:59:35.682 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CallableLoci (GATK CallableLoci pt3291-DX1BM-TALL11) > jobId: 7163661; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/d1/92e7f8212c46e47b1148fc1f36435e
+Oct-31 14:59:35.682 [Task submitter] INFO  nextflow.Session - [d1/92e7f8] Submitted process > qc:CallableLoci (GATK CallableLoci pt3291-DX1BM-TALL11)
+Oct-31 14:59:35.713 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CallableLoci (GATK CallableLoci pt344-DX1PB-MONOBULK) > jobId: 7163662; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/4c/8a690e5d66d85bc1fd75feb3d84892
+Oct-31 14:59:35.713 [Task submitter] INFO  nextflow.Session - [4c/8a690e] Submitted process > qc:CallableLoci (GATK CallableLoci pt344-DX1PB-MONOBULK)
+Oct-31 14:59:35.754 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL2) > jobId: 7163663; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/3d/33e4d5ded10734725de3f3929a596d
+Oct-31 14:59:35.754 [Task submitter] INFO  nextflow.Session - [3d/33e4d5] Submitted process > qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL2)
+Oct-31 14:59:35.783 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1PB-TALL2) > jobId: 7163664; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/27/56227ed568179262c8b6c772c6694a
+Oct-31 14:59:35.783 [Task submitter] INFO  nextflow.Session - [27/56227e] Submitted process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1PB-TALL2)
+Oct-31 14:59:35.826 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1PB-TALL4) > jobId: 7163665; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/f2/dedfac37e0480e7a733ad3f102cc7d
+Oct-31 14:59:35.826 [Task submitter] INFO  nextflow.Session - [f2/dedfac] Submitted process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1PB-TALL4)
+Oct-31 14:59:35.867 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1BM-TALL11) > jobId: 7163666; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/83/e07f71b17a9ee74bda04d4f0e0e786
+Oct-31 14:59:35.867 [Task submitter] INFO  nextflow.Session - [83/e07f71] Submitted process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1BM-TALL11)
+Oct-31 14:59:35.896 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1BM-TALL6) > jobId: 7163667; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/8e/8bf9a238b7a87b3d51f347f1f59624
+Oct-31 14:59:35.897 [Task submitter] INFO  nextflow.Session - [8e/8bf9a2] Submitted process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1BM-TALL6)
+Oct-31 14:59:35.929 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt344-DX1PB-MONOBULK) > jobId: 7163668; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/66/a3de5836523f7ed949b1fc24b4aff3
+Oct-31 14:59:35.929 [Task submitter] INFO  nextflow.Session - [66/a3de58] Submitted process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt344-DX1PB-MONOBULK)
+Oct-31 14:59:35.958 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1PB-TALL3) > jobId: 7163669; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/56/d1c1ea366a05466a6127f660adf115
+Oct-31 14:59:35.958 [Task submitter] INFO  nextflow.Session - [56/d1c1ea] Submitted process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1PB-TALL3)
+Oct-31 14:59:35.986 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1BM-TALL7) > jobId: 7163670; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/76/214872aacad918fe125621b3c1fe6d
+Oct-31 14:59:35.986 [Task submitter] INFO  nextflow.Session - [76/214872] Submitted process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1BM-TALL7)
+Oct-31 14:59:36.023 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1PB-TALL1) > jobId: 7163671; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/7c/6e2e3ec32f83ef1c991203fd97624b
+Oct-31 14:59:36.023 [Task submitter] INFO  nextflow.Session - [7c/6e2e3e] Submitted process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1PB-TALL1)
+Oct-31 14:59:36.058 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1BM-TALL12) > jobId: 7163672; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ea/60e5f4e13a3ca3892d9713b8e488a4
+Oct-31 14:59:36.058 [Task submitter] INFO  nextflow.Session - [ea/60e5f4] Submitted process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1BM-TALL12)
+Oct-31 14:59:36.090 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1BM-TALL10) > jobId: 7163673; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/8f/fa62c622e2ad98cca344bfa6e42db9
+Oct-31 14:59:36.090 [Task submitter] INFO  nextflow.Session - [8f/fa62c6] Submitted process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1BM-TALL10)
+Oct-31 14:59:36.121 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1BM-TALL9) > jobId: 7163674; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/e7/193e5e0550137c7e39b8f5a8241213
+Oct-31 14:59:36.121 [Task submitter] INFO  nextflow.Session - [e7/193e5e] Submitted process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1BM-TALL9)
+Oct-31 14:59:36.151 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CallableLoci (GATK CallableLoci pt3291-DX1BM-TALL6) > jobId: 7163675; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/83/7579e40db72decc95d841a24211a6e
+Oct-31 14:59:36.151 [Task submitter] INFO  nextflow.Session - [83/7579e4] Submitted process > qc:CallableLoci (GATK CallableLoci pt3291-DX1BM-TALL6)
+Oct-31 14:59:36.181 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1BM-TALL8) > jobId: 7163676; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/e3/843298b9631443c4736aee6950405a
+Oct-31 14:59:36.182 [Task submitter] INFO  nextflow.Session - [e3/843298] Submitted process > qc:CollectAlignmentSummaryMetrics (GATK CollectAlignmentSummaryMetrics pt3291-DX1BM-TALL8)
+Oct-31 14:59:36.209 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CallableLoci (GATK CallableLoci pt3291-DX1BM-TALL9) > jobId: 7163677; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/91/3896c3f795d3ffe5f749e131cffbda
+Oct-31 14:59:36.210 [Task submitter] INFO  nextflow.Session - [91/3896c3] Submitted process > qc:CallableLoci (GATK CallableLoci pt3291-DX1BM-TALL9)
+Oct-31 14:59:36.238 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CallableLoci (GATK CallableLoci pt3291-DX1BM-TALL10) > jobId: 7163678; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/90/644936e72223e3434492067da2a8aa
+Oct-31 14:59:36.238 [Task submitter] INFO  nextflow.Session - [90/644936] Submitted process > qc:CallableLoci (GATK CallableLoci pt3291-DX1BM-TALL10)
+Oct-31 14:59:36.268 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL9) > jobId: 7163679; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/aa/faeb556b87a32d33da95a1708ab08f
+Oct-31 14:59:36.269 [Task submitter] INFO  nextflow.Session - [aa/faeb55] Submitted process > svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL9)
+Oct-31 14:59:36.333 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10) > jobId: 7163680; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ac/7ac72e2b5072f1f955ac2339ce03ad
+Oct-31 14:59:36.333 [Task submitter] INFO  nextflow.Session - [ac/7ac72e] Submitted process > svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)
+Oct-31 14:59:36.371 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL11) > jobId: 7163681; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ed/3a40473578ff18e3b8ad2ddb7f93e7
+Oct-31 14:59:36.371 [Task submitter] INFO  nextflow.Session - [ed/3a4047] Submitted process > svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL11)
+Oct-31 14:59:36.402 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CallableLoci (GATK CallableLoci pt3291-DX1PB-TALL1) > jobId: 7163682; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/a0/0ddb9944f1f46c9df1f0af5ca3ffbe
+Oct-31 14:59:36.403 [Task submitter] INFO  nextflow.Session - [a0/0ddb99] Submitted process > qc:CallableLoci (GATK CallableLoci pt3291-DX1PB-TALL1)
+Oct-31 14:59:36.437 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL3) > jobId: 7163683; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c6/646b7f2c487e8c9918604eaaa0be11
+Oct-31 14:59:36.437 [Task submitter] INFO  nextflow.Session - [c6/646b7f] Submitted process > svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL3)
+Oct-31 14:59:36.466 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL5) > jobId: 7163684; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/3a/a7256cf83dd74946f5548a0910f9a7
+Oct-31 14:59:36.466 [Task submitter] INFO  nextflow.Session - [3a/a7256c] Submitted process > svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL5)
+Oct-31 14:59:36.493 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CallableLoci (GATK CallableLoci pt3291-DX1BM-TALL12) > jobId: 7163685; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/44/8425294e7291763e08b76643070026
+Oct-31 14:59:36.494 [Task submitter] INFO  nextflow.Session - [44/842529] Submitted process > qc:CallableLoci (GATK CallableLoci pt3291-DX1BM-TALL12)
+Oct-31 14:59:36.532 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL4) > jobId: 7163686; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/7d/675dabb4ae1375844ceb24768d21cf
+Oct-31 14:59:36.533 [Task submitter] INFO  nextflow.Session - [7d/675dab] Submitted process > svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL4)
+Oct-31 14:59:36.560 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CallableLoci (GATK CallableLoci pt3291-DX1PB-TALL2) > jobId: 7163687; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/f3/41c13028f5f30028890c90ba55bd89
+Oct-31 14:59:36.560 [Task submitter] INFO  nextflow.Session - [f3/41c130] Submitted process > qc:CallableLoci (GATK CallableLoci pt3291-DX1PB-TALL2)
+Oct-31 14:59:36.594 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CallableLoci (GATK CallableLoci pt3291-DX1BM-TALL5) > jobId: 7163688; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/4d/45bc93dd4e2b5e44cd4afb109fb722
+Oct-31 14:59:36.594 [Task submitter] INFO  nextflow.Session - [4d/45bc93] Submitted process > qc:CallableLoci (GATK CallableLoci pt3291-DX1BM-TALL5)
+Oct-31 14:59:36.623 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CallableLoci (GATK CallableLoci pt3291-DX1PB-TALL4) > jobId: 7163689; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/a1/638036e2d3c5e63a0945472899244e
+Oct-31 14:59:36.623 [Task submitter] INFO  nextflow.Session - [a1/638036] Submitted process > qc:CallableLoci (GATK CallableLoci pt3291-DX1PB-TALL4)
+Oct-31 14:59:36.653 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL7) > jobId: 7163690; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/81/0dfc47f0f12645d670952febd08065
+Oct-31 14:59:36.653 [Task submitter] INFO  nextflow.Session - [81/0dfc47] Submitted process > svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL7)
+Oct-31 14:59:36.681 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CallableLoci (GATK CallableLoci pt3291-DX1BM-TALL7) > jobId: 7163691; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/6e/c22f12e9762e7f2b92f8e8ea22dc3c
+Oct-31 14:59:36.681 [Task submitter] INFO  nextflow.Session - [6e/c22f12] Submitted process > qc:CallableLoci (GATK CallableLoci pt3291-DX1BM-TALL7)
+Oct-31 14:59:36.712 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CallableLoci (GATK CallableLoci pt3291-DX1BM-TALL8) > jobId: 7163692; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/38/03542025424443f51e872ddcc755aa
+Oct-31 14:59:36.712 [Task submitter] INFO  nextflow.Session - [38/035420] Submitted process > qc:CallableLoci (GATK CallableLoci pt3291-DX1BM-TALL8)
+Oct-31 14:59:36.741 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process qc:CallableLoci (GATK CallableLoci pt3291-DX1PB-TALL3) > jobId: 7163693; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/2b/6664e419baa2a0e2910c84c6ea2e4f
+Oct-31 14:59:36.741 [Task submitter] INFO  nextflow.Session - [2b/6664e4] Submitted process > qc:CallableLoci (GATK CallableLoci pt3291-DX1PB-TALL3)
+Oct-31 14:59:36.777 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL2) > jobId: 7163694; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/24/f49d49b8c424243185890c1c662b75
+Oct-31 14:59:36.777 [Task submitter] INFO  nextflow.Session - [24/f49d49] Submitted process > svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL2)
+Oct-31 14:59:36.808 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL1) > jobId: 7163695; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/97/4f5d16c2472e9d4320dba97a9d55e3
+Oct-31 14:59:36.808 [Task submitter] INFO  nextflow.Session - [97/4f5d16] Submitted process > svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL1)
+Oct-31 14:59:36.836 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL12) > jobId: 7163696; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/61/2ffdd4a7f317268b87ccedd11c755b
+Oct-31 14:59:36.837 [Task submitter] INFO  nextflow.Session - [61/2ffdd4] Submitted process > svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL12)
+Oct-31 14:59:36.866 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10) > jobId: 7163697; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/6d/54dffb827039841ca1fd4abf2314bf
+Oct-31 14:59:36.866 [Task submitter] INFO  nextflow.Session - [6d/54dffb] Submitted process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)
+Oct-31 14:59:36.896 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL8) > jobId: 7163698; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/b2/de554b822a9a284074732f06ab6cd0
+Oct-31 14:59:36.896 [Task submitter] INFO  nextflow.Session - [b2/de554b] Submitted process > svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL8)
+Oct-31 14:59:36.923 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL9) > jobId: 7163699; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/a1/28a982347fb7e2997b67e9ac1265eb
+Oct-31 14:59:36.923 [Task submitter] INFO  nextflow.Session - [a1/28a982] Submitted process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL9)
+Oct-31 14:59:36.952 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL2) > jobId: 7163700; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/b2/46476db544d9d5e336b3edbd144e08
+Oct-31 14:59:36.953 [Task submitter] INFO  nextflow.Session - [b2/46476d] Submitted process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL2)
+Oct-31 14:59:36.980 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL4) > jobId: 7163701; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ce/4a0956f774dbc78ec0eac57ef74520
+Oct-31 14:59:36.981 [Task submitter] INFO  nextflow.Session - [ce/4a0956] Submitted process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL4)
+Oct-31 14:59:37.008 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL7) > jobId: 7163702; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/21/46587047d51fec3c50f7b349cbda78
+Oct-31 14:59:37.009 [Task submitter] INFO  nextflow.Session - [21/465870] Submitted process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL7)
+Oct-31 14:59:37.035 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL3) > jobId: 7163703; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ff/7a0082754d07535ab5eb3fa0f7b918
+Oct-31 14:59:37.035 [Task submitter] INFO  nextflow.Session - [ff/7a0082] Submitted process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL3)
+Oct-31 14:59:37.063 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL11) > jobId: 7163704; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/37/3f5c1dd0d64c795c71fc717919a45c
+Oct-31 14:59:37.063 [Task submitter] INFO  nextflow.Session - [37/3f5c1d] Submitted process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL11)
+Oct-31 14:59:37.092 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL12) > jobId: 7163705; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c3/466e0ed154ff7440e314fc034a4a1a
+Oct-31 14:59:37.092 [Task submitter] INFO  nextflow.Session - [c3/466e0e] Submitted process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL12)
+Oct-31 14:59:37.121 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL8) > jobId: 7163706; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/9e/d99e6860661abe0c63793386f715f2
+Oct-31 14:59:37.121 [Task submitter] INFO  nextflow.Session - [9e/d99e68] Submitted process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL8)
+Oct-31 14:59:37.148 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL6) > jobId: 7163707; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c3/7ebe5be94715522bcaac7687f72f93
+Oct-31 14:59:37.148 [Task submitter] INFO  nextflow.Session - [c3/7ebe5b] Submitted process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL6)
+Oct-31 14:59:37.177 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL5) > jobId: 7163708; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/f6/6ee8a57cf9b9c34981ef8fcf5e2808
+Oct-31 14:59:37.177 [Task submitter] INFO  nextflow.Session - [f6/6ee8a5] Submitted process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL5)
+Oct-31 14:59:37.205 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL1) > jobId: 7163709; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/7d/fe1ff80708bc648ab857e433ff3548
+Oct-31 14:59:37.206 [Task submitter] INFO  nextflow.Session - [7d/fe1ff8] Submitted process > cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL1)
+Oct-31 14:59:37.233 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL6) > jobId: 7163710; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/55/ca46ce6fd7c59e3c9965bf4ecb9465
+Oct-31 14:59:37.233 [Task submitter] INFO  nextflow.Session - [55/ca46ce] Submitted process > svs:get_gridss_vcfs:gridss (gridss pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL6)
+Oct-31 15:00:34.082 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7163630; id: 15; name: get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/f6/7bf4d50e3fa9d2a29265fe02dd6a84 started: 1698760834079; exited: 2023-10-31T14:00:24Z; ]
+Oct-31 15:00:34.092 [Actor Thread 40] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://vanboxtelbioinformatics/smurf:3.0.1; path=/hpc/local/CentOS7/pmc_vanboxtel/singularity_cache/vanboxtelbioinformatics-smurf-3.0.1.img
+Oct-31 15:00:34.096 [Actor Thread 3] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://davelabhub/snpsift:4.3.1t--1; path=/hpc/local/CentOS7/pmc_vanboxtel/singularity_cache/davelabhub-snpsift-4.3.1t--1.img
+Oct-31 15:00:34.166 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_germline_vcfs:SnpSift (SnpSift pt3291) > jobId: 7163713; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/fd/48ca5e3378b4b3ce041a2cd85e35c8
+Oct-31 15:00:34.166 [Task submitter] INFO  nextflow.Session - [fd/48ca5e] Submitted process > get_germline_vcfs:SnpSift (SnpSift pt3291)
+Oct-31 15:00:34.221 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_somatic_vcfs:smurf (SMuRF 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted) > jobId: 7163714; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/7a/7739046a60860b318c6c90edbf2e28
+Oct-31 15:00:34.221 [Task submitter] INFO  nextflow.Session - [7a/773904] Submitted process > short_variants:get_somatic_vcfs:smurf (SMuRF 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)
+Oct-31 15:02:04.090 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 65 -- submitted tasks are shown below
+~> TaskHandler[jobId: 7163648; id: 39; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL11); status: SUBMITTED; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/72/d08bf36c470c9ba363e73fa457c230 started: -; exited: -; ]
+~> TaskHandler[jobId: 7163649; id: 42; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL6); status: SUBMITTED; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/fb/d4130f05fff98fe7e3616b418bbe69 started: -; exited: -; ]
+~> TaskHandler[jobId: 7163650; id: 28; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL4); status: SUBMITTED; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c0/92c662917f8e91a7b0debcdfc4216d started: -; exited: -; ]
+~> TaskHandler[jobId: 7163651; id: 49; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt344-DX1PB-MONOBULK); status: SUBMITTED; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/03/8d32dc8f1e831d391641146b384a3e started: -; exited: -; ]
+~> TaskHandler[jobId: 7163652; id: 38; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL7); status: SUBMITTED; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/28/af235bf94bc8ec6e20eebe9cd569c0 started: -; exited: -; ]
+~> TaskHandler[jobId: 7163653; id: 40; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL3); status: SUBMITTED; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/32/94d44964dade2c44ce38a7e8dac6a2 started: -; exited: -; ]
+~> TaskHandler[jobId: 7163654; id: 43; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL12); status: SUBMITTED; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ed/fda9852220ee9a1b557bfaee9d4741 started: -; exited: -; ]
+~> TaskHandler[jobId: 7163655; id: 51; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL9); status: SUBMITTED; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c8/580664c7029a2346a29a7fe99e3ea8 started: -; exited: -; ]
+~> TaskHandler[jobId: 7163656; id: 50; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL5); status: SUBMITTED; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/19/330885f0a6ab7cd02a50af4597e97a started: -; exited: -; ]
+~> TaskHandler[jobId: 7163657; id: 47; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL8); status: SUBMITTED; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ee/5d9acf091a8e81c79d47148aa9e45d started: -; exited: -; ]
+.. remaining tasks omitted.
+Oct-31 15:07:04.098 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 65 -- submitted tasks are shown below
+~> TaskHandler[jobId: 7163648; id: 39; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL11); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/72/d08bf36c470c9ba363e73fa457c230 started: 1698760924092; exited: -; ]
+~> TaskHandler[jobId: 7163649; id: 42; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL6); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/fb/d4130f05fff98fe7e3616b418bbe69 started: 1698760924095; exited: -; ]
+~> TaskHandler[jobId: 7163650; id: 28; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL4); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c0/92c662917f8e91a7b0debcdfc4216d started: 1698760924096; exited: -; ]
+~> TaskHandler[jobId: 7163651; id: 49; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt344-DX1PB-MONOBULK); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/03/8d32dc8f1e831d391641146b384a3e started: 1698760924098; exited: -; ]
+~> TaskHandler[jobId: 7163652; id: 38; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL7); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/28/af235bf94bc8ec6e20eebe9cd569c0 started: 1698760924099; exited: -; ]
+~> TaskHandler[jobId: 7163653; id: 40; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL3); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/32/94d44964dade2c44ce38a7e8dac6a2 started: 1698760924101; exited: -; ]
+~> TaskHandler[jobId: 7163654; id: 43; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL12); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ed/fda9852220ee9a1b557bfaee9d4741 started: 1698760924103; exited: -; ]
+~> TaskHandler[jobId: 7163655; id: 51; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL9); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c8/580664c7029a2346a29a7fe99e3ea8 started: 1698760924104; exited: -; ]
+~> TaskHandler[jobId: 7163656; id: 50; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL5); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/19/330885f0a6ab7cd02a50af4597e97a started: 1698760984098; exited: -; ]
+~> TaskHandler[jobId: 7163657; id: 47; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL8); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ee/5d9acf091a8e81c79d47148aa9e45d started: 1698761074096; exited: -; ]
+.. remaining tasks omitted.
+Oct-31 15:12:04.102 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 65 -- submitted tasks are shown below
+~> TaskHandler[jobId: 7163648; id: 39; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL11); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/72/d08bf36c470c9ba363e73fa457c230 started: 1698760924092; exited: -; ]
+~> TaskHandler[jobId: 7163649; id: 42; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL6); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/fb/d4130f05fff98fe7e3616b418bbe69 started: 1698760924095; exited: -; ]
+~> TaskHandler[jobId: 7163650; id: 28; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL4); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c0/92c662917f8e91a7b0debcdfc4216d started: 1698760924096; exited: -; ]
+~> TaskHandler[jobId: 7163651; id: 49; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt344-DX1PB-MONOBULK); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/03/8d32dc8f1e831d391641146b384a3e started: 1698760924098; exited: -; ]
+~> TaskHandler[jobId: 7163652; id: 38; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL7); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/28/af235bf94bc8ec6e20eebe9cd569c0 started: 1698760924099; exited: -; ]
+~> TaskHandler[jobId: 7163653; id: 40; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL3); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/32/94d44964dade2c44ce38a7e8dac6a2 started: 1698760924101; exited: -; ]
+~> TaskHandler[jobId: 7163654; id: 43; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL12); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ed/fda9852220ee9a1b557bfaee9d4741 started: 1698760924103; exited: -; ]
+~> TaskHandler[jobId: 7163655; id: 51; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL9); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c8/580664c7029a2346a29a7fe99e3ea8 started: 1698760924104; exited: -; ]
+~> TaskHandler[jobId: 7163656; id: 50; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL5); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/19/330885f0a6ab7cd02a50af4597e97a started: 1698760984098; exited: -; ]
+~> TaskHandler[jobId: 7163657; id: 47; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL8); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ee/5d9acf091a8e81c79d47148aa9e45d started: 1698761074096; exited: -; ]
+.. remaining tasks omitted.
+Oct-31 15:17:04.106 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 65 -- submitted tasks are shown below
+~> TaskHandler[jobId: 7163648; id: 39; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL11); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/72/d08bf36c470c9ba363e73fa457c230 started: 1698760924092; exited: -; ]
+~> TaskHandler[jobId: 7163649; id: 42; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL6); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/fb/d4130f05fff98fe7e3616b418bbe69 started: 1698760924095; exited: -; ]
+~> TaskHandler[jobId: 7163650; id: 28; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL4); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c0/92c662917f8e91a7b0debcdfc4216d started: 1698760924096; exited: -; ]
+~> TaskHandler[jobId: 7163651; id: 49; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt344-DX1PB-MONOBULK); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/03/8d32dc8f1e831d391641146b384a3e started: 1698760924098; exited: -; ]
+~> TaskHandler[jobId: 7163652; id: 38; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL7); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/28/af235bf94bc8ec6e20eebe9cd569c0 started: 1698760924099; exited: -; ]
+~> TaskHandler[jobId: 7163653; id: 40; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL3); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/32/94d44964dade2c44ce38a7e8dac6a2 started: 1698760924101; exited: -; ]
+~> TaskHandler[jobId: 7163654; id: 43; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL12); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ed/fda9852220ee9a1b557bfaee9d4741 started: 1698760924103; exited: -; ]
+~> TaskHandler[jobId: 7163655; id: 51; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL9); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c8/580664c7029a2346a29a7fe99e3ea8 started: 1698760924104; exited: -; ]
+~> TaskHandler[jobId: 7163656; id: 50; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL5); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/19/330885f0a6ab7cd02a50af4597e97a started: 1698760984098; exited: -; ]
+~> TaskHandler[jobId: 7163657; id: 47; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL8); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ee/5d9acf091a8e81c79d47148aa9e45d started: 1698761074096; exited: -; ]
+.. remaining tasks omitted.
+Oct-31 15:22:04.110 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 65 -- submitted tasks are shown below
+~> TaskHandler[jobId: 7163648; id: 39; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL11); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/72/d08bf36c470c9ba363e73fa457c230 started: 1698760924092; exited: -; ]
+~> TaskHandler[jobId: 7163649; id: 42; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL6); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/fb/d4130f05fff98fe7e3616b418bbe69 started: 1698760924095; exited: -; ]
+~> TaskHandler[jobId: 7163650; id: 28; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL4); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c0/92c662917f8e91a7b0debcdfc4216d started: 1698760924096; exited: -; ]
+~> TaskHandler[jobId: 7163651; id: 49; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt344-DX1PB-MONOBULK); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/03/8d32dc8f1e831d391641146b384a3e started: 1698760924098; exited: -; ]
+~> TaskHandler[jobId: 7163652; id: 38; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL7); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/28/af235bf94bc8ec6e20eebe9cd569c0 started: 1698760924099; exited: -; ]
+~> TaskHandler[jobId: 7163653; id: 40; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL3); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/32/94d44964dade2c44ce38a7e8dac6a2 started: 1698760924101; exited: -; ]
+~> TaskHandler[jobId: 7163654; id: 43; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL12); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ed/fda9852220ee9a1b557bfaee9d4741 started: 1698760924103; exited: -; ]
+~> TaskHandler[jobId: 7163655; id: 51; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL9); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c8/580664c7029a2346a29a7fe99e3ea8 started: 1698760924104; exited: -; ]
+~> TaskHandler[jobId: 7163656; id: 50; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL5); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/19/330885f0a6ab7cd02a50af4597e97a started: 1698760984098; exited: -; ]
+~> TaskHandler[jobId: 7163657; id: 47; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL8); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ee/5d9acf091a8e81c79d47148aa9e45d started: 1698761074096; exited: -; ]
+.. remaining tasks omitted.
+Oct-31 15:27:04.118 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 65 -- submitted tasks are shown below
+~> TaskHandler[jobId: 7163648; id: 39; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL11); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/72/d08bf36c470c9ba363e73fa457c230 started: 1698760924092; exited: -; ]
+~> TaskHandler[jobId: 7163649; id: 42; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL6); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/fb/d4130f05fff98fe7e3616b418bbe69 started: 1698760924095; exited: -; ]
+~> TaskHandler[jobId: 7163650; id: 28; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL4); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c0/92c662917f8e91a7b0debcdfc4216d started: 1698760924096; exited: -; ]
+~> TaskHandler[jobId: 7163651; id: 49; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt344-DX1PB-MONOBULK); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/03/8d32dc8f1e831d391641146b384a3e started: 1698760924098; exited: -; ]
+~> TaskHandler[jobId: 7163652; id: 38; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL7); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/28/af235bf94bc8ec6e20eebe9cd569c0 started: 1698760924099; exited: -; ]
+~> TaskHandler[jobId: 7163653; id: 40; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL3); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/32/94d44964dade2c44ce38a7e8dac6a2 started: 1698760924101; exited: -; ]
+~> TaskHandler[jobId: 7163654; id: 43; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL12); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ed/fda9852220ee9a1b557bfaee9d4741 started: 1698760924103; exited: -; ]
+~> TaskHandler[jobId: 7163655; id: 51; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL9); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c8/580664c7029a2346a29a7fe99e3ea8 started: 1698760924104; exited: -; ]
+~> TaskHandler[jobId: 7163656; id: 50; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL5); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/19/330885f0a6ab7cd02a50af4597e97a started: 1698760984098; exited: -; ]
+~> TaskHandler[jobId: 7163657; id: 47; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL8); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ee/5d9acf091a8e81c79d47148aa9e45d started: 1698761074096; exited: -; ]
+.. remaining tasks omitted.
+Oct-31 15:29:04.134 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7163713; id: 79; name: get_germline_vcfs:SnpSift (SnpSift pt3291); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/fd/48ca5e3378b4b3ce041a2cd85e35c8 started: 1698762424133; exited: 2023-10-31T14:27:58Z; ]
+Oct-31 15:29:04.233 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted) > jobId: 7164861; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/73/ccce33dcacb273a55f2613d2f9c9eb
+Oct-31 15:29:04.233 [Task submitter] INFO  nextflow.Session - [73/ccce33] Submitted process > get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)
+Oct-31 15:30:34.132 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7164861; id: 81; name: get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/73/ccce33dcacb273a55f2613d2f9c9eb started: 1698762574134; exited: 2023-10-31T14:30:11Z; ]
+Oct-31 15:30:34.203 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted) > jobId: 7164866; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/2c/cf3150872019b3fe895e6722f5dcd0
+Oct-31 15:30:34.203 [Task submitter] INFO  nextflow.Session - [2c/cf3150] Submitted process > get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)
+Oct-31 15:31:04.139 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7164866; id: 82; name: get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/2c/cf3150872019b3fe895e6722f5dcd0 started: 1698762664133; exited: 2023-10-31T14:31:02Z; ]
+Oct-31 15:31:06.567 [Actor Thread 5] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=docker://quay.io/biocontainers/shapeit4:4.2.2--h24bf969_1; path=/hpc/local/CentOS7/pmc_vanboxtel/singularity_cache/quay.io-biocontainers-shapeit4-4.2.2--h24bf969_1.img
+Oct-31 15:31:06.804 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL8) > jobId: 7164869; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/56/8c0cb588faea838b28fe6945ae27c5
+Oct-31 15:31:06.804 [Task submitter] INFO  nextflow.Session - [56/8c0cb5] Submitted process > cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL8)
+Oct-31 15:31:06.851 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL9) > jobId: 7164870; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/12/cf9ea6654faa0a597e0461d20983b7
+Oct-31 15:31:06.852 [Task submitter] INFO  nextflow.Session - [12/cf9ea6] Submitted process > cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL9)
+Oct-31 15:31:06.893 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL3) > jobId: 7164871; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c6/7a57ce5774155100f39b1911644792
+Oct-31 15:31:06.893 [Task submitter] INFO  nextflow.Session - [c6/7a57ce] Submitted process > cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL3)
+Oct-31 15:31:06.934 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL11) > jobId: 7164872; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/25/6120b3cb6c06892ee847a9004aaa6b
+Oct-31 15:31:06.935 [Task submitter] INFO  nextflow.Session - [25/6120b3] Submitted process > cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL11)
+Oct-31 15:31:06.966 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 16) > jobId: 7164873; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/fe/41f90ae6b4cb1525d925cd49af1c90
+Oct-31 15:31:06.967 [Task submitter] INFO  nextflow.Session - [fe/41f90a] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 16)
+Oct-31 15:31:06.995 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10) > jobId: 7164874; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/cb/7bcf24e90080317f9192b426f5fc63
+Oct-31 15:31:06.995 [Task submitter] INFO  nextflow.Session - [cb/7bcf24] Submitted process > cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)
+Oct-31 15:31:07.022 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 12) > jobId: 7164875; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c3/efb2f7becd7e7188dce70d64c8a0ff
+Oct-31 15:31:07.022 [Task submitter] INFO  nextflow.Session - [c3/efb2f7] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 12)
+Oct-31 15:31:07.050 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL7) > jobId: 7164876; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/02/5cad469da69ee08981ea7ce4e62269
+Oct-31 15:31:07.050 [Task submitter] INFO  nextflow.Session - [02/5cad46] Submitted process > cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL7)
+Oct-31 15:31:07.076 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL5) > jobId: 7164877; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/36/8ac3b24b4e0e765f49c634f62f345a
+Oct-31 15:31:07.077 [Task submitter] INFO  nextflow.Session - [36/8ac3b2] Submitted process > cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL5)
+Oct-31 15:31:07.103 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL2) > jobId: 7164878; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ca/357d04b703de5c9425bd15e29659c9
+Oct-31 15:31:07.103 [Task submitter] INFO  nextflow.Session - [ca/357d04] Submitted process > cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL2)
+Oct-31 15:31:07.136 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL1) > jobId: 7164879; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/88/9d72253a31e366416cd5dda4c8ad92
+Oct-31 15:31:07.136 [Task submitter] INFO  nextflow.Session - [88/9d7225] Submitted process > cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL1)
+Oct-31 15:31:07.163 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL12) > jobId: 7164880; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/9c/4a6549e2107e880bdde616f1db02f8
+Oct-31 15:31:07.163 [Task submitter] INFO  nextflow.Session - [9c/4a6549] Submitted process > cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL12)
+Oct-31 15:31:07.190 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL6) > jobId: 7164881; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/f9/54148e75cdb660345a50981aa66db0
+Oct-31 15:31:07.190 [Task submitter] INFO  nextflow.Session - [f9/54148e] Submitted process > cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL6)
+Oct-31 15:31:07.216 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL4) > jobId: 7164882; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/05/71b571fda9b362e5d92f22583a7b0e
+Oct-31 15:31:07.216 [Task submitter] INFO  nextflow.Session - [05/71b571] Submitted process > cnvs:filter_cnv_files:FilterBAF (FilterBAF pt344-DX1PB-MONOBULK pt3291-DX1PB-TALL4)
+Oct-31 15:31:07.243 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 2) > jobId: 7164883; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/61/454520284ead8d7582b3e070012687
+Oct-31 15:31:07.243 [Task submitter] INFO  nextflow.Session - [61/454520] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 2)
+Oct-31 15:31:07.271 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 7) > jobId: 7164884; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c8/342b12f2249760fd1bf4c935f55e99
+Oct-31 15:31:07.271 [Task submitter] INFO  nextflow.Session - [c8/342b12] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 7)
+Oct-31 15:31:07.299 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 10) > jobId: 7164885; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/d1/6bedad277ccb094469247902dddcf5
+Oct-31 15:31:07.299 [Task submitter] INFO  nextflow.Session - [d1/6bedad] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 10)
+Oct-31 15:31:07.327 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 8) > jobId: 7164886; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c6/4771fd99816b4b1788911f87dd0fec
+Oct-31 15:31:07.327 [Task submitter] INFO  nextflow.Session - [c6/4771fd] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 8)
+Oct-31 15:31:07.358 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 11) > jobId: 7164887; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ff/4b9e1255f0829716eb04f161f1f715
+Oct-31 15:31:07.358 [Task submitter] INFO  nextflow.Session - [ff/4b9e12] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 11)
+Oct-31 15:31:07.390 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 14) > jobId: 7164888; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/2c/307df1a3b1c6ef71aa6243d12e3b54
+Oct-31 15:31:07.390 [Task submitter] INFO  nextflow.Session - [2c/307df1] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 14)
+Oct-31 15:31:07.419 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 21) > jobId: 7164889; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/4f/4be32109438994aaa84e3b7009a54e
+Oct-31 15:31:07.419 [Task submitter] INFO  nextflow.Session - [4f/4be321] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 21)
+Oct-31 15:31:07.447 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 20) > jobId: 7164890; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/42/890e3cfb4a44ff35c31f390e1a7e5b
+Oct-31 15:31:07.447 [Task submitter] INFO  nextflow.Session - [42/890e3c] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 20)
+Oct-31 15:31:07.485 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 17) > jobId: 7164891; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/75/06e1ec54f6daf5fcd369866b241a66
+Oct-31 15:31:07.485 [Task submitter] INFO  nextflow.Session - [75/06e1ec] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 17)
+Oct-31 15:31:07.531 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 9) > jobId: 7164892; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ba/d529403261b1c4f4181b1821744e63
+Oct-31 15:31:07.532 [Task submitter] INFO  nextflow.Session - [ba/d52940] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 9)
+Oct-31 15:31:07.565 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 5) > jobId: 7164893; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/3e/af840a7a778108aa8b148a537af92f
+Oct-31 15:31:07.565 [Task submitter] INFO  nextflow.Session - [3e/af840a] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 5)
+Oct-31 15:31:07.594 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 3) > jobId: 7164894; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/3e/f52b27b7f354411ab67a6641d4ecbb
+Oct-31 15:31:07.594 [Task submitter] INFO  nextflow.Session - [3e/f52b27] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 3)
+Oct-31 15:31:07.622 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 4) > jobId: 7164895; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/d3/f05746c6fd061e4ee58c8dd2893c0d
+Oct-31 15:31:07.622 [Task submitter] INFO  nextflow.Session - [d3/f05746] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 4)
+Oct-31 15:31:07.651 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 15) > jobId: 7164896; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/86/ac56ab05ce87ab0a032778070ecb80
+Oct-31 15:31:07.651 [Task submitter] INFO  nextflow.Session - [86/ac56ab] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 15)
+Oct-31 15:31:07.679 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 22) > jobId: 7164897; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/7f/83633c9d18e55c4ed2efabd6a317e0
+Oct-31 15:31:07.679 [Task submitter] INFO  nextflow.Session - [7f/83633c] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 22)
+Oct-31 15:31:07.707 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 13) > jobId: 7164898; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/3e/fda148f07be761f69001e2d74cfc3c
+Oct-31 15:31:07.707 [Task submitter] INFO  nextflow.Session - [3e/fda148] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 13)
+Oct-31 15:31:07.734 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 19) > jobId: 7164899; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/34/5657a1262d464ded733ca2ae3292bf
+Oct-31 15:31:07.734 [Task submitter] INFO  nextflow.Session - [34/5657a1] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 19)
+Oct-31 15:31:07.775 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 18) > jobId: 7164900; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/4a/45ae6ddf4cd3a9ba184853223ba5ef
+Oct-31 15:31:07.776 [Task submitter] INFO  nextflow.Session - [4a/45ae6d] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 18)
+Oct-31 15:31:07.804 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 6) > jobId: 7164901; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/a5/da2a0b296651b9ff503c8cc8c6349b
+Oct-31 15:31:07.804 [Task submitter] INFO  nextflow.Session - [a5/da2a0b] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 6)
+Oct-31 15:31:07.831 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process short_variants:get_ab_tables:shapeit (shapeit pt3291 1) > jobId: 7164902; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/eb/936dc2018cc4f1ce0c2b4e91fffc03
+Oct-31 15:31:07.831 [Task submitter] INFO  nextflow.Session - [eb/936dc2] Submitted process > short_variants:get_ab_tables:shapeit (shapeit pt3291 1)
+Oct-31 15:31:34.138 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7163697; id: 55; name: cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10); status: COMPLETED; exit: 0; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/6d/54dffb827039841ca1fd4abf2314bf started: 1698762034155; exited: 2023-10-31T14:30:50Z; ]
+Oct-31 15:31:34.920 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process cnvs:filter_cnv_files:FilterCobalt (FilterCobalt pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10) > jobId: 7164910; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/29/58168984661255da4c3a937fe2fce3
+Oct-31 15:31:34.920 [Task submitter] INFO  nextflow.Session - [29/581689] Submitted process > cnvs:filter_cnv_files:FilterCobalt (FilterCobalt pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)
+Oct-31 15:32:04.120 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 98 -- submitted tasks are shown below
+~> TaskHandler[jobId: 7163648; id: 39; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL11); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/72/d08bf36c470c9ba363e73fa457c230 started: 1698760924092; exited: -; ]
+~> TaskHandler[jobId: 7163649; id: 42; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL6); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/fb/d4130f05fff98fe7e3616b418bbe69 started: 1698760924095; exited: -; ]
+~> TaskHandler[jobId: 7163650; id: 28; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL4); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c0/92c662917f8e91a7b0debcdfc4216d started: 1698760924096; exited: -; ]
+~> TaskHandler[jobId: 7163651; id: 49; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt344-DX1PB-MONOBULK); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/03/8d32dc8f1e831d391641146b384a3e started: 1698760924098; exited: -; ]
+~> TaskHandler[jobId: 7163652; id: 38; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL7); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/28/af235bf94bc8ec6e20eebe9cd569c0 started: 1698760924099; exited: -; ]
+~> TaskHandler[jobId: 7163653; id: 40; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1PB-TALL3); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/32/94d44964dade2c44ce38a7e8dac6a2 started: 1698760924101; exited: -; ]
+~> TaskHandler[jobId: 7163654; id: 43; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL12); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ed/fda9852220ee9a1b557bfaee9d4741 started: 1698760924103; exited: -; ]
+~> TaskHandler[jobId: 7163655; id: 51; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL9); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/c8/580664c7029a2346a29a7fe99e3ea8 started: 1698760924104; exited: -; ]
+~> TaskHandler[jobId: 7163656; id: 50; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL5); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/19/330885f0a6ab7cd02a50af4597e97a started: 1698760984098; exited: -; ]
+~> TaskHandler[jobId: 7163657; id: 47; name: qc:CollectWGSMetrics (GATK CollectWGSMetrics pt3291-DX1BM-TALL8); status: RUNNING; exit: -; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/ee/5d9acf091a8e81c79d47148aa9e45d started: 1698761074096; exited: -; ]
+.. remaining tasks omitted.
+Oct-31 15:32:04.138 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7164910; id: 117; name: cnvs:filter_cnv_files:FilterCobalt (FilterCobalt pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10); status: COMPLETED; exit: 1; error: -; workDir: /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/29/58168984661255da4c3a937fe2fce3 started: 1698762724133; exited: 2023-10-31T14:31:59Z; ]
+Oct-31 15:32:04.185 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'cnvs:filter_cnv_files:FilterCobalt (FilterCobalt pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)'
+
+Caused by:
+  Process `cnvs:filter_cnv_files:FilterCobalt (FilterCobalt pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)` terminated with an error exit status (1)
+
+Command executed:
+
+  host=$(hostname)
+  echo ${host}
+  
+  R --slave --file=/hpc/pmc_vanboxtel/tools/ToolsVanBox/PTATO-1.2.0/scripts/R/filter_cobalt.R --args     pt3291-DX1BM-TALL10.cobalt.ratio.tsv     /hpc/pmc_vanboxtel/tools/ToolsVanBox/PTATO-1.2.0/resources/hg38/svs/hg38_centromeres.txt     /hpc/pmc_vanboxtel/tools/ToolsVanBox/PTATO-1.2.0/resources/hg38/svs/cytoBand_hg38.txt.gz     /hpc/pmc_vanboxtel/tools/ToolsVanBox/PTATO-1.2.0/resources/hg38/cobalt/COBALT_PTA_Normalized_Full.txt     BSgenome.Hsapiens.UCSC.hg38     pt3291-DX1BM-TALL10     1000000 0.01 0.99
+
+Command exit status:
+  1
+
+Command output:
+  n0086.manage.hpc
+
+Command error:
+      rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+      rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+      rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+      rowWeightedSds, rowWeightedVars
+  
+  Loading required package: GenomeInfoDb
+  Loading required package: S4Vectors
+  Loading required package: stats4
+  
+  Attaching package: ‘S4Vectors’
+  
+  The following objects are masked from ‘package:base’:
+  
+      expand.grid, I, unname
+  
+  Loading required package: IRanges
+  Loading required package: GenomicRanges
+  Loading required package: SummarizedExperiment
+  Loading required package: Biobase
+  Welcome to Bioconductor
+  
+      Vignettes contain introductory material; view with
+      'browseVignettes()'. To cite Bioconductor, see
+      'citation("Biobase")', and for packages 'citation("pkgname")'.
+  
+  
+  Attaching package: ‘Biobase’
+  
+  The following object is masked from ‘package:MatrixGenerics’:
+  
+      rowMedians
+  
+  The following objects are masked from ‘package:matrixStats’:
+  
+      anyMissing, rowMedians
+  
+  Loading required package: Rsamtools
+  Loading required package: Biostrings
+  Loading required package: XVector
+  
+  Attaching package: ‘Biostrings’
+  
+  The following object is masked from ‘package:base’:
+  
+      strsplit
+  
+  Error: package or namespace load failed for ‘VariantAnnotation’ in dyn.load(file, DLLpath = DLLpath, ...):
+   unable to load shared object '/hpc/local/CentOS7/pmc_vanboxtel/R_libs/4.1.2/png/libs/png.so':
+    libpng15.so.15: cannot open shared object file: No such file or directory
+  Execution halted
+
+Work dir:
+  /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/PTA_pt3291/work/29/58168984661255da4c3a937fe2fce3
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
+Oct-31 15:32:04.218 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `cnvs:filter_cnv_files:FilterCobalt (FilterCobalt pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)` terminated with an error exit status (1)
+Oct-31 15:32:04.267 [Task monitor] DEBUG nextflow.Session - The following nodes are still active:
+[process] short_variants:get_somatic_vcfs:bgzip
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_somatic_vcfs:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_ab_tables:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_ab_tables:createABtable
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_ab_tables:mergeABtable
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_walker_vcfs:walker
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_walker_vcfs:bgzip
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_walker_vcfs:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_context_beds:getContext
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:get_context_beds:sort
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:closest_feature:closest
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:closest_feature:groupby
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:intersect_feature:intersect
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:intersect_feature:groupby
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:groupby_features:intersectAll
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:groupby_features:groupbyAll
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:SplitVcfs
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:snvs:get_snvs_rf_tables:createSnvRfTable
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:snvs:get_ptato_vcfs:test_snv_rf
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:snvs:get_ptato_vcfs:bgzip
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:snvs:get_ptato_vcfs:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:snvs:filter_ptato_vcfs:ptatoCutoff
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:snvs:filter_ptato_vcfs:ptatoFilter
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:snvs:filter_ptato_vcfs:bgzip
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:snvs:filter_ptato_vcfs:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:indels:get_ptato_vcfs:excludeIndels
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:indels:get_ptato_vcfs:bgzip
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:indels:get_ptato_vcfs:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:indels:filter_ptato_vcfs:ptatoIndelFilter
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:indels:filter_ptato_vcfs:bgzip
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:indels:filter_ptato_vcfs:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:intersect_ptato_vcfs:intersectPTATO
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:intersect_ptato_vcfs:bgzip
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:intersect_ptato_vcfs:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:merge_ptato_vcfs:mergePtatoVcfs
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:merge_ptato_vcfs:bgzip
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] short_variants:merge_ptato_vcfs:tabix
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] cnvs:filter_cnv_files:FilterCobalt
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] svs:get_gridss_vcfs:AnnotateInsertedSequence
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] svs:get_gripss_vcfs:GripssApplicationKt
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] svs:get_gripss_vcfs:GripssHardFilterApplicationKt
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] svs:combine_cnvs_svs:FilterGripss
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] svs:combine_cnvs_svs:IntegrateSvFiles
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] svs:combine_cnvs_svs:CreateSvPlots
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] svs:combine_cnvs_svs:CreateCircosConfig
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] svs:combine_cnvs_svs:Circos
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] qc:QCreport
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+Oct-31 15:32:04.285 [main] DEBUG nextflow.Session - Session await > all process finished
+Oct-31 15:32:04.286 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Oct-31 15:32:04.303 [main] WARN  n.processor.TaskPollingMonitor - Killing pending tasks (97)
+Oct-31 15:32:05.087 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=19; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=31; runningCount=-31; retriesCount=0; abortedCount=97; succeedDuration=1h 50m 51s; failedDuration=5ms; cachedDuration=0ms;loadCpus=-248; loadMemory=0; peakRunning=67; peakCpus=172; peakMemory=1.3 TB; ]
+Oct-31 15:32:05.087 [main] DEBUG nextflow.trace.TraceFileObserver - Flow completing -- flushing trace file
+Oct-31 15:32:05.125 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+Oct-31 15:32:07.162 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":{"mean":98.26,"min":29.1,"q1":38.8,"q2":142,"q3":146.7,"max":153.8,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL11)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL7)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL6)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL3)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt344-DX1PB-MONOBULK)"},"process":"GetSampleName","mem":{"mean":429591000.62,"min":216363008,"q1":228917248,"q2":471580672,"q3":635375616,"max":675860480,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL11)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL7)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL1)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL3)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL8)"},"memUsage":{"mean":4,"min":2.02,"q1":2.13,"q2":4.39,"q3":5.92,"max":6.29,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL11)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL7)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL1)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL3)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL8)"},"timeUsage":{"mean":1.83,"min":0.68,"q1":1.01,"q2":1.27,"q3":2.82,"max":2.88,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL7)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL4)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt344-DX1PB-MONOBULK)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL8)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL10)"},"vmem":{"mean":9013810727.38,"min":8992739328,"q1":8997560320,"q2":9016274944,"q3":9016332288,"max":9047244800,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL6)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL11)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL4)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL5)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL12)"},"reads":{"mean":21559166,"min":21557537,"q1":21558196,"q2":21559163,"q3":21560087,"max":21561007,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL8)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL1)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL10)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL11)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt344-DX1PB-MONOBULK)"},"cpu":{"mean":98.26,"min":29.1,"q1":38.8,"q2":142,"q3":146.7,"max":153.8,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL11)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL7)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL6)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL3)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt344-DX1PB-MONOBULK)"},"time":{"mean":10961.69,"min":4095,"q1":6065,"q2":7601,"q3":16905,"max":17268,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL7)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL4)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt344-DX1PB-MONOBULK)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL8)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL10)"},"writes":{"mean":699282.46,"min":699270,"q1":699281,"q2":699283,"q3":699286,"max":699289,"minLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1PB-TALL4)","maxLabel":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL6)","q1Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL10)","q2Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL8)","q3Label":"get_indexed_bams:GetSampleName (GATK GetSampleName pt3291-DX1BM-TALL11)"}},{"cpuUsage":{"mean":92.55,"min":88.6,"q1":90.57,"q2":92.55,"q3":94.53,"max":96.5,"minLabel":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"process":"bgzip","mem":{"mean":6590464,"min":6586368,"q1":6588416,"q2":6590464,"q3":6592512,"max":6594560,"minLabel":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"memUsage":{"mean":0.06,"min":0.06,"q1":0.06,"q2":0.06,"q3":0.06,"max":0.06,"minLabel":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"timeUsage":{"mean":2.06,"min":1.36,"q1":1.71,"q2":2.06,"q3":2.4,"max":2.75,"minLabel":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"vmem":{"mean":12296192,"min":12296192,"q1":12296192,"q2":12296192,"q3":12296192,"max":12296192,"minLabel":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"reads":{"mean":4504406829,"min":2819814523,"q1":3662110676,"q2":4504406829,"q3":5346702982,"max":6188999135,"minLabel":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"cpu":{"mean":92.55,"min":88.6,"q1":90.57,"q2":92.55,"q3":94.53,"max":96.5,"minLabel":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"time":{"mean":74000,"min":49000,"q1":61500,"q2":74000,"q3":86500,"max":99000,"minLabel":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"writes":{"mean":917659405.5,"min":599746002,"q1":758702703.75,"q2":917659405.5,"q3":1076616107.25,"max":1235572809,"minLabel":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:bgzip (bgzip 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"}},{"cpuUsage":{"mean":98.7,"min":98.7,"q1":98.7,"q2":98.7,"q3":98.7,"max":98.7,"minLabel":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"process":"tabix","mem":{"mean":18874368,"min":18743296,"q1":18808832,"q2":18874368,"q3":18939904,"max":19005440,"minLabel":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"memUsage":{"mean":0.18,"min":0.17,"q1":0.18,"q2":0.18,"q3":0.18,"max":0.18,"minLabel":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"timeUsage":{"mean":0.42,"min":0.31,"q1":0.36,"q2":0.42,"q3":0.47,"max":0.53,"minLabel":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"vmem":{"mean":25839616,"min":25702400,"q1":25771008,"q2":25839616,"q3":25908224,"max":25976832,"minLabel":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"reads":{"mean":917732597.5,"min":599818229,"q1":758775413.25,"q2":917732597.5,"q3":1076689781.75,"max":1235646966,"minLabel":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"cpu":{"mean":98.7,"min":98.7,"q1":98.7,"q2":98.7,"q3":98.7,"max":98.7,"minLabel":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"time":{"mean":15000,"min":11000,"q1":13000,"q2":15000,"q3":17000,"max":19000,"minLabel":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"},"writes":{"mean":1851128,"min":1672619,"q1":1761873.5,"q2":1851128,"q3":1940382.5,"max":2029637,"minLabel":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","maxLabel":"get_gzipped_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q1Label":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q2Label":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)","q3Label":"get_germline_vcfs:tabix (tabix 231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted)"}},{"cpuUsage":{"mean":33.35,"min":33.35,"q1":33.35,"q2":33.35,"q3":33.35,"max":33.35,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)"},"process":"SnpSift","mem":{"mean":469987328,"min":469987328,"q1":469987328,"q2":469987328,"q3":469987328,"max":469987328,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)"},"memUsage":{"mean":2.19,"min":2.19,"q1":2.19,"q2":2.19,"q3":2.19,"max":2.19,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)"},"timeUsage":{"mean":0.44,"min":0.44,"q1":0.44,"q2":0.44,"q3":0.44,"max":0.44,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)"},"vmem":{"mean":8100204544,"min":8100204544,"q1":8100204544,"q2":8100204544,"q3":8100204544,"max":8100204544,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)"},"reads":{"mean":14865564600,"min":14865564600,"q1":14865564600,"q2":14865564600,"q3":14865564600,"max":14865564600,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)"},"cpu":{"mean":266.8,"min":266.8,"q1":266.8,"q2":266.8,"q3":266.8,"max":266.8,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)"},"time":{"mean":128000,"min":128000,"q1":128000,"q2":128000,"q3":128000,"max":128000,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)"},"writes":{"mean":15197593404,"min":15197593404,"q1":15197593404,"q2":15197593404,"q3":15197593404,"max":15197593404,"minLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","maxLabel":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q1Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q2Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)","q3Label":"get_germline_vcfs:SnpSift (SnpSift pt3291)"}},{"cpuUsage":{"mean":86.54,"min":86.54,"q1":86.54,"q2":86.54,"q3":86.54,"max":86.54,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)"},"process":"CountBamLinesApplication","mem":{"mean":16535093248,"min":16535093248,"q1":16535093248,"q2":16535093248,"q3":16535093248,"max":16535093248,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)"},"memUsage":{"mean":38.5,"min":38.5,"q1":38.5,"q2":38.5,"q3":38.5,"max":38.5,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)"},"timeUsage":{"mean":0.77,"min":0.77,"q1":0.77,"q2":0.77,"q3":0.77,"max":0.77,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)"},"vmem":{"mean":45160431616,"min":45160431616,"q1":45160431616,"q2":45160431616,"q3":45160431616,"max":45160431616,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)"},"reads":{"mean":64937237175,"min":64937237175,"q1":64937237175,"q2":64937237175,"q3":64937237175,"max":64937237175,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)"},"cpu":{"mean":692.3,"min":692.3,"q1":692.3,"q2":692.3,"q3":692.3,"max":692.3,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)"},"time":{"mean":663251,"min":663251,"q1":663251,"q2":663251,"q3":663251,"max":663251,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)"},"writes":{"mean":110968374,"min":110968374,"q1":110968374,"q2":110968374,"q3":110968374,"max":110968374,"minLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","maxLabel":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q1Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q2Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q3Label":"cnvs:get_cobalt_files:CountBamLinesApplication (CountBamLinesApplication pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)"}},{"cpuUsage":null,"process":"FilterCobalt","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":{"mean":5,"min":5,"q1":5,"q2":5,"q3":5,"max":5,"minLabel":"cnvs:filter_cnv_files:FilterCobalt (FilterCobalt pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","maxLabel":"cnvs:filter_cnv_files:FilterCobalt (FilterCobalt pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q1Label":"cnvs:filter_cnv_files:FilterCobalt (FilterCobalt pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q2Label":"cnvs:filter_cnv_files:FilterCobalt (FilterCobalt pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)","q3Label":"cnvs:filter_cnv_files:FilterCobalt (FilterCobalt pt344-DX1PB-MONOBULK pt3291-DX1BM-TALL10)"},"writes":null},{"cpuUsage":null,"process":"CollectWGSMetrics","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":null,"writes":null},{"cpuUsage":null,"process":"CollectAlignmentSummaryMetrics","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":null,"writes":null},{"cpuUsage":null,"process":"CallableLoci","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":null,"writes":null},{"cpuUsage":null,"process":"gridss","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":null,"writes":null},{"cpuUsage":null,"process":"smurf","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":null,"writes":null},{"cpuUsage":null,"process":"FilterBAF","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":null,"writes":null},{"cpuUsage":null,"process":"shapeit","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":null,"writes":null}]
+Oct-31 15:32:08.570 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+Oct-31 15:32:08.818 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Oct-31 15:32:08.910 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
