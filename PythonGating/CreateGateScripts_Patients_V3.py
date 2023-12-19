@@ -7,7 +7,7 @@ import os
 
 ### General input files 
 ThresholdFile = "/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/ThresholdFiles/MarkerTreshold_pt2283pt11802_pt344.txt"
-LabelCodeFile = "/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/20220920_GatingStrategy_Pts_stricter.txt"
+LabelCodeFile = "/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/20231128_GatingStrategy_inclDN3.txt"
 
 
 ### Read threshold file and return corresponding threshold per marker 
@@ -149,7 +149,8 @@ def CreateScript(InFile, ThreshDict, MarkerSpot, OutFile, OutputScript, LabelFil
 
 
 ### Loop over all files in input directory and run the entire script 
-path_of_the_directory= '/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/FCS_Patients_MoreSamples/'
+#path_of_the_directory= '/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/FCS_Patients_MoreSamples/'
+path_of_the_directory= '/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/FCS_Patients/'
 print("Files and directories in a specified path:")
 for filename in os.listdir(path_of_the_directory):
 	FlowFile = os.path.join(path_of_the_directory,filename)
@@ -160,8 +161,10 @@ for filename in os.listdir(path_of_the_directory):
 			pass
 		else:
 			#print(FlowFile)
-			FlowOutfile = "/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/PythonGating/FCS_Patients_MoreSamples/"+SampleName+"_keymarkers.csv"
-			ScriptFile = "/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/2_Code/PythonGating/FCS_Patients_MoreSamples_scripts/"+SampleName+".py"
+			#FlowOutfile = "/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/PythonGating/FCS_Patients_MoreSamples/"+SampleName+"_keymarkers.csv"
+			#ScriptFile = "/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/2_Code/PythonGating/FCS_Patients_MoreSamples_scripts/"+SampleName+".py"
+			FlowOutfile = "/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/3_Output/PythonGating/PatientStrict/"+SampleName+"_keymarkers.csv"
+			ScriptFile = "/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/2_Code/PythonGating/PatientStrict/"+SampleName+".py"
 			#print("")
 
 			### Call all functions 
@@ -171,7 +174,7 @@ for filename in os.listdir(path_of_the_directory):
 
 
 
-# for i in $( ls *.py ); do python $i; done
+# for i in $( ls *.py ); do python3 $i; done
 
 
 

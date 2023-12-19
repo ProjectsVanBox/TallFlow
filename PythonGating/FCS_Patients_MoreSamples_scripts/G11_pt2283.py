@@ -39,6 +39,8 @@ def CreateLabelFile(InFile, OutFile):
 				outf.write(str(Index)+","+line+","+"CD8-like"+"\n")
 			elif ((float(SL[17]) >= 483.0) & (float(SL[27]) >= 2800.0)):
 				outf.write(str(Index)+","+line+","+"gdTcell-like"+"\n")
+			elif ((float(SL[24]) >= 11000.0) & (float(SL[17]) >= 483.0)):
+				outf.write(str(Index)+","+line+","+"DN3-like"+"\n")
 			elif ((float(SL[17]) >= 483.0)):
 				outf.write(str(Index)+","+line+","+"DN-like"+"\n")
 			else:
