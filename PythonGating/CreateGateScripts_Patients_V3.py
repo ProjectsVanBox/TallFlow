@@ -6,7 +6,8 @@ import os
 
 
 ### General input files 
-ThresholdFile = "/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/ThresholdFiles/MarkerTreshold_pt2283pt11802_pt344.txt"
+#ThresholdFile = "/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/ThresholdFiles/MarkerTreshold_pt2283pt11802_pt344.txt"
+ThresholdFile = "/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/ThresholdFiles/MarkerThresholds_transposed_25Patients.txt"
 LabelCodeFile = "/Users/ricohagelaar/Documents/Thymus_Project/FlowCytometry/TallFlow/1_Input/20231128_GatingStrategy_inclDN3.txt"
 
 

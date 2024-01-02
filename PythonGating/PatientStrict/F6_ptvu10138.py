@@ -19,29 +19,29 @@ def CreateLabelFile(InFile, OutFile):
 			FirstLine = False
 		else:
 			Index = Index + 1
-			if ((float(SL[14]) >= 1200.0)):
+			if ((float(SL[14]) >= 2500.0)):
 				outf.write(str(Index)+","+line+","+"B-cell-like"+"\n")
-			elif ((float(SL[15]) >= 2700.0)):
+			elif ((float(SL[15]) >= 444.0)):
 				outf.write(str(Index)+","+line+","+"Monocyte-like"+"\n")
-			elif ((float(SL[10]) >= 3000.0)):
+			elif ((float(SL[10]) >= 325.0)):
 				outf.write(str(Index)+","+line+","+"NK-cell-like"+"\n")
-			elif ((float(SL[22]) >= 2900.0)):
+			elif ((float(SL[22]) >= 1600.0)):
 				outf.write(str(Index)+","+line+","+"cDC-like"+"\n")
-			elif ((float(SL[19]) >= 1600.0)):
+			elif ((float(SL[19]) >= 2400.0)):
 				outf.write(str(Index)+","+line+","+"pDC-like"+"\n")
-			elif ((float(SL[11]) >= 393.0) & (float(SL[16]) >= 468.0)):
+			elif ((float(SL[11]) >= 1000.0) & (float(SL[16]) >= 652.0)):
 				outf.write(str(Index)+","+line+","+"DP-like"+"\n")
-			elif ((float(SL[11]) >= 393.0) & (float(SL[13]) >= 11000.0) & (float(SL[21]) < 400.0)):
+			elif ((float(SL[11]) >= 1000.0) & (float(SL[13]) >= 373.0) & (float(SL[21]) < 400.0)):
 				outf.write(str(Index)+","+line+","+"ISP-like"+"\n")
-			elif ((float(SL[11]) >= 393.0) & (float(SL[16]) < 468.0)):
+			elif ((float(SL[11]) >= 1000.0) & (float(SL[16]) < 652.0)):
 				outf.write(str(Index)+","+line+","+"CD4-like"+"\n")
-			elif ((float(SL[16]) >= 468.0)):
+			elif ((float(SL[16]) >= 652.0)):
 				outf.write(str(Index)+","+line+","+"CD8-like"+"\n")
-			elif ((float(SL[17]) >= 483.0) & (float(SL[27]) >= 2800.0)):
+			elif ((float(SL[17]) >= 273.0) & (float(SL[27]) >= 528.0)):
 				outf.write(str(Index)+","+line+","+"gdTcell-like"+"\n")
-			elif ((float(SL[13]) >= 11000.0) & (float(SL[17]) >= 483.0)):
+			elif ((float(SL[13]) >= 373.0) & (float(SL[17]) >= 273.0)):
 				outf.write(str(Index)+","+line+","+"DN3-like"+"\n")
-			elif ((float(SL[17]) >= 483.0)):
+			elif ((float(SL[17]) >= 273.0)):
 				outf.write(str(Index)+","+line+","+"DN-like"+"\n")
 			else:
 				outf.write(str(Index)+","+line+","+"Unknown"+"\n")
