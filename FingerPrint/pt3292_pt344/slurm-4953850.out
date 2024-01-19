@@ -1,0 +1,817 @@
+INFO  16:10:22,555 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:10:22,655 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:10:22,656 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:10:22,656 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:10:22,657 HelpFormatter - [Tue Sep 26 16:10:22 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:10:22,658 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:10:22,666 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt3291-DX1PB-ALLBULK_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt3291-DX1PB-ALLBULK.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:10:22,672 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:10:22,673 HelpFormatter - Date/Time: 2023/09/26 16:10:22 
+INFO  16:10:22,673 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:10:22,674 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:10:22,728 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:10:22,843 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:10:22,843 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:10:22,844 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:10:25,475 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:10:25,485 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt3291-DX1PB-ALLBULK_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt3291-DX1PB-ALLBULK_dedup.bam
+INFO  16:10:25,822 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.30 
+INFO  16:10:28,227 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:10:29,163 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:10:29,411 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:10:29,412 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:10:29,413 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:10:29,414 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:10:29,552 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:10:29,552 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:10:29,553 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:10:48,356 ProgressMeter -            done        82.0    18.0 s      64.2 h       98.8%    18.0 s       0.0 s 
+INFO  16:10:48,359 ProgressMeter - Total runtime 18.95 secs, 0.32 min, 0.01 hours 
+INFO  16:10:48,360 MicroScheduler - 674 reads were filtered out during the traversal out of approximately 3425 total reads (19.68%) 
+INFO  16:10:48,360 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:10:48,361 MicroScheduler -   -> 26 reads (0.76% of total) failing BadMateFilter 
+INFO  16:10:48,361 MicroScheduler -   -> 648 reads (18.92% of total) failing DuplicateReadFilter 
+INFO  16:10:48,362 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:10:48,362 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:10:48,363 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:10:48,363 MicroScheduler -   -> 0 reads (0.00% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:10:48,364 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:10:29,552 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:10:53,116 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:10:53,119 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:10:53,120 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:10:53,120 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:10:53,120 HelpFormatter - [Tue Sep 26 16:10:53 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:10:53,121 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:10:53,126 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt3291-DX1PB-ALLBULK-DNCD1a-min_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt3291-DX1PB-ALLBULK-DNCD1a-min.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:10:53,130 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:10:53,131 HelpFormatter - Date/Time: 2023/09/26 16:10:53 
+INFO  16:10:53,131 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:10:53,131 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:10:53,164 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:10:53,188 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:10:53,189 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:10:53,189 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:10:56,884 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:10:56,892 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt3291-DX1PB-ALLBULK-DNCD1a-min_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt3291-DX1PB-ALLBULK-DNCD1a-min_dedup.bam
+INFO  16:10:57,241 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.35 
+INFO  16:10:59,738 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:10:59,903 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:11:00,229 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:11:00,229 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:11:00,230 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:11:00,230 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:11:00,296 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:11:00,296 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:11:00,297 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:11:10,612 ProgressMeter -            done        82.0    10.0 s      35.2 h       98.8%    10.0 s       0.0 s 
+INFO  16:11:10,613 ProgressMeter - Total runtime 10.38 secs, 0.17 min, 0.00 hours 
+INFO  16:11:10,614 MicroScheduler - 608 reads were filtered out during the traversal out of approximately 2975 total reads (20.44%) 
+INFO  16:11:10,614 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:11:10,615 MicroScheduler -   -> 6 reads (0.20% of total) failing BadMateFilter 
+INFO  16:11:10,615 MicroScheduler -   -> 602 reads (20.24% of total) failing DuplicateReadFilter 
+INFO  16:11:10,616 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:11:10,616 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:11:10,617 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:11:10,617 MicroScheduler -   -> 0 reads (0.00% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:11:10,618 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:11:00,296 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:11:15,559 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:11:15,561 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:11:15,561 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:11:15,561 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:11:15,561 HelpFormatter - [Tue Sep 26 16:11:15 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:11:15,562 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:11:15,570 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt3291-DX1PB-ALLBULK-DNCD1a-plus_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt3291-DX1PB-ALLBULK-DNCD1a-plus.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:11:15,574 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:11:15,574 HelpFormatter - Date/Time: 2023/09/26 16:11:15 
+INFO  16:11:15,575 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:11:15,575 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:11:15,601 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:11:15,626 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:11:15,627 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:11:15,627 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:11:17,520 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:11:17,531 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt3291-DX1PB-ALLBULK-DNCD1a-plus_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt3291-DX1PB-ALLBULK-DNCD1a-plus_dedup.bam
+INFO  16:11:17,920 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.39 
+INFO  16:11:19,745 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:11:19,900 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:11:20,042 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:11:20,043 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:11:20,043 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:11:20,044 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:11:20,115 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:11:20,115 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:11:20,116 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:11:30,841 ProgressMeter -            done        82.0    10.0 s      36.6 h       98.8%    10.0 s       0.0 s 
+INFO  16:11:30,842 ProgressMeter - Total runtime 10.80 secs, 0.18 min, 0.00 hours 
+INFO  16:11:30,842 MicroScheduler - 652 reads were filtered out during the traversal out of approximately 3155 total reads (20.67%) 
+INFO  16:11:30,842 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:11:30,843 MicroScheduler -   -> 11 reads (0.35% of total) failing BadMateFilter 
+INFO  16:11:30,843 MicroScheduler -   -> 641 reads (20.32% of total) failing DuplicateReadFilter 
+INFO  16:11:30,843 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:11:30,844 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:11:30,844 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:11:30,844 MicroScheduler -   -> 0 reads (0.00% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:11:30,844 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:11:20,115 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:11:35,421 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:11:35,424 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:11:35,424 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:11:35,425 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:11:35,425 HelpFormatter - [Tue Sep 26 16:11:35 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:11:35,425 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:11:35,430 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt3291-DX1PB-ALLBULK-DP_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt3291-DX1PB-ALLBULK-DP.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:11:35,433 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:11:35,434 HelpFormatter - Date/Time: 2023/09/26 16:11:35 
+INFO  16:11:35,434 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:11:35,434 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:11:35,464 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:11:35,485 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:11:35,486 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:11:35,486 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:11:37,420 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:11:37,426 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt3291-DX1PB-ALLBULK-DP_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt3291-DX1PB-ALLBULK-DP_dedup.bam
+INFO  16:11:37,676 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.25 
+INFO  16:11:39,218 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:11:39,364 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:11:39,472 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:11:39,473 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:11:39,473 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:11:39,474 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:11:39,541 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:11:39,542 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:11:39,542 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:11:50,215 ProgressMeter -            done        82.0    10.0 s      36.4 h       98.8%    10.0 s       0.0 s 
+INFO  16:11:50,216 ProgressMeter - Total runtime 10.74 secs, 0.18 min, 0.00 hours 
+INFO  16:11:50,217 MicroScheduler - 771 reads were filtered out during the traversal out of approximately 3318 total reads (23.24%) 
+INFO  16:11:50,217 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:11:50,218 MicroScheduler -   -> 5 reads (0.15% of total) failing BadMateFilter 
+INFO  16:11:50,218 MicroScheduler -   -> 766 reads (23.09% of total) failing DuplicateReadFilter 
+INFO  16:11:50,219 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:11:50,219 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:11:50,220 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:11:50,220 MicroScheduler -   -> 0 reads (0.00% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:11:50,221 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:11:39,542 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:11:55,210 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:11:55,212 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:11:55,213 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:11:55,213 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:11:55,213 HelpFormatter - [Tue Sep 26 16:11:55 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:11:55,213 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:11:55,221 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt3291-DX1PB-ALLBULK-SPCD8_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt3291-DX1PB-ALLBULK-SPCD8.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:11:55,224 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:11:55,224 HelpFormatter - Date/Time: 2023/09/26 16:11:55 
+INFO  16:11:55,225 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:11:55,225 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:11:55,254 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:11:55,274 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:11:55,274 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:11:55,275 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:11:56,796 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:11:56,802 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt3291-DX1PB-ALLBULK-SPCD8_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt3291-DX1PB-ALLBULK-SPCD8_dedup.bam
+INFO  16:11:57,237 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.43 
+INFO  16:11:58,996 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:11:59,162 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:11:59,292 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:11:59,293 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:11:59,294 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:11:59,294 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:11:59,361 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:11:59,361 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:11:59,361 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:12:11,411 ProgressMeter -            done        82.0    12.0 s      41.0 h       98.8%    12.0 s       0.0 s 
+INFO  16:12:11,412 ProgressMeter - Total runtime 12.12 secs, 0.20 min, 0.00 hours 
+INFO  16:12:11,412 MicroScheduler - 687 reads were filtered out during the traversal out of approximately 3367 total reads (20.40%) 
+INFO  16:12:11,412 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:12:11,413 MicroScheduler -   -> 7 reads (0.21% of total) failing BadMateFilter 
+INFO  16:12:11,413 MicroScheduler -   -> 680 reads (20.20% of total) failing DuplicateReadFilter 
+INFO  16:12:11,413 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:12:11,414 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:12:11,414 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:12:11,414 MicroScheduler -   -> 0 reads (0.00% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:12:11,414 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:11:59,361 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:12:15,889 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:12:15,891 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:12:15,892 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:12:15,892 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:12:15,892 HelpFormatter - [Tue Sep 26 16:12:15 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:12:15,892 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:12:15,897 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1BM-ALLBULK_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt344-DX1BM-ALLBULK.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:12:15,901 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:12:15,903 HelpFormatter - Date/Time: 2023/09/26 16:12:15 
+INFO  16:12:15,904 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:12:15,904 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:12:15,927 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:12:15,947 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:12:15,948 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:12:15,948 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:12:17,335 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:12:17,342 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1BM-ALLBULK_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1BM-ALLBULK_dedup.bam
+INFO  16:12:17,677 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.33 
+INFO  16:12:19,025 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:12:19,140 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:12:19,269 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:12:19,270 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:12:19,270 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:12:19,270 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:12:19,320 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:12:19,320 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:12:19,320 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:12:28,210 ProgressMeter -            done        82.0     8.0 s      30.3 h       98.8%     8.0 s       0.0 s 
+INFO  16:12:28,211 ProgressMeter - Total runtime 8.94 secs, 0.15 min, 0.00 hours 
+INFO  16:12:28,212 MicroScheduler - 585 reads were filtered out during the traversal out of approximately 3132 total reads (18.68%) 
+INFO  16:12:28,212 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:12:28,212 MicroScheduler -   -> 6 reads (0.19% of total) failing BadMateFilter 
+INFO  16:12:28,213 MicroScheduler -   -> 579 reads (18.49% of total) failing DuplicateReadFilter 
+INFO  16:12:28,213 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:12:28,213 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:12:28,214 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:12:28,214 MicroScheduler -   -> 0 reads (0.00% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:12:28,214 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:12:19,320 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:12:32,156 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:12:32,158 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:12:32,159 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:12:32,159 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:12:32,159 HelpFormatter - [Tue Sep 26 16:12:32 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:12:32,159 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:12:32,164 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-ALLBULK-DNCD1aPos_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt344-DX1PB-ALLBULK-DNCD1aPos.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:12:32,167 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:12:32,167 HelpFormatter - Date/Time: 2023/09/26 16:12:32 
+INFO  16:12:32,167 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:12:32,167 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:12:32,192 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:12:32,214 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:12:32,214 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:12:32,215 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:12:37,188 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:12:37,195 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-ALLBULK-DNCD1aPos_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-ALLBULK-DNCD1aPos_dedup.bam
+INFO  16:12:37,454 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.26 
+INFO  16:12:38,975 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:12:39,108 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:12:39,235 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:12:39,236 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:12:39,236 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:12:39,236 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:12:39,288 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:12:39,288 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:12:39,289 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:12:48,548 ProgressMeter -            done        82.0     9.0 s      31.5 h       98.8%     9.0 s       0.0 s 
+INFO  16:12:48,548 ProgressMeter - Total runtime 9.31 secs, 0.16 min, 0.00 hours 
+INFO  16:12:48,549 MicroScheduler - 667 reads were filtered out during the traversal out of approximately 3003 total reads (22.21%) 
+INFO  16:12:48,549 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:12:48,550 MicroScheduler -   -> 12 reads (0.40% of total) failing BadMateFilter 
+INFO  16:12:48,550 MicroScheduler -   -> 655 reads (21.81% of total) failing DuplicateReadFilter 
+INFO  16:12:48,551 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:12:48,551 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:12:48,552 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:12:48,553 MicroScheduler -   -> 0 reads (0.00% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:12:48,553 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:12:39,288 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:12:53,567 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:12:53,571 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:12:53,571 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:12:53,571 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:12:53,572 HelpFormatter - [Tue Sep 26 16:12:53 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:12:53,572 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:12:53,579 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-ALLBULK-DP_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt344-DX1PB-ALLBULK-DP.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:12:53,583 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:12:53,583 HelpFormatter - Date/Time: 2023/09/26 16:12:53 
+INFO  16:12:53,584 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:12:53,584 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:12:53,611 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:12:53,637 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:12:53,637 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:12:53,637 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:12:56,151 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:12:56,160 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-ALLBULK-DP_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-ALLBULK-DP_dedup.bam
+INFO  16:12:56,478 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.32 
+INFO  16:12:58,014 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:12:58,128 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:12:58,253 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:12:58,253 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:12:58,254 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:12:58,254 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:12:58,311 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:12:58,311 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:12:58,312 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:13:08,096 ProgressMeter -            done        82.0     9.0 s      33.3 h       98.8%     9.0 s       0.0 s 
+INFO  16:13:08,097 ProgressMeter - Total runtime 9.84 secs, 0.16 min, 0.00 hours 
+INFO  16:13:08,098 MicroScheduler - 828 reads were filtered out during the traversal out of approximately 3506 total reads (23.62%) 
+INFO  16:13:08,098 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:13:08,099 MicroScheduler -   -> 11 reads (0.31% of total) failing BadMateFilter 
+INFO  16:13:08,099 MicroScheduler -   -> 817 reads (23.30% of total) failing DuplicateReadFilter 
+INFO  16:13:08,100 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:13:08,100 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:13:08,101 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:13:08,101 MicroScheduler -   -> 0 reads (0.00% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:13:08,102 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:12:58,311 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:13:13,271 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:13:13,274 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:13:13,274 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:13:13,274 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:13:13,275 HelpFormatter - [Tue Sep 26 16:13:13 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:13:13,275 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:13:13,279 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-ALLBULK-SPCD8_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt344-DX1PB-ALLBULK-SPCD8.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:13:13,283 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:13:13,283 HelpFormatter - Date/Time: 2023/09/26 16:13:13 
+INFO  16:13:13,283 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:13:13,284 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:13:13,309 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:13:13,329 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:13:13,330 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:13:13,330 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:13:16,518 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:13:16,524 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-ALLBULK-SPCD8_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-ALLBULK-SPCD8_dedup.bam
+INFO  16:13:16,760 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.23 
+INFO  16:13:18,318 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:13:18,437 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:13:18,547 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:13:18,548 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:13:18,550 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:13:18,550 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:13:18,624 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:13:18,624 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:13:18,625 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:13:29,302 ProgressMeter -            done        82.0    10.0 s      36.4 h       98.8%    10.0 s       0.0 s 
+INFO  16:13:29,303 ProgressMeter - Total runtime 10.75 secs, 0.18 min, 0.00 hours 
+INFO  16:13:29,304 MicroScheduler - 970 reads were filtered out during the traversal out of approximately 3453 total reads (28.09%) 
+INFO  16:13:29,304 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:13:29,305 MicroScheduler -   -> 47 reads (1.36% of total) failing BadMateFilter 
+INFO  16:13:29,305 MicroScheduler -   -> 923 reads (26.73% of total) failing DuplicateReadFilter 
+INFO  16:13:29,306 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:13:29,306 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:13:29,307 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:13:29,307 MicroScheduler -   -> 0 reads (0.00% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:13:29,308 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:13:18,624 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:13:33,628 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:13:33,631 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:13:33,631 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:13:33,631 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:13:33,631 HelpFormatter - [Tue Sep 26 16:13:33 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:13:33,632 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:13:33,639 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-MONOBULK_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt344-DX1PB-MONOBULK.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:13:33,642 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:13:33,643 HelpFormatter - Date/Time: 2023/09/26 16:13:33 
+INFO  16:13:33,643 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:13:33,643 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:13:33,666 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:13:33,687 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:13:33,688 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:13:33,688 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:13:39,288 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:13:39,296 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-MONOBULK_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-MONOBULK_dedup.bam
+INFO  16:13:39,691 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.39 
+INFO  16:13:41,217 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:13:41,341 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:13:41,503 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:13:41,504 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:13:41,504 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:13:41,505 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:13:41,559 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:13:41,559 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:13:41,560 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:13:50,941 ProgressMeter -            done        82.0     9.0 s      32.0 h       98.8%     9.0 s       0.0 s 
+INFO  16:13:50,942 ProgressMeter - Total runtime 9.44 secs, 0.16 min, 0.00 hours 
+INFO  16:13:50,942 MicroScheduler - 613 reads were filtered out during the traversal out of approximately 2685 total reads (22.83%) 
+INFO  16:13:50,943 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:13:50,943 MicroScheduler -   -> 6 reads (0.22% of total) failing BadMateFilter 
+INFO  16:13:50,944 MicroScheduler -   -> 607 reads (22.61% of total) failing DuplicateReadFilter 
+INFO  16:13:50,944 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:13:50,944 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:13:50,945 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:13:50,945 MicroScheduler -   -> 0 reads (0.00% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:13:50,945 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:13:41,559 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:13:55,183 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:13:55,187 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:13:55,187 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:13:55,187 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:13:55,188 HelpFormatter - [Tue Sep 26 16:13:55 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:13:55,188 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:13:55,195 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL1_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt344-DX1PB-TALL1.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:13:55,200 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:13:55,200 HelpFormatter - Date/Time: 2023/09/26 16:13:55 
+INFO  16:13:55,200 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:13:55,201 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:13:55,228 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:13:55,252 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:13:55,252 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:13:55,253 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:13:57,206 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:13:57,213 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL1_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL1_dedup.bam
+INFO  16:13:57,496 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.28 
+INFO  16:13:59,025 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:13:59,151 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:13:59,285 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:13:59,286 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:13:59,286 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:13:59,286 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:13:59,344 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:13:59,344 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:13:59,345 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:14:09,288 ProgressMeter -            done        82.0    10.0 s      33.9 h       98.8%    10.0 s       0.0 s 
+INFO  16:14:09,289 ProgressMeter - Total runtime 10.00 secs, 0.17 min, 0.00 hours 
+INFO  16:14:09,289 MicroScheduler - 363 reads were filtered out during the traversal out of approximately 1723 total reads (21.07%) 
+INFO  16:14:09,289 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:14:09,290 MicroScheduler -   -> 18 reads (1.04% of total) failing BadMateFilter 
+INFO  16:14:09,290 MicroScheduler -   -> 317 reads (18.40% of total) failing DuplicateReadFilter 
+INFO  16:14:09,291 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:14:09,291 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:14:09,291 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:14:09,291 MicroScheduler -   -> 28 reads (1.63% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:14:09,292 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:13:59,344 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:14:13,547 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:14:13,549 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:14:13,549 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:14:13,549 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:14:13,550 HelpFormatter - [Tue Sep 26 16:14:13 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:14:13,550 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:14:13,553 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL2_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt344-DX1PB-TALL2.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:14:13,556 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:14:13,556 HelpFormatter - Date/Time: 2023/09/26 16:14:13 
+INFO  16:14:13,556 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:14:13,556 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:14:13,583 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:14:13,603 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:14:13,604 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:14:13,604 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:14:15,238 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:14:15,246 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL2_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL2_dedup.bam
+INFO  16:14:15,530 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.28 
+INFO  16:14:17,144 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:14:17,268 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:14:17,458 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:14:17,459 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:14:17,460 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:14:17,460 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:14:17,521 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:14:17,521 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:14:17,521 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:14:28,355 ProgressMeter -            done        82.0    10.0 s      36.9 h       98.8%    10.0 s       0.0 s 
+INFO  16:14:28,356 ProgressMeter - Total runtime 10.90 secs, 0.18 min, 0.00 hours 
+INFO  16:14:28,357 MicroScheduler - 385 reads were filtered out during the traversal out of approximately 1892 total reads (20.35%) 
+INFO  16:14:28,357 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:14:28,358 MicroScheduler -   -> 4 reads (0.21% of total) failing BadMateFilter 
+INFO  16:14:28,358 MicroScheduler -   -> 369 reads (19.50% of total) failing DuplicateReadFilter 
+INFO  16:14:28,359 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:14:28,359 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:14:28,360 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:14:28,360 MicroScheduler -   -> 12 reads (0.63% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:14:28,361 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:14:17,521 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:14:33,187 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:14:33,190 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:14:33,190 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:14:33,190 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:14:33,191 HelpFormatter - [Tue Sep 26 16:14:33 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:14:33,191 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:14:33,194 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL3_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt344-DX1PB-TALL3.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:14:33,198 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:14:33,198 HelpFormatter - Date/Time: 2023/09/26 16:14:33 
+INFO  16:14:33,199 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:14:33,199 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:14:33,226 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:14:33,250 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:14:33,251 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:14:33,252 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:14:35,723 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:14:35,736 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL3_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL3_dedup.bam
+INFO  16:14:36,178 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.44 
+INFO  16:14:37,965 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:14:38,138 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:14:38,267 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:14:38,268 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:14:38,268 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:14:38,269 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:14:38,336 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:14:38,336 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:14:38,337 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:14:48,513 ProgressMeter -            done        82.0    10.0 s      34.7 h       98.8%    10.0 s       0.0 s 
+INFO  16:14:48,514 ProgressMeter - Total runtime 10.25 secs, 0.17 min, 0.00 hours 
+INFO  16:14:48,515 MicroScheduler - 431 reads were filtered out during the traversal out of approximately 1969 total reads (21.89%) 
+INFO  16:14:48,515 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:14:48,516 MicroScheduler -   -> 9 reads (0.46% of total) failing BadMateFilter 
+INFO  16:14:48,516 MicroScheduler -   -> 398 reads (20.21% of total) failing DuplicateReadFilter 
+INFO  16:14:48,516 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:14:48,517 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:14:48,517 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:14:48,517 MicroScheduler -   -> 24 reads (1.22% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:14:48,518 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:14:38,336 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:14:53,125 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:14:53,128 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:14:53,128 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:14:53,128 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:14:53,128 HelpFormatter - [Tue Sep 26 16:14:53 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:14:53,129 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:14:53,133 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL4_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt344-DX1PB-TALL4.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:14:53,137 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:14:53,137 HelpFormatter - Date/Time: 2023/09/26 16:14:53 
+INFO  16:14:53,138 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:14:53,138 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:14:53,162 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:14:53,183 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:14:53,184 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:14:53,184 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:14:54,806 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:14:54,813 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL4_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL4_dedup.bam
+INFO  16:14:55,116 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.30 
+INFO  16:14:56,649 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:14:56,775 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:14:56,872 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:14:56,873 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:14:56,873 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:14:56,873 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:14:56,928 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:14:56,929 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:14:56,929 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:15:06,867 ProgressMeter -            done        82.0     9.0 s      33.9 h       98.8%     9.0 s       0.0 s 
+INFO  16:15:06,867 ProgressMeter - Total runtime 9.99 secs, 0.17 min, 0.00 hours 
+INFO  16:15:06,868 MicroScheduler - 343 reads were filtered out during the traversal out of approximately 1876 total reads (18.28%) 
+INFO  16:15:06,868 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:15:06,868 MicroScheduler -   -> 6 reads (0.32% of total) failing BadMateFilter 
+INFO  16:15:06,869 MicroScheduler -   -> 316 reads (16.84% of total) failing DuplicateReadFilter 
+INFO  16:15:06,869 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:15:06,869 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:15:06,869 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:15:06,870 MicroScheduler -   -> 21 reads (1.12% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:15:06,870 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:14:56,929 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:15:11,794 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:15:11,797 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:15:11,797 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:15:11,798 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:15:11,798 HelpFormatter - [Tue Sep 26 16:15:11 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:15:11,798 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:15:11,802 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL5_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt344-DX1PB-TALL5.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:15:11,805 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:15:11,805 HelpFormatter - Date/Time: 2023/09/26 16:15:11 
+INFO  16:15:11,806 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:15:11,806 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:15:11,830 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:15:11,851 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:15:11,851 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:15:11,852 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:15:13,408 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:15:13,415 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL5_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL5_dedup.bam
+INFO  16:15:13,743 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.33 
+INFO  16:15:15,398 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:15:15,533 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:15:15,626 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:15:15,626 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:15:15,626 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:15:15,627 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:15:15,678 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:15:15,679 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:15:15,679 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:15:27,154 ProgressMeter -            done        82.0    11.0 s      39.0 h       98.8%    11.0 s       0.0 s 
+INFO  16:15:27,155 ProgressMeter - Total runtime 11.53 secs, 0.19 min, 0.00 hours 
+INFO  16:15:27,156 MicroScheduler - 371 reads were filtered out during the traversal out of approximately 1947 total reads (19.05%) 
+INFO  16:15:27,156 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:15:27,156 MicroScheduler -   -> 17 reads (0.87% of total) failing BadMateFilter 
+INFO  16:15:27,157 MicroScheduler -   -> 317 reads (16.28% of total) failing DuplicateReadFilter 
+INFO  16:15:27,157 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:15:27,158 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:15:27,158 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:15:27,158 MicroScheduler -   -> 37 reads (1.90% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:15:27,159 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:15:15,679 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:15:31,973 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:15:31,976 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:15:31,977 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:15:31,977 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:15:31,980 HelpFormatter - [Tue Sep 26 16:15:31 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:15:31,980 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:15:31,984 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL6_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt344-DX1PB-TALL6.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:15:31,987 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:15:31,988 HelpFormatter - Date/Time: 2023/09/26 16:15:31 
+INFO  16:15:31,988 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:15:31,989 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:15:32,023 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:15:32,046 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:15:32,047 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:15:32,048 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:15:35,226 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:15:35,234 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL6_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL6_dedup.bam
+INFO  16:15:35,528 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.29 
+INFO  16:15:37,552 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:15:37,732 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:15:37,908 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:15:37,909 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:15:37,909 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:15:37,910 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:15:37,975 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:15:37,975 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:15:37,976 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:15:48,308 ProgressMeter -            done        82.0    10.0 s      35.2 h       98.8%    10.0 s       0.0 s 
+INFO  16:15:48,308 ProgressMeter - Total runtime 10.40 secs, 0.17 min, 0.00 hours 
+INFO  16:15:48,309 MicroScheduler - 417 reads were filtered out during the traversal out of approximately 2024 total reads (20.60%) 
+INFO  16:15:48,309 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:15:48,309 MicroScheduler -   -> 11 reads (0.54% of total) failing BadMateFilter 
+INFO  16:15:48,310 MicroScheduler -   -> 370 reads (18.28% of total) failing DuplicateReadFilter 
+INFO  16:15:48,310 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:15:48,310 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:15:48,310 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:15:48,311 MicroScheduler -   -> 35 reads (1.73% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:15:48,311 MicroScheduler -   -> 1 reads (0.05% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:15:37,975 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:15:53,079 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:15:53,083 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:15:53,083 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:15:53,083 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:15:53,084 HelpFormatter - [Tue Sep 26 16:15:53 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:15:53,084 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:15:53,089 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL7_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt344-DX1PB-TALL7.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:15:53,093 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:15:53,093 HelpFormatter - Date/Time: 2023/09/26 16:15:53 
+INFO  16:15:53,093 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:15:53,094 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:15:53,127 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:15:53,154 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:15:53,154 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:15:53,155 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:15:56,675 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:15:56,682 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL7_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL7_dedup.bam
+INFO  16:15:56,983 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.30 
+INFO  16:15:58,413 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:15:58,540 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:15:58,637 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:15:58,637 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:15:58,638 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:15:58,638 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:15:58,699 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:15:58,699 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:15:58,700 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:16:22,400 ProgressMeter -            done        82.0    23.0 s      80.5 h       98.8%    23.0 s       0.0 s 
+INFO  16:16:22,400 ProgressMeter - Total runtime 23.76 secs, 0.40 min, 0.01 hours 
+INFO  16:16:22,401 MicroScheduler - 387 reads were filtered out during the traversal out of approximately 1928 total reads (20.07%) 
+INFO  16:16:22,401 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:16:22,402 MicroScheduler -   -> 8 reads (0.41% of total) failing BadMateFilter 
+INFO  16:16:22,402 MicroScheduler -   -> 351 reads (18.21% of total) failing DuplicateReadFilter 
+INFO  16:16:22,403 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:16:22,403 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:16:22,403 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:16:22,404 MicroScheduler -   -> 28 reads (1.45% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:16:22,404 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:15:58,699 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:16:26,886 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:16:26,888 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:16:26,888 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:16:26,889 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:16:26,889 HelpFormatter - [Tue Sep 26 16:16:26 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:16:26,889 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:16:26,893 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL8_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt344-DX1PB-TALL8.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:16:26,897 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:16:26,898 HelpFormatter - Date/Time: 2023/09/26 16:16:26 
+INFO  16:16:26,898 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:16:26,898 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:16:26,924 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:16:26,944 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:16:26,945 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:16:26,945 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:16:28,639 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:16:28,648 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL8_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL8_dedup.bam
+INFO  16:16:28,966 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.32 
+INFO  16:16:30,458 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:16:30,582 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:16:30,734 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:16:30,735 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:16:30,735 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:16:30,736 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:16:30,780 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:16:30,780 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:16:30,781 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:16:42,192 ProgressMeter -            done        82.0    11.0 s      38.8 h       98.8%    11.0 s       0.0 s 
+INFO  16:16:42,192 ProgressMeter - Total runtime 11.46 secs, 0.19 min, 0.00 hours 
+INFO  16:16:42,193 MicroScheduler - 412 reads were filtered out during the traversal out of approximately 1848 total reads (22.29%) 
+INFO  16:16:42,193 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:16:42,193 MicroScheduler -   -> 7 reads (0.38% of total) failing BadMateFilter 
+INFO  16:16:42,194 MicroScheduler -   -> 377 reads (20.40% of total) failing DuplicateReadFilter 
+INFO  16:16:42,194 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:16:42,194 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:16:42,194 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:16:42,195 MicroScheduler -   -> 28 reads (1.52% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:16:42,195 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:16:30,780 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
+INFO  16:16:46,903 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:16:46,907 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:16:46,907 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:16:46,907 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:16:46,908 HelpFormatter - [Tue Sep 26 16:16:46 CEST 2023] Executing on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64 
+INFO  16:16:46,908 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27 
+INFO  16:16:46,914 HelpFormatter - Program Args: -T UnifiedGenotyper -R /hpc/pmc_vanboxtel/_old_structure/data/homo_sapiens.GRCh38.GATK.illumina/Homo_sapiens_assembly38.fasta -L /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -D /hpc/pmc_vanboxtel/_old_structure/data/ENRICH/MIPs/81_snps_mip_design_nijmegen_sort_hg38_liftover.vcf -I /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL9_dedup.bam -o /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FingerPrint/pt3292_pt344/pt344-DX1PB-TALL9.vcf --output_mode EMIT_ALL_SITES 
+INFO  16:16:46,918 HelpFormatter - Executing as rhagelaar@n0062.manage.hpc on Linux 4.18.0-425.19.2.el8_7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_60-b27. 
+INFO  16:16:46,919 HelpFormatter - Date/Time: 2023/09/26 16:16:46 
+INFO  16:16:46,919 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:16:46,919 HelpFormatter - ------------------------------------------------------------------------------------- 
+INFO  16:16:46,958 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/hpc/local/CentOS7/pmc_vanboxtel/bin/GenomeAnalysisTK-3.8-1-0-gf15c1c3ef/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:16:46,981 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:16:46,981 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:16:46,982 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:16:48,722 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 250 
+INFO  16:16:48,732 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+WARNING: BAM index file /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL9_dedup.bai is older than BAM /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FingerPrint/pt344-DX1PB-TALL9_dedup.bam
+INFO  16:16:49,133 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.40 
+INFO  16:16:50,949 IntervalUtils - Processing 81 bp from intervals 
+INFO  16:16:51,088 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:16:51,424 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:16:51,424 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:16:51,424 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:16:51,425 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:16:51,476 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  16:16:51,476 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  16:16:51,477 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  16:17:00,435 ProgressMeter -            done        82.0     9.0 s      30.5 h       98.8%     9.0 s       0.0 s 
+INFO  16:17:00,435 ProgressMeter - Total runtime 9.01 secs, 0.15 min, 0.00 hours 
+INFO  16:17:00,436 MicroScheduler - 433 reads were filtered out during the traversal out of approximately 2073 total reads (20.89%) 
+INFO  16:17:00,436 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:17:00,436 MicroScheduler -   -> 9 reads (0.43% of total) failing BadMateFilter 
+INFO  16:17:00,437 MicroScheduler -   -> 400 reads (19.30% of total) failing DuplicateReadFilter 
+INFO  16:17:00,437 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:17:00,437 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:17:00,437 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:17:00,438 MicroScheduler -   -> 24 reads (1.16% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:17:00,438 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  16:16:51,476 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+------------------------------------------------------------------------------------------
