@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SMURF_FILT_VCF=/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/BulkSeq_SMuRF/pt344/230612_HMFreg2010_pt344.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted.SMuRF.filtered.vcf
-SMURF_VCF=/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/BulkSeq_SMuRF/pt344/230612_HMFreg2010_pt344.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted.SMuRF.vcf
+SMURF_VCF=/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/BulkSeq_SMuRF/pt344/230612_HMFreg2010_pt344_Bulk.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted.SMuRF.vcf
 
 BRANCHES_VCF=/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/TreeBuilding/pt344/branches_vcfs/branches_merged.vcf
 
@@ -20,7 +20,7 @@ OUTDIR=/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/TreeBuilding/pt344/branches
 for BRANCH_VCF in ${OUTDIR}/../{root,TALL}*.vcf; do 
     OUT_VCF=${BRANCH_VCF/.vcf/_BulkSeqSMuRF.vcf}
     OUT_VCF=$(basename ${OUT_VCF})
-    grep -f <(grep -v "^#" ${BRANCH_VCF} | cut -f 1,2) ${SMURF_VCF} > ${OUTDIR}/${OUT_VCF}
+    grep -f <(grep -v "^#" ${BRANCH_VCF} | cut -f 1,2) ${SMURF_VCF} >> ${OUTDIR}/${OUT_VCF}
 done
     
 for BRANCH_VCF in ${OUTDIR}/../{root,TALL}*.vcf; do 
@@ -28,8 +28,8 @@ for BRANCH_VCF in ${OUTDIR}/../{root,TALL}*.vcf; do
     BRANCH_BULKSEQ_VCF=${BRANCH_BULKSEQ_VCF/../}
     OUT_VCF=${BRANCH_BULKSEQ_VCF/.vcf/_MISSED.vcf}
     OUT_VCF=$(basename ${OUT_VCF})
-
-    echo "grep -vf <(grep -v \"^#\" ${BRANCH_BULKSEQ_VCF} | cut -f 1,2) ${BRANCH_VCF} > ${OUTDIR}/${OUT_VCF}"
-    grep -vf <(grep -v "^#" ${BRANCH_BULKSEQ_VCF} | cut -f 1,2) ${BRANCH_VCF} > ${OUTDIR}/${OUT_VCF}
+    
+    echo "grep -vf <(grep -v \"^#\" ${BRANCH_BULKSEQ_VCF} | cut -f 1,2) ${BRANCH_VCF} >> ${OUTDIR}/${OUT_VCF}"
+    grep -vf <(grep -v "^#" ${BRANCH_BULKSEQ_VCF} | cut -f 1,2) ${BRANCH_VCF} >> ${OUTDIR}/${OUT_VCF}
 done
 

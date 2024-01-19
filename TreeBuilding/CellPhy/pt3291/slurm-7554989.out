@@ -1,0 +1,3 @@
+--input /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/PTATO_Dev/pt3291/intermediate/short_variants/SMuRF/pt3291/231016_HMFreg2090_pt3291.vcf.filtered_variants_dbnsfp_CosmicCodingMuts_gonl.snps_indels.r5.liftover.hg38.sorted.SMuRF.filtered.vcf --outputdir /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/TreeBuilding/CellPhyWrapper/pt3291/ --outgr pt344-DX1PB-MONOBULK --prefix pt3291
+/var/spool/slurmd/job7554989
+Fatal error: cannot open file '/var/spool/slurmd/job7554989/cellPhyPlotTree.R': No such file or directory
