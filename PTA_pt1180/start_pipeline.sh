@@ -12,8 +12,8 @@ run_config_file=./run_config.config
 projectDir=$(dirname "$0")
 
 module load Java
-module load R/4.3.0
-#module load R/4.1.2
+#module load R/4.3.0
+module load R/4.1.2
 #export R_LIBS="/hpc/local/CentOS7/pmc_vanboxtel/R_libs/4.1.2":$R_LIBS
 
 
