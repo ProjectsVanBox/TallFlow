@@ -1,0 +1,23 @@
+[general]
+BedGraphOutput = TRUE
+chrFiles =/hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FreecBAF/freec/chr_files
+chrLenFile = /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FreecBAF/Homo_sapiens_assembly38_subset.len
+gemMappabilityFile = /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FreecBAF/freec/out100m2_hg38.gem
+maxThreads = 6
+ploidy = 2
+window = 100
+step = 10
+
+[sample]
+mateFile = /hpc/pmc_vanboxtel/projects/TallFlow/2_Code/FreecBAF/pt2229-DX1BM-MSCBULK_dedup.mpileup
+inputFormat = pileup
+mateOrientation = FR
+
+[BAF]
+fastaFile = /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FreecBAF/freec/Homo_sapiens_assembly38.fasta
+SNPfile = /hpc/pmc_vanboxtel/resources/homo_sapiens.GRCh38.GATK.illumina/GATK_bundle_GRCh38/dbsnp_146.hg38.vcf.gz
+
+#/hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FreecBAF/pt344/dbsnp_146_hg18_MONO_SNPS_VAF_0.33_0.67.vcf
+
+[target]
+captureRegions = /hpc/pmc_vanboxtel/projects/TallFlow/1_Input/FreecBAF/TCR_subset.sorted.bed
