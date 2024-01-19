@@ -19,13 +19,13 @@ library(randomcoloR)
 setwd("~/hpc/projects/TallFlow/3_Output/MIXCR4.3.2/Output/")
 
 #sample name
-sample_name = "pt2283D"
+sample_name = "pt3291"
 dir <- getwd()
 Outputdir = paste0(dir, "TCR_Output_", sample_name, "/")
 if (!dir.exists(Outputdir)) {dir.create(Outputdir)}   # if permission denied ask Rico to give you permission
 
 # alternative output directory
-Outputdir <- "/Users/verapoort/Desktop/output_TCR/" # change if you cannot wait for Rico ;)
+#Outputdir <- "/Users/verapoort/Desktop/output_TCR/" # change if you cannot wait for Rico ;)
 
 # color pallet
 n <- 100
@@ -37,7 +37,6 @@ nonempty <- list.dirs(recursive=F)[which(lengths(lapply(list.dirs(recursive=F), 
 subdir <- nonempty[grepl(sample_name, nonempty) ]
 # exclude directories with no .tsv output files
 
-
 ff<-do.call(rbind, lapply(subdir, function(x) {
   ff<-list.files(x, "\\.tsv$", include.dirs = FALSE, full.names = TRUE )
   data.frame(dir=basename(x), file=basename(ff), 
@@ -45,7 +44,7 @@ ff<-do.call(rbind, lapply(subdir, function(x) {
 }))
 
 tsv_files_list <- lapply(ff$fullpath, function(x) {read.delim(x, header = T, sep ="\t")})
-names(tsv_files_list) <- gsub(".*M-","",ff$dir)
+names(tsv_files_list) <- gsub(".*^[a-z0-9]*-[A-Z0-9]*-", "", ff$dir)
 
 # Combine them
 combined_df <- do.call("rbind", lapply(tsv_files_list, as.data.frame)) 
@@ -83,7 +82,7 @@ write.table(combined_df, file = paste0(Outputdir, sample_name, "_combinedTCR.txt
 
 
 # if want to start from saved table: 
-combined_df <- read.csv2("Desktop/output_TCR/pt2229_combinedTCR.txt", sep = "\t")
+#combined_df <- read.csv2("Desktop/output_TCR/pt2229_combinedTCR.txt", sep = "\t")
 combined_df <- transform(combined_df, cloneFraction = as.numeric(readFraction))
 combined_df <- transform(combined_df, cloneCount = as.numeric(readCount))
 
@@ -127,6 +126,15 @@ SampleOrder <- c("ALLBULK",  "ALLBULK-DN","ALLBULK-iSPCD4", "ALLBULK-DP", "ALLBU
                  "TALL8", "TALL9", "TALL10", "TALL11", "TALL12")
 #pt2283R <- Relapse only
 SampleOrder <- c("ALLBULK",  "ALLBULK-DN","ALLBULK-iSPCD4", "ALLBULK-DP", "ALLBULK-SPCD4")
+
+#pt344 Diagnosis + single cells
+SampleOrder <- c("ALLBULK",  "ALLBULK-DNCD1aNeg","ALLBULK-DP", "ALLBULK-SPCD8",
+                 "TALL1", "TALL2", "TALL3" ,"TALL4", "TALL5" , "TALL6", "TALL7", 
+                 "TALL8", "TALL9")
+
+#pt3291 Relapse
+SampleOrder <- c("ALLBULK",  "ALLBULK-DNCD1a-min","ALLBULK-CD1a-plus", "ALLBULK-DP",
+                 "ALLBULK-SPCD8")
 
             
 # plot  

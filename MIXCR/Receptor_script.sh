@@ -3,7 +3,8 @@
 #SBATCH -t 2:0:0
 #SBATCH --mem=25G
 #SBATCH -c 8
-
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=r.hagelaar@prinsesmaximacentrum.nl
 
 ### Load modules 
 module load samtools
@@ -27,8 +28,8 @@ mkdir -p $OutDir/Output/$SampleName
 
 
 ### Create a bamslice 
-samtools view -L $Receptor -bo $OutDir/input/bam/${SampleName}_dedup.bam $BAM
-
+#samtools view -L $Receptor -bo $OutDir/input/bam/${SampleName}_dedup.bam $BAM
+java -jar /hpc/pmc_vanboxtel/tools/external/jvarkit/jvarkit.jar samviewwithmate -u --samoutputformat BAM --bed ${Receptor} ${BAM} > $OutDir/input/bam/${SampleName}_dedup.bam
 
 ### Create fastq files 
 cd $OutDir/input/fastq
