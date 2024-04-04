@@ -22,8 +22,9 @@ plot_order <- c("DN-like", "DN3-like", "ISP-like", "gdTcell-like", "DP-like", "C
 
 ## load data 
 # population proportions in the flow cytometry
-#flow_pop <- read.table('/Users/verapoort/surfdrive/Shared/pmc_vanboxtel/projects/TallFlow/3_Output/Barcharts/PatientStrict/OnlyT_Populations/PercentagesLabel_Patients_TPop.txt', header = TRUE)
 flow_pop <- read.table('Barcharts/PatientStrict/OnlyT_Populations/LabelCountsTable_Patients_TPop_V3.txt', header = TRUE)
+flow_pop1 <- read.table('Barcharts/PatientStrict/OnlyT_Populations/PercentagesLabel_Patients_TPop_V3.txt', header = TRUE)
+
 #flow_thy <- read.csv('/Users/verapoort/surfdrive/Shared/pmc_vanboxtel/projects/TallFlow/3_Output/Barcharts/')
 #thy_flow_files <- list.files(path='PythonGating/ThyCITE/',pattern='.csv',full.names = T)
   
@@ -53,6 +54,9 @@ flow_pop_m$platform <- "flow"
 flow_pop_m <- flow_pop_m %>% mutate(SampleID2 = gsub(".*_", "", SampleID))
 flow_pop_m$n <- as.numeric(flow_pop_m$n)
 head(flow_pop_m)
+#unique(flow_pop_m$SampleID2)
+## pt10138 still has vu in front of name
+flow_pop_m["SampleID2"][flow_pop_m["SampleID2"] == "ptvu10138"] <- "pt10138"
 
 
 flow_pop_m_mean <- flow_pop_m %>% 
@@ -151,7 +155,7 @@ p2 <- ggplot(combined_pts, aes(fill = factor(combined_pts$Celltype, levels = rev
   facet_grid(~SampleID) +  scale_fill_manual(values = pal) + theme_classic() + labs(fill = "Celltype")
 
 p2
-pdf("/Users/verapoort/surfdrive/Shared/pmc_vanboxtel/projects/TallFlow/3_Output/FlowVSCiteGatingPatients_V3.pdf")
+pdf("/Users/verapoort/surfdrive/Shared/pmc_vanboxtel/projects/TallFlow/3_Output/FlowVSCiteGatingPatients_V4.pdf")
 p2
 dev.off()
 
