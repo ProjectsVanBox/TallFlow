@@ -6,7 +6,7 @@ library(ggpubr)
 library(gridExtra)
 library(ggrepel)
 
-setwd("~/hpc/pmc_vanboxtel/projects/TallFlow/3_Output/FreecBAF/pt344/output")
+setwd("~/hpc/projects/TallFlow/3_Output/FreecBAF/pt2229/output")
 
 tcr_regions <- read.table("../../../../1_Input/FreecBAF/TCR_subset.bed")
 tcr_regions <- tcr_regions[-c(1:3),]
@@ -21,7 +21,7 @@ tcr_genes$TCR <- substr(tcr_genes$GENE,1,3)
 tcr_genes <- tcr_genes[tcr_genes$TCR != "",]
 tcr_genes$VDJ <- substr(tcr_genes$GENE,4,4)
 
-MSC_BAF <- read.table("../input/pt344-D",sep="\t",header=T)
+MSC_BAF <- read.table("../output/pt2229-DX1BM-MSCBULK_dedup.mpileup_BAF.txt",sep="\t",header=T)
 MSC_ratio <- read.table("pt2229-DX1BM-MSCBULK_dedup.mpileup_ratio_subset.bed",sep="\t")
 colnames(MSC_ratio) <- c("Chromosome","Start","Position","Ratio","MedianRatio","CopyNumber",	"BAFratio","estimatedBAF","Genotype","UncertaintyOfGT")
 MSC_BAF_melted <- melt(MSC_BAF[,1:3],id.vars = c("Chromosome","Position"), )
@@ -67,10 +67,10 @@ for ( myfile in list.files(".","_BAF.txt")) {
   
     
     p1 <- ggplot(data=MSC_BAF_ratio_tcr,aes(x=Position,y=value)) +
-      geom_point(alpha=0.4) +
+      stat_binhex(bins = nrow (MSC_BAF_ratio_tcr) / 250, col = "black", show.legend = FALSE)+
       geom_blank(data=dummy) +
-      geom_point(data=sample_BAF_ratio_tcr,aes(x=Position,y=value),col="red",alpha=0.4) +
-      facet_grid( variable ~ ., scales = "free")
+      stat_binhex(data=sample_BAF_ratio_tcr,aes(x=Position,y=value),col="red", bins = nrow (sample_BAF_ratio_tcr) / 250, show.legend = FALSE) +
+      facet_grid( variable ~ ., scales = "free") 
     
     #pdf(paste0(sname,"_",myTCR,".pdf"),width=30,height=15)
     print(p1)
@@ -105,7 +105,7 @@ for ( myfile in list.files(".","_BAF.txt")) {
                 segment.size = 0.2,  )
     #,position=position_jitter(width=0,height=2))
     
-    pdf(paste0(sname,"_",myTCR,"_2.pdf"),width=14,height=7)
+    pdf(paste0(sname,"_",myTCR,"_3.pdf"))
     grid.arrange(p3, p2, p1, ncol= 1, nrow = 3, heights= c(3,1,4))
     dev.off()
     
