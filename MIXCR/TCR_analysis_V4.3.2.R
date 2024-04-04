@@ -82,7 +82,7 @@ write.table(combined_df, file = paste0(Outputdir, sample_name, "_combinedTCR.txt
 
 
 # if want to start from saved table: 
-#combined_df <- read.csv2("Desktop/output_TCR/pt2229_combinedTCR.txt", sep = "\t")
+combined_df <- read.csv2("Desktop/output_TCR/pt2229_combinedTCR.txt", sep = "\t")
 combined_df <- transform(combined_df, cloneFraction = as.numeric(readFraction))
 combined_df <- transform(combined_df, cloneCount = as.numeric(readCount))
 
