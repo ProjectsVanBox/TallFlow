@@ -1,4 +1,0 @@
-basename: missing operand
-Try 'basename --help' for more information.
-/var/spool/slurmd/job11014758/slurm_script: line 8: /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/Drivers/pt344/: Is a directory
-/var/spool/slurmd/job11014758/slurm_script: line 11: /hpc/pmc_vanboxtel/projects/TallFlow/3_Output/SVs/pt344/: Is a directory
