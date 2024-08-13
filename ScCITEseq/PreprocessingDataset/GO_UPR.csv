@@ -1,0 +1,208 @@
+﻿MGI Gene/Marker ID;Symbol;Name;Chr;Qualifier;Annotated Term;Context;Proteoform;Evidence;Inferred From;Reference(s)
+MGI:1351646;ABCA7;ATP-binding cassette, sub-family A (ABC1), member 7;10;;negative regulation of PERK-mediated unfolded protein response;happens in neuron;;IMP;;J:231748 
+MGI:1860508;ABCB10;ATP-binding cassette, sub-family B (MDR/TAP), member 10;8;;mitochondrial unfolded protein response;;;ISO;Q9NRK6 ;J:164563 
+MGI:1344405;AGR2;anterior gradient 2;12;;positive regulation of IRE1-mediated unfolded protein response;;;ISO;O95994 ;J:164563 
+MGI:1344405;AGR2;anterior gradient 2;12;;positive regulation of PERK-mediated unfolded protein response;;;ISO;O95994 ;J:164563 
+MGI:1345634;AMFR;autocrine motility factor receptor;8;;endoplasmic reticulum unfolded protein response;;;IBA;PTN000967651 ;J:265628 
+MGI:1345634;AMFR;autocrine motility factor receptor;8;;endoplasmic reticulum unfolded protein response;;;ISO;Q9UKV5 ;J:164563 
+MGI:109384;ATF3;activating transcription factor 3;1;;endoplasmic reticulum unfolded protein response;;;IMP;;J:124910 
+MGI:88096;ATF4;activating transcription factor 4;15;;endoplasmic reticulum unfolded protein response;;;IDA;;J:198492 
+MGI:88096;ATF4;activating transcription factor 4;15;;PERK-mediated unfolded protein response;;;IDA;;J:137331 
+MGI:88096;ATF4;activating transcription factor 4;15;;PERK-mediated unfolded protein response;;;IMP;;J:124910 
+MGI:1926157;ATF6;activating transcription factor 6;1;;endoplasmic reticulum unfolded protein response;;;IBA;PTN005284906 ;J:265628 
+MGI:1926157;ATF6;activating transcription factor 6;1;;positive regulation of ATF6-mediated unfolded protein response;;;ISO;P18850 ;J:164563 
+MGI:1926157;ATF6;activating transcription factor 6;1;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:105121;ATF6B;activating transcription factor 6 beta;17;;endoplasmic reticulum unfolded protein response;;;IBA;PTN005284906 ;J:265628 
+MGI:105121;ATF6B;activating transcription factor 6 beta;17;;negative regulation of ATF6-mediated unfolded protein response;;;ISO;Q99941 ;J:164563 
+MGI:105121;ATF6B;activating transcription factor 6 beta;17;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1352493;BAG3;BCL2-associated athanogene 3;7;;cellular response to unfolded protein;;;ISO;O95817 ;J:164563 
+MGI:1097161;BAK1;BCL2-antagonist/killer 1;17;;positive regulation of endoplasmic reticulum unfolded protein response;;;ISO;Q16611 ;J:164563 
+MGI:99702;BAX;BCL2-associated X protein;7;;positive regulation of endoplasmic reticulum unfolded protein response;;;ISO;Q07812 ;J:164563 
+MGI:1914368;BFAR;bifunctional apoptosis regulator;16;;negative regulation of IRE1-mediated unfolded protein response;;;ISO;Q9NZS9 ;J:164563 
+MGI:891976;BHLHA15;basic helix-loop-helix family, member a15;5;;endoplasmic reticulum unfolded protein response;;;IDA;;J:215889 
+MGI:1858494;BOK;BCL2-related ovarian killer;1;;positive regulation of PERK-mediated unfolded protein response;;;IMP;;J:223399 
+MGI:88252;CALR;calreticulin;8;;endoplasmic reticulum unfolded protein response;;;IBA;PTN000117401 ;J:265628 
+MGI:1920566;CALR3;calreticulin 3;8;;endoplasmic reticulum unfolded protein response;;;IBA;PTN000117401 ;J:265628 
+MGI:2140435;CALR4;calreticulin 4;4;;endoplasmic reticulum unfolded protein response;;;IBA;PTN000117401 ;J:265628 
+MGI:88261;CANX;calnexin;11;;endoplasmic reticulum unfolded protein response;;;IBA;PTN000117401 ;J:265628 
+MGI:1312922;CASP12;caspase 12;9;;endoplasmic reticulum unfolded protein response;;;IDA;;J:62257 
+MGI:88313;CCND1;cyclin D1;7;;endoplasmic reticulum unfolded protein response;;;IDA;;J:107108 
+MGI:1933126;CDK5RAP3;CDK5 regulatory subunit associated protein 3;11;;endoplasmic reticulum unfolded protein response;;;ISO;Q96JB5 ;J:164563 
+MGI:1916315;CHAC1;ChaC, cation transport regulator 1;2;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:107472;CLGN;calmegin;8;;endoplasmic reticulum unfolded protein response;;;IBA;PTN000117401 ;J:265628 
+MGI:88469;COMP;cartilage oligomeric matrix protein;8;;response to unfolded protein;;;IMP;MGI:3758741 ;J:125086 
+MGI:1349415;COPS5;COP9 signalosome subunit 5;1;;regulation of IRE1-mediated unfolded protein response;;;ISO;Q92905 ;J:164563 
+MGI:99946;CREB3;cAMP responsive element binding protein 3;4;;endoplasmic reticulum unfolded protein response;;;IEA;IPR029808 ;J:72247 
+MGI:99946;CREB3;cAMP responsive element binding protein 3;4;;positive regulation of transcription from RNA polymerase II promoter involved in unfolded protein response;;;ISO;O43889 ;J:164563 
+MGI:99946;CREB3;cAMP responsive element binding protein 3;4;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1347062;CREB3L1;cAMP responsive element binding protein 3-like 1;2;;endoplasmic reticulum unfolded protein response;;;IDA;;J:158242 
+MGI:1347062;CREB3L1;cAMP responsive element binding protein 3-like 1;2;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:2442695;CREB3L2;cAMP responsive element binding protein 3-like 2;6;;endoplasmic reticulum unfolded protein response;;;IEA;IPR029804 ;J:72247 
+MGI:2442695;CREB3L2;cAMP responsive element binding protein 3-like 2;6;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:2384786;CREB3L3;cAMP responsive element binding protein 3-like 3;10;;endoplasmic reticulum unfolded protein response;;;IEA;IPR029806 ;J:72247 
+MGI:2384786;CREB3L3;cAMP responsive element binding protein 3-like 3;10;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1916603;CREB3L4;cAMP responsive element binding protein 3-like 4;3;;endoplasmic reticulum unfolded protein response;;;IEA;IPR029807 ;J:72247 
+MGI:1916603;CREB3L4;cAMP responsive element binding protein 3-like 4;3;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1924378;CREBRF;CREB3 regulatory factor;17;;negative regulation of endoplasmic reticulum unfolded protein response;;;ISO;Q8IUR6 ;J:164563 
+MGI:1924378;CREBRF;CREB3 regulatory factor;17;;response to unfolded protein;;;IEA;IPR039165 ;J:72247 
+MGI:1924378;CREBRF;CREB3 regulatory factor;17;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1916851;DAB2IP;disabled 2 interacting protein;2;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1197015;DAXX;Fas death domain-associated protein;17;;cellular response to unfolded protein;;;ISO;Q9UER7 ;J:164563 
+MGI:109247;DDIT3;DNA-damage inducible transcript 3;10;;endoplasmic reticulum unfolded protein response;;;IDA;;J:198492 
+MGI:109247;DDIT3;DNA-damage inducible transcript 3;10;;endoplasmic reticulum unfolded protein response;;;IMP;MGI:2654034 ;J:95320 
+MGI:109247;DDIT3;DNA-damage inducible transcript 3;10;;endoplasmic reticulum unfolded protein response;;;IMP;MGI:5441015 ;J:268046 
+MGI:109247;DDIT3;DNA-damage inducible transcript 3;10;;response to unfolded protein;;;ISO;P35638 ;J:164563 
+MGI:1924256;DDRGK1;DDRGK domain containing 1;2;;negative regulation of IRE1-mediated unfolded protein response;;;IMP;;J:244198 
+MGI:1924256;DDRGK1;DDRGK domain containing 1;2;;negative regulation of IRE1-mediated unfolded protein response;;;ISO;Q96HY6 ;J:164563 
+MGI:1915069;DERL1;Der1-like domain family, member 1;15;;cellular response to unfolded protein;;;IMP;;J:153178 
+MGI:1915069;DERL1;Der1-like domain family, member 1;15;;endoplasmic reticulum unfolded protein response;;;IBA;PTN000109990 ;J:265628 
+MGI:1915069;DERL1;Der1-like domain family, member 1;15;;endoplasmic reticulum unfolded protein response;;;ISO;Q9BUN8 ;J:164563 
+MGI:1915069;DERL1;Der1-like domain family, member 1;15;;response to unfolded protein;;;ISO;Q9BUN8 ;J:73065 
+MGI:2151483;DERL2;Der1-like domain family, member 2;11;;endoplasmic reticulum unfolded protein response;;;IBA;PTN000109990 ;J:265628 
+MGI:2151483;DERL2;Der1-like domain family, member 2;11;;endoplasmic reticulum unfolded protein response;;;ISO;Q9GZP9 ;J:164563 
+MGI:2151483;DERL2;Der1-like domain family, member 2;11;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1917627;DERL3;Der1-like domain family, member 3;10;;endoplasmic reticulum unfolded protein response;;;IBA;PTN000109990 ;J:265628 
+MGI:1917627;DERL3;Der1-like domain family, member 3;10;;endoplasmic reticulum unfolded protein response;;;ISO;Q96Q80 ;J:164563 
+MGI:1351618;DNAJB9;DnaJ heat shock protein family (Hsp40) member B9;12;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:107373;DNAJC3;DnaJ heat shock protein family (Hsp40) member C3;14;;endoplasmic reticulum unfolded protein response;;;IC;GO:0051787 ;J:156044 
+MGI:107373;DNAJC3;DnaJ heat shock protein family (Hsp40) member C3;14;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:2180139;EDEM1;ER degradation enhancer, mannosidase alpha-like 1;6;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1915540;EDEM2;ER degradation enhancer, mannosidase alpha-like 2;2;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1914217;EDEM3;ER degradation enhancer, mannosidase alpha-like 3;1;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1098684;EIF2A;eukaryotic translation initiation factor 2A;3;;endoplasmic reticulum unfolded protein response;has the participant Eif2ak3;;TAS;;J:171795 
+MGI:1353449;EIF2AK2;eukaryotic translation initiation factor 2-alpha kinase 2;17;;endoplasmic reticulum unfolded protein response;;;IDA;;J:94221 
+MGI:1341830;EIF2AK3;eukaryotic translation initiation factor 2 alpha kinase 3;6;;endoplasmic reticulum unfolded protein response;;;IDA;;J:51759 J:85958 
+MGI:1341830;EIF2AK3;eukaryotic translation initiation factor 2 alpha kinase 3;6;;endoplasmic reticulum unfolded protein response;;;IMP;MGI:2177666 ;J:62257 J:70005 J:94221 J:99655 J:107108 
+MGI:1341830;EIF2AK3;eukaryotic translation initiation factor 2 alpha kinase 3;6;;endoplasmic reticulum unfolded protein response;;;ISO;Q9NZJ5 ;J:164563 
+MGI:1341830;EIF2AK3;eukaryotic translation initiation factor 2 alpha kinase 3;6;;endoplasmic reticulum unfolded protein response;has the participant Eif2a;;TAS;;J:171795 
+MGI:1341830;EIF2AK3;eukaryotic translation initiation factor 2 alpha kinase 3;6;;PERK-mediated unfolded protein response;;;IMP;;J:124910 J:296095 
+MGI:1341830;EIF2AK3;eukaryotic translation initiation factor 2 alpha kinase 3;6;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1353427;EIF2AK4;eukaryotic translation initiation factor 2 alpha kinase 4;2;;endoplasmic reticulum unfolded protein response;;;IMP;MGI:2387965 ;J:107108 
+MGI:95299;EIF2S1;eukaryotic translation initiation factor 2, subunit 1 alpha;12;;PERK-mediated unfolded protein response;;;ISO;P05198 ;J:164563 
+MGI:1276116;EP300;E1A binding protein p300;15;;positive regulation of transcription from RNA polymerase II promoter involved in unfolded protein response;;;IDA;;J:215876 
+MGI:106250;ERMP1;endoplasmic reticulum metallopeptidase 1;19;;endoplasmic reticulum unfolded protein response;;;ISO;Q7Z2K6 ;J:164563 
+MGI:1930134;ERN1;endoplasmic reticulum (ER) to nucleus signalling 1;11;;cellular response to unfolded protein;;;ISO;O75460 ;J:164563 
+MGI:1930134;ERN1;endoplasmic reticulum (ER) to nucleus signalling 1;11;;endoplasmic reticulum unfolded protein response;;;IDA;;J:62257 J:70005 J:95320 
+MGI:1930134;ERN1;endoplasmic reticulum (ER) to nucleus signalling 1;11;;endoplasmic reticulum unfolded protein response;;;TAS;;J:171795 
+MGI:1930134;ERN1;endoplasmic reticulum (ER) to nucleus signalling 1;11;;IRE1-mediated unfolded protein response;;;IBA;PTN000359335 ;J:265628 
+MGI:1930134;ERN1;endoplasmic reticulum (ER) to nucleus signalling 1;11;;IRE1-mediated unfolded protein response;;;IDA;;J:210646 J:255334 
+MGI:1930134;ERN1;endoplasmic reticulum (ER) to nucleus signalling 1;11;;IRE1-mediated unfolded protein response;;;ISO;O75460 ;J:164563 
+MGI:1930134;ERN1;endoplasmic reticulum (ER) to nucleus signalling 1;11;;positive regulation of endoplasmic reticulum unfolded protein response;;;ISO;O75460 ;J:164563 
+MGI:1930134;ERN1;endoplasmic reticulum (ER) to nucleus signalling 1;11;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1349436;ERN2;endoplasmic reticulum (ER) to nucleus signalling 2;7;;IRE1-mediated unfolded protein response;;;IBA;PTN000359335 ;J:265628 
+MGI:1349436;ERN2;endoplasmic reticulum (ER) to nucleus signalling 2;7;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1354385;ERO1A;endoplasmic reticulum oxidoreductase 1 alpha;14;;endoplasmic reticulum unfolded protein response;;;IDA;;J:95320 
+MGI:1916437;ERP27;endoplasmic reticulum protein 27;6;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1923549;ERP44;endoplasmic reticulum protein 44;4;;response to unfolded protein;;;ISO;AJ344330 ;J:74761 
+MGI:1923549;ERP44;endoplasmic reticulum protein 44;4;;response to unfolded protein;;;ISO;Q9BS26 ;J:164563 
+MGI:1923827;FAF2;Fas associated factor family member 2;13;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1354743;FBXO6;F-box protein 6;4;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1098550;FICD;FIC domain containing;5;;regulation of IRE1-mediated unfolded protein response;;;ISO;Q9BVA6 ;J:164563 
+MGI:1098550;FICD;FIC domain containing;5;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1927406;HERPUD1;homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1;8;;endoplasmic reticulum unfolded protein response;;;IBA;PTN000986585 ;J:265628 
+MGI:1927406;HERPUD1;homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1;8;;endoplasmic reticulum unfolded protein response;;;IDA;;J:65186 
+MGI:1927406;HERPUD1;homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1;8;;endoplasmic reticulum unfolded protein response;;;ISO;RGD:620818 ;J:155856 
+MGI:1927406;HERPUD1;homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1;8;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1915393;HERPUD2;HERPUD family member 2;9;;endoplasmic reticulum unfolded protein response;;;IBA;PTN000986585 ;J:265628 
+MGI:1915393;HERPUD2;HERPUD family member 2;9;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:96238;HSF1;heat shock factor 1;15;;cellular response to unfolded protein;;;ISO;Q00613 ;J:164563 
+MGI:96250;HSP90AA1;heat shock protein 90, alpha (cytosolic), class A member 1;12;;response to unfolded protein;;;TAS;;J:113936 
+MGI:96244;HSPA1A;heat shock protein 1A;17;;cellular response to unfolded protein;;;IBA;PTN002321897 ;J:265628 
+MGI:99517;HSPA1B;heat shock protein 1B;17;;cellular response to unfolded protein;;;IBA;PTN002321897 ;J:265628 
+MGI:96231;HSPA1L;heat shock protein 1-like;17;;cellular response to unfolded protein;;;IBA;PTN002321897 ;J:265628 
+MGI:96243;HSPA2;heat shock protein 2;12;;cellular response to unfolded protein;;;IBA;PTN002321897 ;J:265628 
+MGI:107422;HSPA4L;heat shock protein 4 like;3;;response to unfolded protein;;;ISO;RGD:1306528 ;J:155856 
+MGI:95835;HSPA5;heat shock protein 5;2;;cellular response to unfolded protein;;;IBA;PTN002321897 ;J:265628 
+MGI:95835;HSPA5;heat shock protein 5;2;;endoplasmic reticulum unfolded protein response;;;IBA;PTN001834223 ;J:265628 
+MGI:95835;HSPA5;heat shock protein 5;2;;endoplasmic reticulum unfolded protein response;;;IMP;;J:158036 
+MGI:95835;HSPA5;heat shock protein 5;2;;IRE1-mediated unfolded protein response;;;IEP;;J:210646 
+MGI:105384;HSPA8;heat shock protein 8;9;;cellular response to unfolded protein;;;IBA;PTN002321897 ;J:265628 
+MGI:96245;HSPA9;heat shock protein 9;18;;cellular response to unfolded protein;;;IBA;PTN002321897 ;J:265628 
+MGI:1309463;HSPA13;heat shock protein 70 family, member 13;16;;cellular response to unfolded protein;;;IBA;PTN002321897 ;J:265628 
+MGI:1354164;HSPA14;heat shock protein 14;2;;cellular response to unfolded protein;;;IBA;PTN002321897 ;J:265628 
+MGI:96240;HSPB1;heat shock protein 1;5;;response to unfolded protein;;;NAS;;J:172909 
+MGI:2135756;HSPB8;heat shock protein 8;5;;cellular response to unfolded protein;;;IBA;PTN002930537 ;J:265628 
+MGI:2135756;HSPB8;heat shock protein 8;5;;cellular response to unfolded protein;;;ISO;Q9UJY1 ;J:164563 
+MGI:96242;HSPD1;heat shock protein 1 (chaperonin);1;;mitochondrial unfolded protein response;;;IBA;PTN000143510 ;J:265628 
+MGI:96242;HSPD1;heat shock protein 1 (chaperonin);1;;response to unfolded protein;;;ISO;P10809 ;J:164563 
+MGI:105053;HSPH1;heat shock 105kDa/110kDa protein 1;5;;response to unfolded protein;;;TAS;;J:52826 
+MGI:107656;IFNG;interferon gamma;10;;endoplasmic reticulum unfolded protein response;;;IDA;;J:99655 
+MGI:1915057;JKAMP;JNK1/MAPK8-associated membrane protein;12;;response to unfolded protein;;;IEA;IPR008485 ;J:72247 
+MGI:1915057;JKAMP;JNK1/MAPK8-associated membrane protein;12;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1922090;MANF;mesencephalic astrocyte-derived neurotrophic factor;9;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:2442230;MFN2;mitofusin 2;4;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:109601;NCK1;non-catalytic region of tyrosine kinase adaptor protein 1;9;;negative regulation of PERK-mediated unfolded protein response;;;IGI;O55033 ;J:217285 
+MGI:109601;NCK1;non-catalytic region of tyrosine kinase adaptor protein 1;9;;negative regulation of PERK-mediated unfolded protein response;;;ISO;P16333 ;J:164563 
+MGI:1306821;NCK2;non-catalytic region of tyrosine kinase adaptor protein 2;1;;negative regulation of PERK-mediated unfolded protein response;;;IGI;Q99M51 ;J:217285 
+MGI:108420;NFE2L2;nuclear factor, erythroid derived 2, like 2;2;;endoplasmic reticulum unfolded protein response;;;IDA;;J:85958 
+MGI:108420;NFE2L2;nuclear factor, erythroid derived 2, like 2;2;;PERK-mediated unfolded protein response;;;IDA;;J:85958 
+MGI:1918898;OPTN;optineurin;2;;cellular response to unfolded protein;;;ISO;Q96CV9 ;J:164563 
+MGI:1916560;PACRG;PARK2 co-regulated;17;;cellular response to unfolded protein;;;TAS;;J:213906 
+MGI:2446133;PARP16;poly (ADP-ribose) polymerase family, member 16;9;;endoplasmic reticulum unfolded protein response;;;IBA;PTN001084720 ;J:265628 
+MGI:2446133;PARP16;poly (ADP-ribose) polymerase family, member 16;9;;endoplasmic reticulum unfolded protein response;;;ISO;Q8N5Y8 ;J:164563 
+MGI:2446133;PARP16;poly (ADP-ribose) polymerase family, member 16;9;;IRE1-mediated unfolded protein response;;;ISO;Q8N5Y8 ;J:164563 
+MGI:2446133;PARP16;poly (ADP-ribose) polymerase family, member 16;9;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1919103;PDIA6;protein disulfide isomerase associated 6;12;;negative regulation of IRE1-mediated unfolded protein response;;;IMP;;J:210646 
+MGI:97583;PIK3R1;phosphoinositide-3-kinase regulatory subunit 1;13;;positive regulation of endoplasmic reticulum unfolded protein response;;;ISO;P27986 ;J:164563 
+MGI:97631;PMP22;peripheral myelin protein 22;11;;cellular response to unfolded protein;;;IMP;GO:0034620 ;J:202239 
+MGI:1927072;PPP1R15A;protein phosphatase 1, regulatory subunit 15A;7;;endoplasmic reticulum unfolded protein response;;;IMP;MGI:2652765 ;J:95320 
+MGI:97805;PTPN1;protein tyrosine phosphatase, non-receptor type 1;2;;endoplasmic reticulum unfolded protein response;;;ISO;P18031 ;J:164563 
+MGI:97805;PTPN1;protein tyrosine phosphatase, non-receptor type 1;2;;IRE1-mediated unfolded protein response;;;IMP;;J:217999 
+MGI:97805;PTPN1;protein tyrosine phosphatase, non-receptor type 1;2;;negative regulation of PERK-mediated unfolded protein response;happens in pancreas;;IMP;;J:219081 
+MGI:97805;PTPN1;protein tyrosine phosphatase, non-receptor type 1;2;;negative regulation of PERK-mediated unfolded protein response;;;ISO;P18031 ;J:164563 
+MGI:97806;PTPN2;protein tyrosine phosphatase, non-receptor type 2;18;;positive regulation of PERK-mediated unfolded protein response;happens in pancreas;;IMP;;J:219081 
+MGI:1916482;QRICH1;glutamine-rich 1;9;;endoplasmic reticulum unfolded protein response;;;ISO;Q2TAL8 ;J:164563 
+MGI:1916482;QRICH1;glutamine-rich 1;9;;PERK-mediated unfolded protein response;;;ISO;Q2TAL8 ;J:164563 
+MGI:1924117;RHBDD1;rhomboid domain containing 1;1;;cellular response to unfolded protein;;;IBA;PTN000513145 ;J:265628 
+MGI:1924117;RHBDD1;rhomboid domain containing 1;1;;cellular response to unfolded protein;;;IDA;;J:187613 
+MGI:1922462;RNF121;ring finger protein 121;7;;endoplasmic reticulum unfolded protein response;;;IBA;PTN000334121 ;J:265628 
+MGI:95994;SELENOS;selenoprotein S;7;;endoplasmic reticulum unfolded protein response;;;IBA;PTN002007460 ;J:265628 
+MGI:95994;SELENOS;selenoprotein S;7;;endoplasmic reticulum unfolded protein response;;;ISO;Q9BQE4 ;J:164563 
+MGI:92638;SERP1;stress-associated endoplasmic reticulum protein 1;3;;endoplasmic reticulum unfolded protein response;;;IBA;PTN000400928 ;J:265628 
+MGI:92638;SERP1;stress-associated endoplasmic reticulum protein 1;3;;endoplasmic reticulum unfolded protein response;happens in pancreas;;IMP;MGI:3652355 ;J:106619 
+MGI:1919911;SERP2;stress-associated endoplasmic reticulum protein family member 2;14;;endoplasmic reticulum unfolded protein response;;;IBA;PTN000400928 ;J:265628 
+MGI:1316731;STC2;stanniocalcin 2;11;;endoplasmic reticulum unfolded protein response;;;IMP;;J:94132 
+MGI:1915542;STT3B;STT3, subunit of the oligosaccharyltransferase complex, homolog B (S. cerevisiae);9;;response to unfolded protein;;;ISO;Q8TCJ2 ;J:164563 
+MGI:1891731;STUB1;STIP1 homology and U-Box containing protein 1;17;;endoplasmic reticulum unfolded protein response;;;IDA;;J:212816 
+MGI:1921376;SYVN1;synovial apoptosis inhibitor 1, synoviolin;19;;response to unfolded protein;;;ISO;AB085847 ;J:80665 
+MGI:1351652;TBL2;transducin (beta)-like 2;5;;endoplasmic reticulum unfolded protein response;;;ISO;Q9Y4P3 ;J:164563 
+MGI:98737;THBS1;thrombospondin 1;2;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1101779;THBS4;thrombospondin 4;13;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1914873;TM7SF3;transmembrane 7 superfamily member 3;6;;cellular response to unfolded protein;;;IMP;;J:243621 
+MGI:1914873;TM7SF3;transmembrane 7 superfamily member 3;6;;cellular response to unfolded protein;;;ISO;Q9NS93 ;J:164563 
+MGI:99682;TMBIM6;transmembrane BAX inhibitor motif containing 6;15;;cellular response to unfolded protein;;;IMP;;J:147348 
+MGI:99682;TMBIM6;transmembrane BAX inhibitor motif containing 6;15;;cellular response to unfolded protein;;;ISO;P55061 ;J:164563 
+MGI:99682;TMBIM6;transmembrane BAX inhibitor motif containing 6;15;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1929269;TMED2;transmembrane p24 trafficking protein 2;5;;PERK-mediated unfolded protein response;happens in liver;;IMP;MGI:4456438 ;J:246024 
+MGI:1915128;TMEM33;transmembrane protein 33;5;;positive regulation of IRE1-mediated unfolded protein response;;;ISO;P57088 ;J:164563 
+MGI:1915128;TMEM33;transmembrane protein 33;5;;positive regulation of PERK-mediated unfolded protein response;;;ISO;P57088 ;J:164563 
+MGI:1915616;TMEM129;transmembrane protein 129;5;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1921050;TMTC4;transmembrane and tetratricopeptide repeat containing 4;14;;endoplasmic reticulum unfolded protein response;happens in cochlea;;IMP;MGI:5008116 ;J:268046 
+MGI:2153608;UBE2J2;ubiquitin-conjugating enzyme E2J 2;4;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1915062;UBXN4;UBX domain protein 4;1;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1914740;UFL1;UFM1 specific ligase 1;4;;negative regulation of IRE1-mediated unfolded protein response;;;ISO;O94874 ;J:164563 
+MGI:102674;UMOD;uromodulin;7;;cellular response to unfolded protein;;;IMP;;J:289677 
+MGI:102674;UMOD;uromodulin;7;;response to unfolded protein;;;IMP;;J:252420 
+MGI:2449307;UPF2;UPF2 regulator of nonsense transcripts homolog (yeast);2;;response to unfolded protein;;;ISO;AY013249 ;J:73065 
+MGI:1914281;UPF3A;UPF3 regulator of nonsense transcripts homolog A (yeast);8;;response to unfolded protein;;;ISO;AY013249 ;J:73065 
+MGI:1915384;UPF3B;UPF3 regulator of nonsense transcripts homolog B (yeast);X;;response to unfolded protein;;;ISO;AY013249 ;J:73065 
+MGI:1928744;VAPB;vesicle-associated membrane protein, associated protein B and C;2;;endoplasmic reticulum unfolded protein response;;;ISO;O95292 ;J:164563 
+MGI:1928744;VAPB;vesicle-associated membrane protein, associated protein B and C;2;;IRE1-mediated unfolded protein response;;;ISO;O95292 ;J:164563 
+MGI:1928744;VAPB;vesicle-associated membrane protein, associated protein B and C;2;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:1328355;WFS1;wolframin ER transmembrane glycoprotein;5;;endoplasmic reticulum unfolded protein response;;;IBA;PTN000991855 ;J:265628 
+MGI:1328355;WFS1;wolframin ER transmembrane glycoprotein;5;;endoplasmic reticulum unfolded protein response;happens in type B pancreatic cell,has the participant transcription regulator complex,has the participant nuclear protein-containing complex;;IMP;;J:171795 
+MGI:1328355;WFS1;wolframin ER transmembrane glycoprotein;5;;endoplasmic reticulum unfolded protein response;;;IMP;;J:109537 J:171795 
+MGI:1328355;WFS1;wolframin ER transmembrane glycoprotein;5;;negative regulation of ATF6-mediated unfolded protein response;;;ISO;RGD:68954 ;J:155856 
+MGI:1328355;WFS1;wolframin ER transmembrane glycoprotein;5;;negative regulation of ATF6-mediated unfolded protein response;;;ISO;O76024 ;J:164563 
+MGI:98970;XBP1;X-box binding protein 1;11;;endoplasmic reticulum unfolded protein response;;;IDA;;J:211083 J:215889 
+MGI:98970;XBP1;X-box binding protein 1;11;;endoplasmic reticulum unfolded protein response;;;ISO;RGD:1303073 ;J:155856 
+MGI:98970;XBP1;X-box binding protein 1;11;;negative regulation of endoplasmic reticulum unfolded protein response;;;ISO;P17861 ;J:164563 
+MGI:98970;XBP1;X-box binding protein 1;11;;positive regulation of endoplasmic reticulum unfolded protein response;;;ISO;P17861 ;J:164563 
+MGI:98970;XBP1;X-box binding protein 1;11;;positive regulation of transcription from RNA polymerase II promoter involved in unfolded protein response;;;IBA;PTN000999262 ;J:265628 
+MGI:98970;XBP1;X-box binding protein 1;11;;positive regulation of transcription from RNA polymerase II promoter involved in unfolded protein response;;;IDA;;J:215876 J:215890 
+MGI:98970;XBP1;X-box binding protein 1;11;;positive regulation of transcription from RNA polymerase II promoter involved in unfolded protein response;uses UniProtKB:Q9QYI6|uses UniProtKB:Q91YW3|uses UniProtKB:F6VAN0|uses UniProtKB:P20029|uses UniProtKB:Q9QUS4|uses UniProtKB:Q9CXI5|uses UniProtKB:P19182;;IMP;;J:215656 
+MGI:98970;XBP1;X-box binding protein 1;11;;positive regulation of transcription from RNA polymerase II promoter involved in unfolded protein response;;;ISO;P17861 ;J:164563 
+MGI:98970;XBP1;X-box binding protein 1;11;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
+MGI:2442596;YOD1;YOD1 deubiquitinase;1;;endoplasmic reticulum unfolded protein response;;;IBA;PTN000329911 ;J:265628 
+MGI:2442596;YOD1;YOD1 deubiquitinase;1;;endoplasmic reticulum unfolded protein response;;;ISO;Q5VVQ6 ;J:164563 
+MGI:2442596;YOD1;YOD1 deubiquitinase;1;;response to unfolded protein;;;IEA;KW-0834 ;J:60000 
